@@ -1,0 +1,7 @@
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
+C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb

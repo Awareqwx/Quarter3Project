@@ -8,6 +8,7 @@ using Microsoft.Xna.Framework.GamerServices;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
+using Quarter3Project.EntityTypes;
 
 namespace Quarter3Project
 {
@@ -19,10 +20,15 @@ namespace Quarter3Project
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
+        Texture2D[] testTextures;
+        TestEntity test;
+
         public Game1()
         {
             graphics = new GraphicsDeviceManager(this);
             Content.RootDirectory = "Content";
+            graphics.PreferredBackBufferWidth = 960;
+            graphics.PreferredBackBufferHeight = 620;
         }
 
         /// <summary>
@@ -46,7 +52,8 @@ namespace Quarter3Project
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-
+            testTextures = new Texture2D[]{Content.Load<Texture2D>(@"Images/PlayerTest")};
+            test = new TestEntity(this, testTextures);
             // TODO: use this.Content to load your game content here
         }
 
@@ -69,7 +76,7 @@ namespace Quarter3Project
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-
+            test.Update(gameTime);
             // TODO: Add your update logic here
 
             base.Update(gameTime);
@@ -82,7 +89,9 @@ namespace Quarter3Project
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-
+            spriteBatch.Begin();
+            test.Draw(gameTime, spriteBatch);
+            spriteBatch.End();
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
