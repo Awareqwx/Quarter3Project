@@ -5,3 +5,10 @@ C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86
 C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
 C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
 C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
+\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb

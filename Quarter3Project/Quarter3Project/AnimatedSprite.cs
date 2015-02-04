@@ -15,9 +15,9 @@ namespace Quarter3Project
         {
             public string name; //Should be all caps
             public Point frameSize; //The size of each individual frame
-            public Point sheetSize; //The number of frames
-            public int millisPerFrame; //The time each frame should be up, in milliseconds
+            public Point sheetSize; //The number of frames in either direction
             public Point startPos; //The starting point of the animation, the top left frame is (0, 0)
+            public int millisPerFrame; //The time each frame should be up, in milliseconds
             public Boolean doesLoop; //Does the animation loop?
             public AnimationSet(string n, Point fs, Point ss, Point sp, int mpf, Boolean l)
             {
@@ -35,7 +35,7 @@ namespace Quarter3Project
 
         public Texture2D[] textures;
 
-        protected Vector2 position;
+        protected Vector2 position, prevPosition;
         protected Color[] colors;
 
         protected Point currentFrame;
@@ -51,6 +51,15 @@ namespace Quarter3Project
             currentFrame = Point.Zero;
             sets = new List<AnimationSet>();
             animIsOver = false;
+            addAnimations();
+        }
+        public AnimatedSprite(Texture2D t)
+        {
+            textures = new Texture2D[]{t};
+            currentFrame = Point.Zero;
+            sets = new List<AnimationSet>();
+            animIsOver = false;
+            addAnimations();
         }
 
         public virtual void Update(GameTime gameTime)
@@ -84,6 +93,7 @@ namespace Quarter3Project
             {
                 currentFrame = Point.Zero;
             }
+            prevPosition = position;
         }
 
         public virtual void addAnimations() { }

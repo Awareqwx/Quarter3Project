@@ -10,7 +10,6 @@ namespace Quarter3Project.EntityTypes
 {
     class TestEntity : Quarter3Project.Entity
     {
-        int speed;
         KeyboardState keyboardState, prevKBState;
         public TestEntity(Game1 g, Texture2D[] t)
             : base(t, new Vector2(100, 100), g)
@@ -18,8 +17,34 @@ namespace Quarter3Project.EntityTypes
             keyboardState = prevKBState = Keyboard.GetState();
             myGame = g;
             colors = new Color[] { Color.White };
-            addAnimations();
-            speed = 3;
+            speed = 5;
+        }
+
+        public TestEntity(Game1 g, Texture2D[] t, Vector2 v)
+            : base(t, v, g)
+        {
+            keyboardState = prevKBState = Keyboard.GetState();
+            myGame = g;
+            colors = new Color[] { Color.White };
+            speed = 5;
+        }
+
+        public TestEntity(Game1 g, Texture2D t)
+            : base(t, new Vector2(100, 100), g)
+        {
+            keyboardState = prevKBState = Keyboard.GetState();
+            myGame = g;
+            colors = new Color[] { Color.White };
+            speed = 5;
+        }
+
+        public TestEntity(Game1 g, Texture2D t, Vector2 v)
+            : base(t, v, g)
+        {
+            keyboardState = prevKBState = Keyboard.GetState();
+            myGame = g;
+            colors = new Color[] { Color.White };
+            speed = 5;
         }
 
         public override void addAnimations()
@@ -49,6 +74,23 @@ namespace Quarter3Project.EntityTypes
             {
                 position.X -= speed;
             }
+
+            for (int i = 0; i < myGame.buildingSegments.Count; i++)
+            {
+                if (collisionRect().Intersects(myGame.buildingSegments[i].collisionRect()))
+                {
+                    position = prevPosition;
+                }
+            }
+
+            for (int i = 0; i < myGame.mapSegments.Count; i++)
+            {
+                if(collisionRect().Intersects(myGame.mapSegments[i].collisionRect())) 
+                {
+                    position = prevPosition;
+                }
+            }
+
             base.Update(gameTime);
         }
 

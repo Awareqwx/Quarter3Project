@@ -17,8 +17,23 @@ namespace Quarter3Project
             position = p;
         }
 
-        public Entity()
-            : base(null)
-        { }
+        public Entity(Texture2D t, Vector2 p, Game1 g)
+            : base(t)
+        {
+            myGame = g;
+            position = p;
+        }
+
+        public Entity(Texture2D[] t, Game1 g)
+            : base(t)
+        {
+            myGame = g;
+        }
+
+        public Entity(Texture2D t, Game1 g)
+            : base(t)
+        {
+            myGame = g;
+        }
     }
 }

@@ -20,8 +20,14 @@ namespace Quarter3Project
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        Texture2D[] testTextures;
-        TestEntity test;
+        Texture2D testTexture;
+        Texture2D bT;
+
+        TestEntity[] tests;
+        BuildingEntity[] bE;
+
+        public List<Collision.mapSegment> buildingSegments;
+        public List<Collision.mapSegment> mapSegments;
 
         public Game1()
         {
@@ -40,6 +46,13 @@ namespace Quarter3Project
         protected override void Initialize()
         {
             // TODO: Add your initialization logic here
+            buildingSegments = new List<Collision.mapSegment>();
+
+            mapSegments = new List<Collision.mapSegment>();
+            mapSegments.Add(new Collision.mapSegment(new Point(960, 0), new Point(0, 0)));
+            mapSegments.Add(new Collision.mapSegment(new Point(0, 0), new Point(0, 620)));
+            mapSegments.Add(new Collision.mapSegment(new Point(0, 619), new Point(960, 620)));
+            mapSegments.Add(new Collision.mapSegment(new Point(960, 618), new Point(959, 0)));
 
             base.Initialize();
         }
@@ -52,8 +65,16 @@ namespace Quarter3Project
         {
             // Create a new SpriteBatch, which can be used to draw textures.
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            testTextures = new Texture2D[]{Content.Load<Texture2D>(@"Images/PlayerTest")};
-            test = new TestEntity(this, testTextures);
+            testTexture = Content.Load<Texture2D>(@"Images/PlayerTest");
+            bT = Content.Load<Texture2D>(@"Images/PlayerTest");
+            tests = new TestEntity[1];
+            bE = new BuildingEntity[6];
+            for (int i = 0; i < tests.Length; i++)
+                tests[i] = new TestEntity(this, testTexture, new Vector2(500, 150));
+            
+            for (int i = 0; i < bE.Length; i++) 
+                bE[i] = new BuildingEntity(this, bT, new Vector2(i*50, i*50));
+            
             // TODO: use this.Content to load your game content here
         }
 
@@ -76,8 +97,12 @@ namespace Quarter3Project
             // Allows the game to exit
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
-            test.Update(gameTime);
+            for (int i = 0; i < tests.Length; i++)
+                tests[i].Update(gameTime);
+
             // TODO: Add your update logic here
+            for (int i = 0; i < bE.Length; i++)
+                bE[i].Update(gameTime);
 
             base.Update(gameTime);
         }
@@ -90,7 +115,12 @@ namespace Quarter3Project
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
             spriteBatch.Begin();
-            test.Draw(gameTime, spriteBatch);
+            for (int i = 0; i < tests.Length; i++)
+                tests[i].Draw(gameTime, spriteBatch);
+
+            for (int i = 0; i < bE.Length; i++)
+                bE[i].Draw(gameTime, spriteBatch);
+
             spriteBatch.End();
             // TODO: Add your drawing code here
 
