@@ -8,7 +8,43 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
-      <Time>2015-02-03T07:55:05.7922564-08:00</Time>
+      <Time>2015-02-03T07:55:06-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Menu.png</Source>
+      <Name>Images\Menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
+      <Time>2015-02-04T19:23:02-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\MenuOpts.png</Source>
+      <Name>Images\MenuOpts</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
+      <Time>2015-02-04T19:23:04-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\menus.png</Source>
+      <Name>Images\menus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
+      <Time>2015-02-04T19:23:04-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Splash.png</Source>
+      <Name>Images\Splash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
+      <Time>2015-02-04T19:23:04-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -48,7 +84,7 @@
       </Assembly>
       <Assembly>
         <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-04-01T14:31:19.8840079-07:00</Value>
+        <Value>2014-04-01T14:35:52.1488829-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

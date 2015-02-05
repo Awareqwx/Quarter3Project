@@ -11,7 +11,7 @@ namespace Quarter3Project.EntityTypes
     class TestEntity : Quarter3Project.Entity
     {
         KeyboardState keyboardState, prevKBState;
-        public TestEntity(Game1 g, Texture2D[] t)
+        public TestEntity(GameManager g, Texture2D[] t)
             : base(t, new Vector2(100, 100), g)
         {
             keyboardState = prevKBState = Keyboard.GetState();
@@ -20,7 +20,7 @@ namespace Quarter3Project.EntityTypes
             speed = 5;
         }
 
-        public TestEntity(Game1 g, Texture2D[] t, Vector2 v)
+        public TestEntity(GameManager g, Texture2D[] t, Vector2 v)
             : base(t, v, g)
         {
             keyboardState = prevKBState = Keyboard.GetState();
@@ -29,7 +29,7 @@ namespace Quarter3Project.EntityTypes
             speed = 5;
         }
 
-        public TestEntity(Game1 g, Texture2D t)
+        public TestEntity(GameManager g, Texture2D t)
             : base(t, new Vector2(100, 100), g)
         {
             keyboardState = prevKBState = Keyboard.GetState();
@@ -38,7 +38,7 @@ namespace Quarter3Project.EntityTypes
             speed = 5;
         }
 
-        public TestEntity(Game1 g, Texture2D t, Vector2 v)
+        public TestEntity(GameManager g, Texture2D t, Vector2 v)
             : base(t, v, g)
         {
             keyboardState = prevKBState = Keyboard.GetState();
@@ -75,14 +75,18 @@ namespace Quarter3Project.EntityTypes
                 position.X -= speed;
             }
 
-            for (int i = 0; i < myGame.buildingSegments.Count; i++)
+            myGame.playerRadius = 50f;
+            myGame.Player.P.X = position.X + myGame.playerRadius;
+            myGame.Player.P.Y = position.Y + myGame.playerRadius;
+            myGame.Player.R = myGame.playerRadius;
+
+            if(Collision.CheckCircleCircleCollision(myGame.Building, myGame.Player))
             {
-                if (collisionRect().Intersects(myGame.buildingSegments[i].collisionRect()))
-                {
-                    position = prevPosition;
-                }
+                position = prevPosition;
+                return;
             }
 
+            
             for (int i = 0; i < myGame.mapSegments.Count; i++)
             {
                 if(collisionRect().Intersects(myGame.mapSegments[i].collisionRect())) 
@@ -90,6 +94,7 @@ namespace Quarter3Project.EntityTypes
                     position = prevPosition;
                 }
             }
+            
 
             base.Update(gameTime);
         }

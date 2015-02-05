@@ -112,6 +112,9 @@
     <Compile Include="Collision.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="EntityTypes\TestEntity.cs" />
+    <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\MenuManager.cs" />
+    <Compile Include="Managers\SplashScreenManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />

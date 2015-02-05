@@ -9,28 +9,28 @@ namespace Quarter3Project
 {
     public class Entity : AnimatedSprite
     {
-        protected Game1 myGame;
+        protected GameManager myGame;
 
-        public Entity(Texture2D[] t, Vector2 p, Game1 g) : base(t)
+        public Entity(Texture2D[] t, Vector2 p, GameManager g) : base(t)
         {
             myGame = g;
             position = p;
         }
 
-        public Entity(Texture2D t, Vector2 p, Game1 g)
+        public Entity(Texture2D t, Vector2 p, GameManager g)
             : base(t)
         {
             myGame = g;
             position = p;
         }
 
-        public Entity(Texture2D[] t, Game1 g)
+        public Entity(Texture2D[] t, GameManager g)
             : base(t)
         {
             myGame = g;
         }
 
-        public Entity(Texture2D t, Game1 g)
+        public Entity(Texture2D t, GameManager g)
             : base(t)
         {
             myGame = g;

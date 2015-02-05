@@ -37,32 +37,32 @@ namespace Quarter3Project
 
         public struct line2D
         {
-            public Vector2 p;
-            public Vector2 v;
+            public Vector2 P;
+            public Vector2 V;
 
             public float yInt()
             {
-                return (-v.Y * p.X + v.X * p.Y) / v.X;
+                return (-V.Y * P.X + V.X * P.Y) / V.X;
             }
 
             public float Slope()
             {
-                return v.Y / v.X;
+                return V.Y / V.X;
             }
 
         }
 
-	public struct Circle 
-	{
-		public Vector2 P;
-		public double R;
-	
-		public Circle(Vector2 p, double r)
-		{	
-			P = p;
-			R = r;
-		}
-	}
+        public struct Circle
+        {
+            public Vector2 P;
+            public double R;
+
+            public Circle(Vector2 p, double r)
+            {
+                P = p;
+                R = r;
+            }
+        }
 
         public static float magnitude(Vector2 v)
         {
@@ -94,56 +94,56 @@ namespace Quarter3Project
             return r;
         }
 
-	public static bool CheckCircleSegmentCollision(Circle c, MapSegment S) 
-	{
-		Line2D L;
-		L.P.X = S.p1.X;
-		L.P.Y = S.p1.Y;
-		L.V.X = S.p2.X - S.p1.X;
-		L.V.Y = S.p2.Y - S.p1.Y;
+        public static bool CheckCircleSegmentCollision(Circle C, mapSegment S)
+        {
+            line2D L;
+            L.P.X = S.p1.X;
+            L.P.Y = S.p1.Y;
+            L.V.X = S.p2.X - S.p1.X;
+            L.V.Y = S.p2.Y - S.p1.Y;
 
-		double OH = Math.Abs(((L.V.X * (C.P.Y - L.P.Y)) - (L.V.Y * (C.P.X - L.P.X)) / (Math.Sqrt(L.V.X * L.V.X + L.V.Y * L.V.Y)));
-		
-		if(OH <= C.R)
-		{
-			Vector2 CollisionPoint1;
-			Vector2 CollisionPoint2;
-			if(L.V.X != 0)
-			{
-				double Dv = L.V.Y / L.V.X;
-				double E = (L.V.X * L.P.Y - L.V.Y * L.P.X) / L.V.X - C.P.Y;
-			
-				double a = 1 + Dv * Dv;
-				double b = -2 * C.P.X + 2 * E * Dv;
-				double c = C.P.X * C.P.X + E * E - C.R * C.R;
-	
-				CollisionPoint1.X = (float)((-b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
-				CollisionPoint2.X = (float)((-b - Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
-				CollisionPoint1.Y = L.Slope() * CollisionPoint1.X + L.yInt();
-				CollisionPoint2.Y = L.Slope() * CollisionPoint2.X + L.yInt();
-			
-				bool cond1 = (Math.Min(S.p1.X, S.p2.X) <= CollisionPoint1.X && CollisionPoint1.X <= Math.Max(S.p1.X, S.p2.X));
-				bool cond2 = (Math.Min(S.p1.Y, S.p2.Y) <= CollisionPoint1.Y && CollisionPoint1.Y <= Math.Max(S.p1.Y, S.p2.Y));
-				bool cond3 = (Math.Min(S.p1.X, S.p2.X) <= CollisionPoint2.X && CollisionPoint2.X <= Math.Max(S.p1.X, S.p2.X));
-				bool cond4 = (Math.Min(S.p1.Y, S.p2.Y) <= CollisionPoint2.Y && CollisionPoint2.Y <= Math.Max(S.p1.Y, S.p2.Y));
+            double OH = Math.Abs(((L.V.X * (C.P.Y - L.P.Y)) - (L.V.Y * (C.P.X - L.P.X))) / (Math.Sqrt(L.V.X * L.V.X + L.V.Y * L.V.Y)));
 
-				return (cond1 && cond2) || (cond3 & cond4);
-			}
-		}
-		return false;
-	}
-	
+            if (OH <= C.R)
+            {
+                Vector2 CollisionPoint1;
+                Vector2 CollisionPoint2;
+                if (L.V.X != 0)
+                {
+                    double Dv = L.V.Y / L.V.X;
+                    double E = (L.V.X * L.P.Y - L.V.Y * L.P.X) / L.V.X - C.P.Y;
+
+                    double a = 1 + Dv * Dv;
+                    double b = -2 * C.P.X + 2 * E * Dv;
+                    double c = C.P.X * C.P.X + E * E - C.R * C.R;
+
+                    CollisionPoint1.X = (float)((-b + Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
+                    CollisionPoint2.X = (float)((-b - Math.Sqrt(b * b - 4 * a * c)) / (2 * a));
+                    CollisionPoint1.Y = L.Slope() * CollisionPoint1.X + L.yInt();
+                    CollisionPoint2.Y = L.Slope() * CollisionPoint2.X + L.yInt();
+
+                    bool cond1 = (Math.Min(S.p1.X, S.p2.X) <= CollisionPoint1.X && CollisionPoint1.X <= Math.Max(S.p1.X, S.p2.X));
+                    bool cond2 = (Math.Min(S.p1.Y, S.p2.Y) <= CollisionPoint1.Y && CollisionPoint1.Y <= Math.Max(S.p1.Y, S.p2.Y));
+                    bool cond3 = (Math.Min(S.p1.X, S.p2.X) <= CollisionPoint2.X && CollisionPoint2.X <= Math.Max(S.p1.X, S.p2.X));
+                    bool cond4 = (Math.Min(S.p1.Y, S.p2.Y) <= CollisionPoint2.Y && CollisionPoint2.Y <= Math.Max(S.p1.Y, S.p2.Y));
+
+                    return (cond1 && cond2) || (cond3 && cond4);
+                }
+            }
+            return false;
+        }
+
 
         public static bool CheckSegmentSegmentCollision(mapSegment s1, mapSegment s2)
         {
             line2D l1, l2;
 
-            l1.p = new Vector2(s1.p1.X, s1.p1.Y);
-            l2.p = new Vector2(s2.p1.X, s2.p1.Y);
-            l1.v.X = s1.p2.X - s1.p1.X;
-            l1.v.Y = s1.p2.Y - s1.p1.Y;
-            l2.v.X = s2.p2.X - s2.p1.X;
-            l2.v.Y = s2.p2.Y - s2.p1.Y;
+            l1.P = new Vector2(s1.p1.X, s1.p1.Y);
+            l2.P = new Vector2(s2.p1.X, s2.p1.Y);
+            l1.V.X = s1.p2.X - s1.p1.X;
+            l1.V.Y = s1.p2.Y - s1.p1.Y;
+            l2.V.X = s2.p2.X - s2.p1.X;
+            l2.V.Y = s2.p2.Y - s2.p1.Y;
 
             Vector2 collisionPoint;
 
@@ -159,7 +159,14 @@ namespace Quarter3Project
             return cond1 && cond2 && cond3 && cond4;
         }
 
-        
+        public static bool CheckCircleCircleCollision(Circle C1, Circle C2)
+        {
+            if (C2.R + C1.R >= magnitude(C2.P + C1.P))
+            {
+                return true;
+            }
+            return false;
+        }
 
 
     }

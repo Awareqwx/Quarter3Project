@@ -13,11 +13,11 @@ namespace Quarter3Project
 
         public struct AnimationSet
         {
-            public string name; //Should be all caps
-            public Point frameSize; //The size of each individual frame
-            public Point sheetSize; //The number of frames in either direction
+            public string name; //Should be all caps OKAY
+            public Point frameSize; //The size of each individual frame (px, px)
+            public Point sheetSize; //The number of frames in either direction 
             public Point startPos; //The starting point of the animation, the top left frame is (0, 0)
-            public int millisPerFrame; //The time each frame should be up, in milliseconds
+            public int millisPerFrame; //The time each frame should be up, in milliseconds (1000ms = 1s)
             public Boolean doesLoop; //Does the animation loop?
             public AnimationSet(string n, Point fs, Point ss, Point sp, int mpf, Boolean l)
             {

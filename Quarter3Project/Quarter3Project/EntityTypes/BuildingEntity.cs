@@ -9,14 +9,40 @@ namespace Quarter3Project
 {
     class BuildingEntity : Entity
     {
-        public BuildingEntity(Game1 g, Texture2D t, Vector2 p):base(t, p, g)
+        public BuildingEntity(GameManager g, Texture2D[] t)
+            : base(t, new Vector2(100, 100), g)
         {
-            colors = new Color[] { Color.White, Color.Orange };
+            g.buildingRadius = 50f;
+            g.Building.P.X = position.X + g.buildingRadius;
+            g.Building.P.Y = position.Y + g.buildingRadius;
+            g.Building.R = g.buildingRadius;
+        }
 
-            g.buildingSegments.Add(new Collision.mapSegment(new Point((int)position.X, (int)position.Y), new Point((int)position.X + currentSet.frameSize.X, (int)position.Y)));
-            g.buildingSegments.Add(new Collision.mapSegment(new Point((int)position.X, (int)position.Y), new Point((int)position.X, (int)position.Y + currentSet.frameSize.Y)));
-            g.buildingSegments.Add(new Collision.mapSegment(new Point((int)position.X, (int)position.Y + currentSet.frameSize.Y), new Point((int)position.X + currentSet.frameSize.X, (int)position.Y + currentSet.frameSize.Y)));
-            g.buildingSegments.Add(new Collision.mapSegment(new Point((int)position.X + currentSet.frameSize.X, (int)position.Y), new Point((int)position.X + currentSet.frameSize.X, (int)position.Y + currentSet.frameSize.Y)));
+        public BuildingEntity(GameManager g, Texture2D[] t, Vector2 v)
+            : base(t, v, g)
+        {
+            g.buildingRadius = 50f;
+            g.Building.P.X = position.X + g.buildingRadius;
+            g.Building.P.Y = position.Y + g.buildingRadius;
+            g.Building.R = g.buildingRadius;
+        }
+
+        public BuildingEntity(GameManager g, Texture2D t)
+            : base(t, new Vector2(100, 100), g)
+        {
+            g.buildingRadius = 50f;
+            g.Building.P.X = position.X + g.buildingRadius;
+            g.Building.P.Y = position.Y + g.buildingRadius;
+            g.Building.R = g.buildingRadius;
+        }
+
+        public BuildingEntity(GameManager g, Texture2D t, Vector2 v)
+            : base(t, v, g)
+        {
+            g.buildingRadius = 50f;
+            g.Building.P.X = position.X + g.buildingRadius;
+            g.Building.P.Y = position.Y + g.buildingRadius;
+            g.Building.R = g.buildingRadius;
         }
 
         public override void addAnimations()

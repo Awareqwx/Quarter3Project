@@ -10,6 +10,42 @@
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
       <Time>2015-02-03T07:55:06-08:00</Time>
     </Item>
+    <Item>
+      <Source>Images\Menu.png</Source>
+      <Name>Images\Menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
+      <Time>2015-02-04T19:23:01.8285877-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\MenuOpts.png</Source>
+      <Name>Images\MenuOpts</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
+      <Time>2015-02-04T19:23:02.8170422-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\menus.png</Source>
+      <Name>Images\menus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
+      <Time>2015-02-04T19:23:02.8971596-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Splash.png</Source>
+      <Name>Images\Splash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
+      <Time>2015-02-04T19:23:03.0333599-08:00</Time>
+    </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
       <ContentProjectGUID>{A393E15B-466F-4895-8DB0-D913ED55776F}</ContentProjectGUID>
