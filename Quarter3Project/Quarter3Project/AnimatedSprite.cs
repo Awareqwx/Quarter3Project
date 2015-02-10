@@ -35,12 +35,14 @@ namespace Quarter3Project
 
         public Texture2D[] textures;
 
-        protected Vector2 position, prevPosition;
+        protected Vector2 position, prevPosition, prevPrevPosition;
         protected Color[] colors;
 
         protected Point currentFrame;
 
         protected Boolean animIsOver;
+
+        public Collision.Circle collisionCircle;
 
         public float speed;
         protected int timeSinceLast;
@@ -51,6 +53,14 @@ namespace Quarter3Project
             currentFrame = Point.Zero;
             sets = new List<AnimationSet>();
             animIsOver = false;
+            colors = new Color[t.Length];
+            for (int i = 0; i < colors.Length; i++)
+            {
+                colors[i] = Color.White;
+            }
+            collisionCircle.R = (currentSet.frameSize.X + currentSet.frameSize.Y) / 4;
+            collisionCircle.P.X = (float) (position.X + collisionCircle.R);
+            collisionCircle.P.Y = (float) (position.Y + collisionCircle.R);
             addAnimations();
         }
         public AnimatedSprite(Texture2D t)
@@ -59,41 +69,58 @@ namespace Quarter3Project
             currentFrame = Point.Zero;
             sets = new List<AnimationSet>();
             animIsOver = false;
+            colors = new Color[textures.Length];
+            for (int i = 0; i < colors.Length; i++)
+            {
+                colors[i] = Color.White;
+            }
             addAnimations();
         }
 
         public virtual void Update(GameTime gameTime)
         {
             timeSinceLast += gameTime.ElapsedGameTime.Milliseconds;
-            if (!animIsOver)
+            if (currentSet.sheetSize == new Point(1, 1))
             {
-                if (timeSinceLast >= currentSet.millisPerFrame)
+
+            }
+            else
+            {
+                if (!animIsOver)
                 {
-                    timeSinceLast = 0;
-                    currentFrame.X++;
-                    if (currentFrame.X >= currentSet.sheetSize.X)
+                    if (timeSinceLast >= currentSet.millisPerFrame)
                     {
-                        currentFrame.X = 0;
-                        currentFrame.Y++;
-                        if (currentFrame.Y >= currentSet.sheetSize.Y)
+                        timeSinceLast = 0;
+                        currentFrame.X++;
+                        if (currentFrame.X >= currentSet.sheetSize.X)
                         {
-                            if (currentSet.doesLoop)
+                            currentFrame.X = 0;
+                            currentFrame.Y++;
+                            if (currentFrame.Y >= currentSet.sheetSize.Y)
                             {
-                                currentFrame.Y = 0;
-                            }
-                            else
-                            {
-                                animIsOver = true;
+                                if (currentSet.doesLoop)
+                                {
+                                    currentFrame.Y = 0;
+                                }
+                                else
+                                {
+                                    animIsOver = true;
+                                }
                             }
                         }
                     }
                 }
+                else
+                {
+                    currentFrame = Point.Zero;
+                }
             }
-            else
-            {
-                currentFrame = Point.Zero;
-            }
+            prevPrevPosition = prevPosition;
             prevPosition = position;
+
+            collisionCircle.R = (currentSet.frameSize.X + currentSet.frameSize.Y) / 4;
+            collisionCircle.P.X = (float)(position.X + collisionCircle.R);
+            collisionCircle.P.Y = (float)(position.Y + collisionCircle.R);
         }
 
         public virtual void addAnimations() { }

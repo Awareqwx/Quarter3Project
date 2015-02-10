@@ -16,7 +16,7 @@ namespace Quarter3Project.Managers
     {
         SpriteBatch spriteBatch;
         Texture2D background;
-        int countdown = 5000;
+        int countdown = 1000;
         Game1 myGame;
 
         public SplashScreenManager(Game1 game)

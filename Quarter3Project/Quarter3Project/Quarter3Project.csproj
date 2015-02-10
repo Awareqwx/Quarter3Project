@@ -112,8 +112,13 @@
     <Compile Include="Collision.cs" />
     <Compile Include="Entity.cs" />
     <Compile Include="EntityTypes\TestEntity.cs" />
+    <Compile Include="Managers\CCManager.cs" />
     <Compile Include="Managers\GameManager.cs" />
+    <Compile Include="Managers\Interface\CCUI.cs" />
+    <Compile Include="Managers\Interface\YesNo.cs" />
     <Compile Include="Managers\MenuManager.cs" />
+    <Compile Include="Managers\Interface\Home.cs" />
+    <Compile Include="Managers\PopUpManager.cs" />
     <Compile Include="Managers\SplashScreenManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />

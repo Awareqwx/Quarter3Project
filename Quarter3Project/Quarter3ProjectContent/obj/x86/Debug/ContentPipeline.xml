@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
-      <Time>2015-02-03T07:55:06-08:00</Time>
+      <Time>2015-02-09T07:56:57.2100719-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Menu.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
-      <Time>2015-02-04T19:23:02-08:00</Time>
+      <Time>2015-02-09T07:56:57.0694465-08:00</Time>
     </Item>
     <Item>
       <Source>Images\MenuOpts.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
-      <Time>2015-02-04T19:23:04-08:00</Time>
+      <Time>2015-02-09T07:56:57.1475716-08:00</Time>
     </Item>
     <Item>
       <Source>Images\menus.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
-      <Time>2015-02-04T19:23:04-08:00</Time>
+      <Time>2015-02-09T07:56:57.8819735-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Splash.png</Source>
@@ -44,7 +44,97 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
-      <Time>2015-02-04T19:23:04-08:00</Time>
+      <Time>2015-02-09T07:56:57.4444539-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\buildingTest.png</Source>
+      <Name>Images\buildingTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb</Output>
+      <Time>2015-02-09T07:56:57.819449-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\PotionShopBase.png</Source>
+      <Name>Images\PotionShopBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb</Output>
+      <Time>2015-02-09T07:56:57.288197-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\PotionShopShadow.png</Source>
+      <Name>Images\PotionShopShadow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb</Output>
+      <Time>2015-02-09T07:56:57.3663225-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard.png</Source>
+      <Name>Images\Wizard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb</Output>
+      <Time>2015-02-09T07:56:57.6475793-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\DialogBox.png</Source>
+      <Name>Images\DialogBox</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\DialogBox.xnb</Output>
+      <Time>2015-02-09T07:56:56.8038266-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard_C.png</Source>
+      <Name>Images\Wizard_C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb</Output>
+      <Time>2015-02-09T07:56:57.6944731-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Consolas.spritefont</Source>
+      <Name>Fonts\Consolas</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
+      <Time>2015-02-09T07:56:56.7100946-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccImage.png</Source>
+      <Name>Images\ccImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb</Output>
+      <Time>2015-02-09T09:02:50.5451463-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccArrows.png</Source>
+      <Name>Images\ccArrows</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb</Output>
+      <Time>2015-02-09T09:14:28.2218963-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccClass.png</Source>
+      <Name>Images\ccClass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb</Output>
+      <Time>2015-02-09T09:32:53.1096463-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

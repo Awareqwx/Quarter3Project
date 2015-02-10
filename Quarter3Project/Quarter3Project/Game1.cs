@@ -20,12 +20,17 @@ namespace Quarter3Project
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
 
-        public enum GameLevels { SPLASH, MENU, PLAY };
-        public GameLevels currentLevel = GameLevels.SPLASH;
+        public enum GameLevels { SPLASH, MENU, PLAY, UI, CC };
+        public GameLevels currentLevel = GameLevels.SPLASH, prevLevel = GameLevels.SPLASH;
 
         SplashScreenManager splashScreenManager;
         MenuManager menuManager;
         GameManager gameManager;
+        PopUpManager popUpManager;
+        CCManager ccManager;
+
+        public int buttonPressed, prevButtonPressed, currentChar = 1;
+        public string msg;
 
 
         public Game1()
@@ -49,12 +54,18 @@ namespace Quarter3Project
             splashScreenManager = new SplashScreenManager(this);
             menuManager = new MenuManager(this);
             gameManager = new GameManager(this);
+            popUpManager = new PopUpManager(this);
+            ccManager = new CCManager(this);
 
             Components.Add(splashScreenManager);
             Components.Add(menuManager);
             Components.Add(gameManager);
+            Components.Add(popUpManager);
+            Components.Add(ccManager);
 
             SetCurrentLevel(GameLevels.SPLASH);
+
+            this.IsMouseVisible = true;
 
             base.Initialize();
         }
@@ -113,22 +124,51 @@ namespace Quarter3Project
             menuManager.Visible = false;
             gameManager.Enabled = false;
             gameManager.Visible = false;
+            popUpManager.Enabled = false;
+            popUpManager.Visible = false;
+            ccManager.Enabled = false;
+            ccManager.Visible = false;
 
             switch (level)
             {
                 case GameLevels.SPLASH:
                     splashScreenManager.Enabled = true;
                     splashScreenManager.Visible = true;
+                    currentLevel = GameLevels.SPLASH;
                     break;
                 case GameLevels.MENU:
                     menuManager.Visible = true;
                     menuManager.Enabled = true;
+                    currentLevel = GameLevels.MENU;
                     break;
                 case GameLevels.PLAY:
                     gameManager.Visible = true;
                     gameManager.Enabled = true;
+                    currentLevel = GameLevels.PLAY;
                     break;
+                case GameLevels.UI:
+                    switch (prevLevel)
+                    {
+                        case GameLevels.MENU:
+                            menuManager.Visible = true;
+                            break;
+                        case GameLevels.PLAY:
+                            gameManager.Visible = true;
+                            break;
+                        case GameLevels.SPLASH:
+                            splashScreenManager.Visible = true;
+                            break;
+                    }
+                    popUpManager.Enabled = true;
+                    popUpManager.Visible = true;
+                   break;
+                case GameLevels.CC:
+                   ccManager.Enabled = true;
+                   ccManager.Visible = true;
+                   currentLevel = GameLevels.CC;
+                   break;
             }
+            prevLevel = currentLevel;
         }
     }
 }

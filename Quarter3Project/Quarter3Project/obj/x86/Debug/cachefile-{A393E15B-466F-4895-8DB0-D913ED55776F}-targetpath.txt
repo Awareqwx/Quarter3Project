@@ -3,3 +3,13 @@ Content\Images\Menu.xnb
 Content\Images\MenuOpts.xnb
 Content\Images\menus.xnb
 Content\Images\Splash.xnb
+Content\Images\buildingTest.xnb
+Content\Images\PotionShopBase.xnb
+Content\Images\PotionShopShadow.xnb
+Content\Images\Wizard.xnb
+Content\Images\DialogBox.xnb
+Content\Images\Wizard_C.xnb
+Content\Fonts\Consolas.xnb
+Content\Images\ccImage.xnb
+Content\Images\ccArrows.xnb
+Content\Images\ccClass.xnb

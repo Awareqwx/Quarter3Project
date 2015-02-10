@@ -161,7 +161,7 @@ namespace Quarter3Project
 
         public static bool CheckCircleCircleCollision(Circle C1, Circle C2)
         {
-            if (C2.R + C1.R >= magnitude(C2.P + C1.P))
+            if (C1.R + C2.R >= magnitude(C2.P - C1.P))
             {
                 return true;
             }
