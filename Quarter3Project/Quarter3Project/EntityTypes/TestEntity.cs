@@ -18,7 +18,6 @@ namespace Quarter3Project.EntityTypes
             : base(t, new Vector2(100, 100), g)
         {
             keyboardState = prevKBState = Keyboard.GetState();
-            myGame = g;
             speed = 5;
             r = new Random();
         }

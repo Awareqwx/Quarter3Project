@@ -9,7 +9,8 @@ Content\Images\PotionShopShadow.xnb
 Content\Images\Wizard.xnb
 Content\Images\DialogBox.xnb
 Content\Images\Wizard_C.xnb
-Content\Fonts\Consolas.xnb
 Content\Images\ccImage.xnb
 Content\Images\ccArrows.xnb
 Content\Images\ccClass.xnb
+Content\Images\EnemyTest.xnb
+Content\Fonts\Consolas.xnb

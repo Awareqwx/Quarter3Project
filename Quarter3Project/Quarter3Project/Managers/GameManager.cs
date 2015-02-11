@@ -19,10 +19,15 @@ namespace Quarter3Project
         SpriteBatch spriteBatch;
         Game1 myGame;
 
+        Random RNG;
+
         Texture2D[] testTexture;
         Texture2D[] bT;
 
         TestEntity[] tests;
+
+        TestEnemy[] mooks;
+
         public BuildingEntity[] bE;
 
         public List<Collision.mapSegment> buildingSegments;
@@ -41,6 +46,8 @@ namespace Quarter3Project
         public override void Initialize() 
         {
             buildingSegments = new List<Collision.mapSegment>();
+
+            RNG = new Random();
 
             mapSegments = new List<Collision.mapSegment>();
             mapSegments.Add(new Collision.mapSegment(new Point(960, 0), new Point(0, 0)));
@@ -64,6 +71,13 @@ namespace Quarter3Project
             for (int i = 0; i < tests.Length; i++)
                 tests[i] = new TestEntity(this, testTexture, new Vector2(10, 10));
 
+            mooks = new TestEnemy[1];
+
+            Texture2D enemy = Game.Content.Load<Texture2D>(@"Images/EnemyTest");
+            for (int i = 0; i < mooks.Length; i++)
+            {
+                mooks[i] = new TestEnemy(this, enemy, new Vector2(RNG.Next(0, 540), RNG.Next(0, 380)));
+            }
 
             bE[0] = new BuildingEntity(this, bT, new Vector2(650, 450));
             bE[1] = new BuildingEntity(this, bT, new Vector2(250, 350));
@@ -94,6 +108,9 @@ namespace Quarter3Project
             for (int i = 0; i < bE.Length; i++)
                 bE[i].Update(gameTime);
 
+            for (int i = 0; i < mooks.Length; i++)
+                mooks[i].Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -107,6 +124,9 @@ namespace Quarter3Project
 
             for (int i = 0; i < bE.Length; i++)
                 bE[i].Draw(gameTime, spriteBatch);
+
+            for (int i = 0; i < mooks.Length; i++)
+                mooks[i].Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
 

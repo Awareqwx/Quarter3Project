@@ -158,7 +158,7 @@ namespace Quarter3Project
             return new Rectangle((int)position.X, (int)position.Y, (int)currentSet.frameSize.X, (int)currentSet.frameSize.Y);
         }
 
-        public void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        public virtual void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
             for (int i = 0; i < textures.Length; i++)
             {
