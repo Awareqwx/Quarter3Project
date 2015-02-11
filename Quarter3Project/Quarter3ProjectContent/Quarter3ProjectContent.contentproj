@@ -139,10 +139,22 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Images\EnemyTest.png">
-      <Name>EnemyTest</Name>
+    <Compile Include="Images\ccBase.png">
+      <Name>ccBase</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\ccStats.png">
+      <Name>ccStats</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\consolassmall.spritefont">
+      <Name>consolassmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
     </Compile>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\XNA Game Studio\$(XnaFrameworkVersion)\Microsoft.Xna.GameStudio.ContentPipeline.targets" />

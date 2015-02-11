@@ -1,5 +1,4 @@
-﻿
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -7,6 +6,19 @@ using Microsoft.Xna.Framework;
 using Quarter3Project;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+
+/*
+ * Buttons are as follows:
+ * 1 - Create New Character(Menu)
+ * 2 - Load from previous game(Menu)
+ * 3 - Quit game(Menu)
+ * 4 - Yes(Various Uses)
+ * 5 - No(Various Uses)
+ * 6 - Esc(Various Uses)
+ * 7 - Left Arrow(Char Creation)
+ * 8 - Right Arrow(Char Creation)
+ * 9 - Ok(Char Creation)
+*/
 
 namespace Quarter3Project.Managers
 {
@@ -91,6 +103,7 @@ namespace Quarter3Project.Managers
                             switch (myGame.currentLevel)
                             {
                                 case Game1.GameLevels.PLAY:
+                                case Game1.GameLevels.CC:
                                     myGame.SetCurrentLevel(Game1.GameLevels.MENU);
                                     break;
                                 case Game1.GameLevels.MENU:
@@ -125,6 +138,9 @@ namespace Quarter3Project.Managers
                                 case Game1.GameLevels.PLAY:
                                     myGame.SetCurrentLevel(Game1.GameLevels.PLAY);
                                     break;
+                                case Game1.GameLevels.CC:
+                                    myGame.SetCurrentLevel(Game1.GameLevels.CC);
+                                    break;
                             }
                         }
                     }
@@ -143,10 +159,6 @@ namespace Quarter3Project.Managers
                                 timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                                 if (timer > .1F)
                                 {
-                                    if (myGame.currentChar < 1)
-                                    {
-                                        myGame.currentChar = 4;
-                                    }
                                     myGame.currentChar -= 1;
                                     timer = 0;
                                 }
@@ -168,10 +180,6 @@ namespace Quarter3Project.Managers
                             timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                             if (timer > .1F)
                             {
-                                if (myGame.currentChar > 3)
-                                {
-                                    myGame.currentChar = 0;
-                                }
                                 myGame.currentChar += 1;
                                 timer = 0;
                             }
@@ -181,6 +189,21 @@ namespace Quarter3Project.Managers
                     else
                     {
                         setAnimation("RIGHT");
+                    }
+                    break;
+                case "9":
+                    if (collisionRect().Contains(mousePos))
+                    {
+                        setAnimation("PRESS9");
+                        if (mouseState.LeftButton == ButtonState.Pressed)
+                        {
+                            myGame.buttonPressed = 9;
+                            myGame.SetCurrentLevel(Game1.GameLevels.UI);
+                        }
+                    }
+                    else
+                    {
+                        setAnimation("IDLE9");
                     }
                     break;
             }            
@@ -205,6 +228,8 @@ namespace Quarter3Project.Managers
             AnimationSet press5 = new AnimationSet("PRESS5", new Point(100, 45), new Point(1, 1), new Point(1, 4), 0, false);
             AnimationSet leftArrow = new AnimationSet("LEFT", new Point(25, 30), new Point(1, 1), new Point(0, 0), 0, false);
             AnimationSet rightArrow = new AnimationSet("RIGHT", new Point(25, 30), new Point(1, 1), new Point(1, 0), 0, false);
+            AnimationSet idle9 = new AnimationSet("IDLE9", new Point(100, 45), new Point(1, 1), new Point(0, 5), 0, false);
+            AnimationSet press9 = new AnimationSet("PRESS9", new Point(100, 45), new Point(1, 1), new Point(1, 5), 0, false);
             sets.Add(idle);
             sets.Add(press);
             sets.Add(idle2);
@@ -217,6 +242,8 @@ namespace Quarter3Project.Managers
             sets.Add(press5);
             sets.Add(leftArrow);
             sets.Add(rightArrow);
+            sets.Add(idle9);
+            sets.Add(press9);
             setAnimation("IDLE1");
             base.addAnimations();
         }

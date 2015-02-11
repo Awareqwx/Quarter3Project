@@ -54,14 +54,16 @@ namespace Quarter3Project
             splashScreenManager = new SplashScreenManager(this);
             menuManager = new MenuManager(this);
             gameManager = new GameManager(this);
-            popUpManager = new PopUpManager(this);
             ccManager = new CCManager(this);
+            popUpManager = new PopUpManager(this);
+            
 
             Components.Add(splashScreenManager);
             Components.Add(menuManager);
             Components.Add(gameManager);
-            Components.Add(popUpManager);
             Components.Add(ccManager);
+            Components.Add(popUpManager);
+            
 
             SetCurrentLevel(GameLevels.SPLASH);
 
@@ -124,10 +126,11 @@ namespace Quarter3Project
             menuManager.Visible = false;
             gameManager.Enabled = false;
             gameManager.Visible = false;
-            popUpManager.Enabled = false;
-            popUpManager.Visible = false;
             ccManager.Enabled = false;
             ccManager.Visible = false;
+            popUpManager.Enabled = false;
+            popUpManager.Visible = false;
+            
 
             switch (level)
             {
@@ -146,6 +149,11 @@ namespace Quarter3Project
                     gameManager.Enabled = true;
                     currentLevel = GameLevels.PLAY;
                     break;
+                case GameLevels.CC:
+                   ccManager.Enabled = true;
+                   ccManager.Visible = true;
+                   currentLevel = GameLevels.CC;
+                   break;
                 case GameLevels.UI:
                     switch (prevLevel)
                     {
@@ -158,15 +166,14 @@ namespace Quarter3Project
                         case GameLevels.SPLASH:
                             splashScreenManager.Visible = true;
                             break;
+                        case GameLevels.CC:
+                            ccManager.Visible = true;
+                            break;
                     }
                     popUpManager.Enabled = true;
                     popUpManager.Visible = true;
                    break;
-                case GameLevels.CC:
-                   ccManager.Enabled = true;
-                   ccManager.Visible = true;
-                   currentLevel = GameLevels.CC;
-                   break;
+                
             }
             prevLevel = currentLevel;
         }
