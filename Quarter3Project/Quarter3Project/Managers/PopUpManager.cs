@@ -36,12 +36,13 @@ namespace Quarter3Project.Managers
             DialogBox = Game.Content.Load <Texture2D>(@"Images/DialogBox");
             buttons = Game.Content.Load<Texture2D>(@"Images/MenuOpts");
 
-            YesNoDialog = new YesNo[3];
+            YesNoDialog = new YesNo[4];
             home = new Home[2];
 
             YesNoDialog[0] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Do you want to quit the game?");
             YesNoDialog[1] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Do you want to return to the menu?");
             YesNoDialog[2] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Continue previous save game?");
+            YesNoDialog[3] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Create new character?");
             
             home[0] = new Home(myGame, buttons, new Vector2((YesNoDialog[0].getPos().X + YesNoDialog[0].getFrameSize().X - 110),
                                                             (YesNoDialog[0].getPos().Y + YesNoDialog[0].getFrameSize().Y) - 55), "4");
@@ -78,6 +79,11 @@ namespace Quarter3Project.Managers
             {
                 YesNoDialog[2].Draw(gameTime, spriteBatch);
                 spriteBatch.DrawString(consolas, YesNoDialog[2].ss, new Vector2(YesNoDialog[2].getPos().X + 10, YesNoDialog[2].getPos().Y + 10), Color.Blue);
+            }
+            else if (myGame.prevButtonPressed == 9)
+            {
+                YesNoDialog[3].Draw(gameTime, spriteBatch);
+                spriteBatch.DrawString(consolas, YesNoDialog[3].ss, new Vector2(YesNoDialog[3].getPos().X + 10, YesNoDialog[3].getPos().Y + 10), Color.Blue);
             }
 
             for (int i = 0; i < home.Length; i++)

@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
-      <Time>2015-02-09T07:56:57.1475716-08:00</Time>
+      <Time>2015-02-10T08:52:40.4706889-08:00</Time>
     </Item>
     <Item>
       <Source>Images\menus.png</Source>
@@ -135,6 +135,33 @@
       <Options>None</Options>
       <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb</Output>
       <Time>2015-02-09T09:32:53.1096463-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccBase.png</Source>
+      <Name>Images\ccBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb</Output>
+      <Time>2015-02-10T08:15:17.0781952-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccStats.png</Source>
+      <Name>Images\ccStats</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb</Output>
+      <Time>2015-02-10T08:19:07.2129452-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\consolassmall.spritefont</Source>
+      <Name>Fonts\consolassmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
+      <Time>2015-02-10T08:22:00.7756703-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
