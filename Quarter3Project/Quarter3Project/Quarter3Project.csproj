@@ -108,9 +108,11 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite.cs" />
+    <Compile Include="EntityTypes\Attack.cs" />
     <Compile Include="EntityTypes\BuildingEntity.cs" />
     <Compile Include="Collision.cs" />
     <Compile Include="Entity.cs" />
+    <Compile Include="EntityTypes\Enemy.cs" />
     <Compile Include="EntityTypes\TestEnemy.cs" />
     <Compile Include="EntityTypes\TestEntity.cs" />
     <Compile Include="Managers\CCManager.cs" />

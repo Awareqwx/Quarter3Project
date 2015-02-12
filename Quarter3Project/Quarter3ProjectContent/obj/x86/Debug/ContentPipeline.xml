@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
-      <Time>2015-02-09T07:56:58-08:00</Time>
+      <Time>2015-02-11T07:18:24.1780285-08:00</Time>
     </Item>
     <Item>
       <Source>Images\menus.png</Source>
@@ -128,13 +128,22 @@
       <Time>2015-02-09T09:32:54-08:00</Time>
     </Item>
     <Item>
-      <Source>Images\EnemyTest.png</Source>
-      <Name>Images\EnemyTest</Name>
+      <Source>Images\ccBase.png</Source>
+      <Name>Images\ccBase</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb</Output>
-      <Time>2015-02-10T08:24:36.2506004-08:00</Time>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb</Output>
+      <Time>2015-02-11T07:18:24.1790134-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccStats.png</Source>
+      <Name>Images\ccStats</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb</Output>
+      <Time>2015-02-11T07:18:24.1800239-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\Consolas.spritefont</Source>
@@ -144,6 +153,33 @@
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\consolassmall.spritefont</Source>
+      <Name>Fonts\consolassmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
+      <Time>2015-02-11T07:18:24.1760271-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Spell.png</Source>
+      <Name>Images\Spell</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb</Output>
+      <Time>2015-02-11T08:57:16.4236933-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard_S.png</Source>
+      <Name>Images\Wizard_S</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb</Output>
+      <Time>2015-02-11T10:12:11.176498-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

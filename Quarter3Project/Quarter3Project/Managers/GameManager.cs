@@ -24,7 +24,7 @@ namespace Quarter3Project
         Texture2D[] testTexture;
         Texture2D[] bT;
 
-        TestEntity[] tests;
+        public TestEntity[] tests;
 
         TestEnemy[] mooks;
 
@@ -32,18 +32,23 @@ namespace Quarter3Project
 
         public List<Collision.mapSegment> buildingSegments;
         public List<Collision.mapSegment> mapSegments;
+
+        public List<Attack> enemyShots;
+        public List<Attack> friendlyShots;
+
         public Collision.mapSegment[] playerSegments = new Collision.mapSegment[4];
 
         KeyboardState keyBoardState;
 
         float timer;
 
-        public GameManager(Game1 game) : base(game)
+        public GameManager(Game1 game)
+            : base(game)
         {
             myGame = game;
         }
 
-        public override void Initialize() 
+        public override void Initialize()
         {
             buildingSegments = new List<Collision.mapSegment>();
 
@@ -53,20 +58,23 @@ namespace Quarter3Project
             mapSegments.Add(new Collision.mapSegment(new Point(960, 0), new Point(0, 0)));
             mapSegments.Add(new Collision.mapSegment(new Point(0, 0), new Point(0, 620)));
             mapSegments.Add(new Collision.mapSegment(new Point(0, 619), new Point(960, 620)));
-            mapSegments.Add(new Collision.mapSegment(new Point(960, 618), new Point(959, 0)));            
+            mapSegments.Add(new Collision.mapSegment(new Point(960, 618), new Point(959, 0)));
 
-            base.Initialize(); 
+            enemyShots = new List<Attack>();
+            friendlyShots = new List<Attack>();
+
+            base.Initialize();
         }
 
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
-            testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C") };
+            testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") };
             bT = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/PotionShopBase"), Game.Content.Load<Texture2D>(@"Images/PotionShopShadow") };
 
             tests = new TestEntity[1];
-            bE = new BuildingEntity[3];
+            bE = new BuildingEntity[1];
 
             for (int i = 0; i < tests.Length; i++)
                 tests[i] = new TestEntity(this, testTexture, new Vector2(10, 10));
@@ -80,8 +88,10 @@ namespace Quarter3Project
             }
 
             bE[0] = new BuildingEntity(this, bT, new Vector2(650, 450));
+            /*
             bE[1] = new BuildingEntity(this, bT, new Vector2(250, 350));
             bE[2] = new BuildingEntity(this, bT, new Vector2(450, 150));
+             */
 
             base.LoadContent();
         }
@@ -111,6 +121,12 @@ namespace Quarter3Project
             for (int i = 0; i < mooks.Length; i++)
                 mooks[i].Update(gameTime);
 
+            for (int i = 0; i < enemyShots.Count; i++)
+                enemyShots[i].Update(gameTime);
+
+            for (int i = 0; i < friendlyShots.Count; i++)
+                friendlyShots[i].Update(gameTime);
+
             base.Update(gameTime);
         }
 
@@ -127,6 +143,12 @@ namespace Quarter3Project
 
             for (int i = 0; i < mooks.Length; i++)
                 mooks[i].Draw(gameTime, spriteBatch);
+
+            for (int i = 0; i < enemyShots.Count; i++)
+                enemyShots[i].Draw(gameTime, spriteBatch);
+
+            for (int i = 0; i < friendlyShots.Count; i++)
+                friendlyShots[i].Draw(gameTime, spriteBatch);
 
             spriteBatch.End();
 

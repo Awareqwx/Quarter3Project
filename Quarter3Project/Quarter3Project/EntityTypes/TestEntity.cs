@@ -8,45 +8,24 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Quarter3Project.EntityTypes
 {
-    class TestEntity : Quarter3Project.Entity
+    public class TestEntity : Quarter3Project.Entity
     {
         KeyboardState keyboardState, prevKBState;
+        MouseState mouse;
         Random r;
-        float timer;
-
-        public TestEntity(GameManager g, Texture2D[] t)
-            : base(t, new Vector2(100, 100), g)
-        {
-            keyboardState = prevKBState = Keyboard.GetState();
-            speed = 5;
-            r = new Random();
-        }
+        float colorTimer;
+        int shotTimer;
+        Texture2D atkTex;
 
         public TestEntity(GameManager g, Texture2D[] t, Vector2 v)
             : base(t, v, g)
         {
             keyboardState = prevKBState = Keyboard.GetState();
+            mouse = Mouse.GetState();
             myGame = g;
             speed = 5;
             r = new Random();
-        }
-
-        public TestEntity(GameManager g, Texture2D t)
-            : base(t, new Vector2(100, 100), g)
-        {
-            keyboardState = prevKBState = Keyboard.GetState();
-            myGame = g;
-            speed = 5;
-            r = new Random();
-        }
-
-        public TestEntity(GameManager g, Texture2D t, Vector2 v)
-            : base(t, v, g)
-        {
-            keyboardState = prevKBState = Keyboard.GetState();
-            myGame = g;
-            speed = 5;
-            r = new Random();
+            atkTex = myGame.Game.Content.Load<Texture2D>(@"Images/Spell");
         }
 
         public override void addAnimations()
@@ -59,13 +38,16 @@ namespace Quarter3Project.EntityTypes
 
         public override void Update(GameTime gameTime)
         {
-            timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            colorTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
+            shotTimer -= gameTime.ElapsedGameTime.Milliseconds;
+
+            mouse = Mouse.GetState();
 
             colors[0] = Color.White;
-            if (timer >= .1F)
+            if (colorTimer >= .1F)
             {
-                colors[1] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
-                timer = 0;
+                colors[1] = colors[2] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
+                colorTimer = 0;
             }
                 speed = 20;
             keyboardState = Keyboard.GetState();
@@ -123,7 +105,13 @@ namespace Quarter3Project.EntityTypes
                     position = prevPosition;
                 }
             }
-            
+
+            if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
+            {
+                Vector2 p = new Vector2(mouse.X - position.X, mouse.Y - position.Y);
+                myGame.friendlyShots.Add(new Attack(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12)));
+                shotTimer = 1000;
+            }
             
             base.Update(gameTime);
         }
