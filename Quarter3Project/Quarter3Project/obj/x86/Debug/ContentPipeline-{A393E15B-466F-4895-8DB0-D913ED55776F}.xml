@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
-      <Time>2015-02-03T07:55:06-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Menu.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
-      <Time>2015-02-04T19:23:02-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\MenuOpts.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
-      <Time>2015-02-06T16:26:05.0914513-08:00</Time>
+      <Time>2015-02-11T20:22:03.8938197-08:00</Time>
     </Item>
     <Item>
       <Source>Images\menus.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
-      <Time>2015-02-04T19:23:04-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Splash.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
-      <Time>2015-02-04T19:23:04-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\buildingTest.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb</Output>
-      <Time>2015-02-05T08:54:40-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\PotionShopBase.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb</Output>
-      <Time>2015-02-06T08:31:00-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\PotionShopShadow.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb</Output>
-      <Time>2015-02-06T08:31:00-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Wizard.png</Source>
@@ -80,7 +80,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb</Output>
-      <Time>2015-02-08T15:41:42.8539979-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\Consolas.spritefont</Source>
@@ -89,7 +89,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
-      <Time>2015-02-06T16:27:37.1471094-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\DialogBox.png</Source>
@@ -98,7 +98,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\DialogBox.xnb</Output>
-      <Time>2015-02-06T16:46:34.6778916-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Wizard_C.png</Source>
@@ -107,7 +107,97 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb</Output>
-      <Time>2015-02-08T15:53:19.3714494-08:00</Time>
+      <Time>2015-02-09T07:56:58-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccImage.png</Source>
+      <Name>Images\ccImage</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb</Output>
+      <Time>2015-02-09T09:02:52-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccArrows.png</Source>
+      <Name>Images\ccArrows</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb</Output>
+      <Time>2015-02-09T09:14:30-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccClass.png</Source>
+      <Name>Images\ccClass</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb</Output>
+      <Time>2015-02-09T09:32:54-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccBase.png</Source>
+      <Name>Images\ccBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccStats.png</Source>
+      <Name>Images\ccStats</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\consolassmall.spritefont</Source>
+      <Name>Fonts\consolassmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Cleric.png</Source>
+      <Name>Images\Cleric</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric.xnb</Output>
+      <Time>2015-02-11T19:50:56.6581425-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Cleric_C.png</Source>
+      <Name>Images\Cleric_C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric_C.xnb</Output>
+      <Time>2015-02-11T19:50:56.8303965-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\knight.png</Source>
+      <Name>Images\knight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb</Output>
+      <Time>2015-02-11T19:50:56.8524304-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Knight_C.png</Source>
+      <Name>Images\Knight_C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight_C.xnb</Output>
+      <Time>2015-02-11T19:50:56.8614446-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>

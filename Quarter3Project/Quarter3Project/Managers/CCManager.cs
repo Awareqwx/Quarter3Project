@@ -13,17 +13,24 @@ namespace Quarter3Project.Managers
         SpriteBatch spriteBatch;
         Texture2D ccImage, ccStats, ccBase, ccClass, ccArrows, menu, menuOpts;
         Game1 myGame;
+        GameManager gm;
         float timer;
-        KeyboardState keyboardState;
+        Keys[] lastKeys;
+        KeyboardState keyboardState, lastKeyboardState;
         SpriteFont consolas, consolassmall;
+
+        Keys[] k = { Keys.A, Keys.B, Keys.C, Keys.D, Keys.E, Keys.F, Keys.G, Keys.H, Keys.I, Keys.J, Keys.K, Keys.L, Keys.M, Keys.N, Keys.O, Keys.P, Keys.Q, Keys.R, Keys.S, Keys.T, Keys.U, Keys.V, Keys.W, Keys.X, Keys.Y, Keys.Z, Keys.Space, Keys.Back };
 
         public CCUI[] ccui;
         public Home[] home;
 
-        public CCManager(Game1 game)
+        double timer2;
+
+        public CCManager(Game1 game, GameManager g)
             : base(game)
         {
             myGame = game;
+            gm = g;
         }
 
         public override void Initialize()
@@ -58,6 +65,27 @@ namespace Quarter3Project.Managers
             base.LoadContent();
         }
 
+        private void HandleKey(GameTime gameTime, Keys currentKey)
+        {
+            string keyString = currentKey.ToString();
+            if (gm.name.Length < 20)
+            {
+                if (currentKey == Keys.Space)
+                    gm.name += " ";
+                else if ((currentKey == Keys.Back || currentKey == Keys.Delete) && gm.name.Length > 0)
+                    gm.name = gm.name.Remove(gm.name.Length - 1);
+                else if (currentKey == Keys.Enter)
+                    return;
+                for (int i = 0; i < 26; i++)
+                {
+                    if (currentKey == k[i])
+                        gm.name += keyString;
+                }
+            }
+            //Set the timer to the current time
+            timer2 = gameTime.TotalGameTime.TotalMilliseconds;
+        }
+
         public override void Update(GameTime gameTime)
         {
             keyboardState = Keyboard.GetState();
@@ -65,6 +93,29 @@ namespace Quarter3Project.Managers
             {
                 home[i].Update(gameTime);
             }
+
+            //Get the current keyboard state and keys that are pressed
+            Keys[] keys = keyboardState.GetPressedKeys();
+
+            foreach (Keys currentKey in keys)
+            {
+                if (currentKey != Keys.None)
+                {
+                    if (lastKeys.Contains(currentKey))
+                    {
+                        if ((gameTime.TotalGameTime.TotalMilliseconds - timer2 > 15000))
+                            HandleKey(gameTime, currentKey);
+                    }
+
+                    else if (!lastKeys.Contains(currentKey))
+                        HandleKey(gameTime, currentKey);
+                }
+            }
+
+            //Save the last keys and pressed keys array
+            lastKeyboardState = keyboardState;
+            lastKeys = keys;
+
 
             timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
             if (timer >= .1)
@@ -79,13 +130,13 @@ namespace Quarter3Project.Managers
 
             ccui[0].Update(gameTime);
 
-            if (myGame.currentChar == 0)
+            if (myGame.currentCharcc == 0)
             {
-                myGame.currentChar = 3;
+                myGame.currentCharcc = 3;
             }
-            else if (myGame.currentChar == 4)
+            else if (myGame.currentCharcc == 4)
             {
-                myGame.currentChar = 1;
+                myGame.currentCharcc = 1;
             }
 
             base.Update(gameTime);
@@ -102,19 +153,21 @@ namespace Quarter3Project.Managers
             spriteBatch.Draw(ccStats, new Vector2(300, 215), Color.White);
             spriteBatch.DrawString(consolas, myGame.buttonPressed.ToString(), new Vector2(50, 110), Color.Cyan);
             spriteBatch.DrawString(consolas, "Stats", new Vector2(305, 220), Color.Blue);
-            if (myGame.currentChar == 3)
+            spriteBatch.DrawString(consolassmall, "Enter your name: ", new Vector2(410, 400), Color.Blue);
+            spriteBatch.DrawString(consolas, "" + gm.name, new Vector2(530, 395), Color.Red);
+            if (myGame.currentCharcc == 3)
             {
                 spriteBatch.DrawString(consolassmall, "\n\nWep Atk: 30\n\nMag Atk: 10\n\nMag Def: 5\n\nWep Def: 15", new Vector2(305, 220), Color.Blue);
                 spriteBatch.DrawString(consolassmall, "This is a Knight. Overpowered tank.", new Vector2(415, 140), Color.Blue);
                 spriteBatch.DrawString(consolas, "Knight", new Vector2(410, 120), Color.Blue);
             }
-            else if (myGame.currentChar == 2)
+            else if (myGame.currentCharcc == 2)
             {
                 spriteBatch.DrawString(consolassmall, "\n\nWep Atk: 10\n\nMag Atk: 20\n\nMag Def: 15\n\nWep Def: 10", new Vector2(305, 220), Color.Blue);
                 spriteBatch.DrawString(consolassmall, "This is a Cleric. Complete garbage.", new Vector2(415, 140), Color.Blue);
                 spriteBatch.DrawString(consolas, "Cleric", new Vector2(410, 120), Color.Blue);
             }
-            else if (myGame.currentChar == 1)
+            else if (myGame.currentCharcc == 1)
             {
                 spriteBatch.DrawString(consolassmall, "\n\nWep Atk: 5\n\nMag Atk: 25\n\nMag Def: 15\n\nWep Def: 10", new Vector2(305, 220), Color.Blue);
                 spriteBatch.DrawString(consolassmall, "This is a Wizard. Overpowered.", new Vector2(415, 140), Color.Blue);
@@ -131,6 +184,8 @@ namespace Quarter3Project.Managers
 
             base.Draw(gameTime);
         }
+
+
 
     }
 }

@@ -23,9 +23,7 @@ namespace Quarter3Project.Managers
 
         public override void Update(GameTime gameTime)
         {
-
-            for (int i = 0; i < m.home.Length; i++)
-                m.home[i].Update(gameTime);
+                       
             
             base.Update(gameTime);
         }

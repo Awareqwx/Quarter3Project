@@ -25,11 +25,11 @@ namespace Quarter3Project
 
         SplashScreenManager splashScreenManager;
         MenuManager menuManager;
-        GameManager gameManager;
+        public GameManager gameManager;
         PopUpManager popUpManager;
         CCManager ccManager;
 
-        public int buttonPressed, prevButtonPressed, currentChar = 1;
+        public int buttonPressed, prevButtonPressed, currentCharcc = 1, currentChar;
         public string msg;
 
 
@@ -54,7 +54,7 @@ namespace Quarter3Project
             splashScreenManager = new SplashScreenManager(this);
             menuManager = new MenuManager(this);
             gameManager = new GameManager(this);
-            ccManager = new CCManager(this);
+            ccManager = new CCManager(this, gameManager);
             popUpManager = new PopUpManager(this);
             
 

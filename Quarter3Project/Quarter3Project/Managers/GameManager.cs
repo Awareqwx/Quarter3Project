@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading;
+using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -18,16 +21,14 @@ namespace Quarter3Project
     {
         SpriteBatch spriteBatch;
         Game1 myGame;
-
         Random RNG;
 
         Texture2D[] testTexture;
         Texture2D[] bT;
+        public SpriteFont consolas;
 
         public TestEntity[] tests;
-
         TestEnemy[] mooks;
-
         public BuildingEntity[] bE;
 
         public List<Collision.mapSegment> buildingSegments;
@@ -41,6 +42,11 @@ namespace Quarter3Project
         KeyboardState keyBoardState;
 
         float timer;
+        public string name;
+
+        FileStream fs;
+
+        
 
         public GameManager(Game1 game)
             : base(game)
@@ -51,6 +57,8 @@ namespace Quarter3Project
         public override void Initialize()
         {
             buildingSegments = new List<Collision.mapSegment>();
+
+            name = "";
 
             RNG = new Random();
 
@@ -70,8 +78,26 @@ namespace Quarter3Project
         {
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
-            testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") };
+            if (File.Exists(@"Save/Save.txt"))
+            {
+                load();
+            
+            
+            if (myGame.currentChar == 1)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C") };
+            }
+            else if (myGame.currentChar == 2)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Cleric"), Game.Content.Load<Texture2D>(@"Images/Cleric_C") };
+            }
+            else if (myGame.currentChar == 3)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Knight"), Game.Content.Load<Texture2D>(@"Images/Knight_C") };
+            }
+
             bT = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/PotionShopBase"), Game.Content.Load<Texture2D>(@"Images/PotionShopShadow") };
+            consolas = Game.Content.Load<SpriteFont>(@"Fonts/consolas");
 
             tests = new TestEntity[1];
             bE = new BuildingEntity[1];
@@ -92,6 +118,8 @@ namespace Quarter3Project
             bE[1] = new BuildingEntity(this, bT, new Vector2(250, 350));
             bE[2] = new BuildingEntity(this, bT, new Vector2(450, 150));
              */
+            
+            }
 
             base.LoadContent();
         }
@@ -153,6 +181,33 @@ namespace Quarter3Project
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        public void save()
+        {
+            fs = new FileStream(@"Save/Save.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            fs.Close();
+            fs = new FileStream(@"Save/Save.txt", FileMode.Truncate, FileAccess.Write);
+            fs.Close();
+            StreamWriter sw = new StreamWriter(@"Save/Save.txt", true, Encoding.ASCII);
+            string names = name;
+            string chr = myGame.currentChar.ToString();
+            sw.WriteLine(names);
+            sw.WriteLine(chr);            
+            sw.Close();
+            LoadContent();
+        }
+
+        public void load()
+        {
+            StreamReader sr = new StreamReader(@"Save/Save.txt", Encoding.ASCII);
+            if (!File.Exists(@"Save/Save.txt"))
+            {
+                myGame.SetCurrentLevel(Game1.GameLevels.UI);
+            }
+            name = sr.ReadLine();
+            myGame.currentChar = Int32.Parse(sr.ReadLine());
+            sr.Close();
         }
     }
 }

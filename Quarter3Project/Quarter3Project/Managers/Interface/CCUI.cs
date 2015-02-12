@@ -22,15 +22,15 @@ namespace Quarter3Project.Managers
 
         public override void Update(GameTime gameTime)
         {
-            if (myGame.currentChar == 1)
+            if (myGame.currentCharcc == 1)
             {
                 setAnimation("CCWIZARD");
             }
-            else if(myGame.currentChar == 2)
+            else if(myGame.currentCharcc == 2)
             {
                 setAnimation("CCCLERIC");
             }
-            else if (myGame.currentChar == 3)
+            else if (myGame.currentCharcc == 3)
             {
                 setAnimation("CCKNIGHT");
             }
