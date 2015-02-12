@@ -23,7 +23,7 @@ namespace Quarter3Project
         Game1 myGame;
         Random RNG;
 
-        Texture2D[] testTexture, testTexture1, testTexture2;
+        Texture2D[] testTexture;
         Texture2D[] bT;
         public SpriteFont consolas;
 
@@ -69,6 +69,11 @@ namespace Quarter3Project
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
+
+            if (File.Exists(@"Save/Save.txt"))
+            {
+                load();
+            
             
             if (myGame.currentChar == 1)
             {
@@ -103,6 +108,8 @@ namespace Quarter3Project
             bE[0] = new BuildingEntity(this, bT, new Vector2(650, 450));
             bE[1] = new BuildingEntity(this, bT, new Vector2(250, 350));
             bE[2] = new BuildingEntity(this, bT, new Vector2(450, 150));
+            
+            }
 
             base.LoadContent();
         }
@@ -164,9 +171,9 @@ namespace Quarter3Project
             string names = name;
             string chr = myGame.currentChar.ToString();
             sw.WriteLine(names);
-            sw.WriteLine(chr);
-            LoadContent();
+            sw.WriteLine(chr);            
             sw.Close();
+            LoadContent();
         }
 
         public void load()

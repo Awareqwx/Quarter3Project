@@ -130,13 +130,13 @@ namespace Quarter3Project.Managers
 
             ccui[0].Update(gameTime);
 
-            if (myGame.currentChar == 0)
+            if (myGame.currentCharcc == 0)
             {
-                myGame.currentChar = 3;
+                myGame.currentCharcc = 3;
             }
-            else if (myGame.currentChar == 4)
+            else if (myGame.currentCharcc == 4)
             {
-                myGame.currentChar = 1;
+                myGame.currentCharcc = 1;
             }
 
             base.Update(gameTime);
@@ -155,19 +155,19 @@ namespace Quarter3Project.Managers
             spriteBatch.DrawString(consolas, "Stats", new Vector2(305, 220), Color.Blue);
             spriteBatch.DrawString(consolassmall, "Enter your name: ", new Vector2(410, 400), Color.Blue);
             spriteBatch.DrawString(consolas, "" + gm.name, new Vector2(530, 395), Color.Red);
-            if (myGame.currentChar == 3)
+            if (myGame.currentCharcc == 3)
             {
                 spriteBatch.DrawString(consolassmall, "\n\nWep Atk: 30\n\nMag Atk: 10\n\nMag Def: 5\n\nWep Def: 15", new Vector2(305, 220), Color.Blue);
                 spriteBatch.DrawString(consolassmall, "This is a Knight. Overpowered tank.", new Vector2(415, 140), Color.Blue);
                 spriteBatch.DrawString(consolas, "Knight", new Vector2(410, 120), Color.Blue);
             }
-            else if (myGame.currentChar == 2)
+            else if (myGame.currentCharcc == 2)
             {
                 spriteBatch.DrawString(consolassmall, "\n\nWep Atk: 10\n\nMag Atk: 20\n\nMag Def: 15\n\nWep Def: 10", new Vector2(305, 220), Color.Blue);
                 spriteBatch.DrawString(consolassmall, "This is a Cleric. Complete garbage.", new Vector2(415, 140), Color.Blue);
                 spriteBatch.DrawString(consolas, "Cleric", new Vector2(410, 120), Color.Blue);
             }
-            else if (myGame.currentChar == 1)
+            else if (myGame.currentCharcc == 1)
             {
                 spriteBatch.DrawString(consolassmall, "\n\nWep Atk: 5\n\nMag Atk: 25\n\nMag Def: 15\n\nWep Def: 10", new Vector2(305, 220), Color.Blue);
                 spriteBatch.DrawString(consolassmall, "This is a Wizard. Overpowered.", new Vector2(415, 140), Color.Blue);

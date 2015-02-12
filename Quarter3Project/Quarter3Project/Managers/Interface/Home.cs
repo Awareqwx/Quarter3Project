@@ -18,7 +18,8 @@ using System.IO;
  * 6 - Esc(Various Uses)
  * 7 - Left Arrow(Char Creation)
  * 8 - Right Arrow(Char Creation)
- * 9 - Ok(Char Creation)
+ * 9 - Create(Char Creation)
+ * 10 - Ok
 */
 
 namespace Quarter3Project.Managers
@@ -106,7 +107,11 @@ namespace Quarter3Project.Managers
                                 case Game1.GameLevels.PLAY:
                                 case Game1.GameLevels.CC:
                                     myGame.SetCurrentLevel(Game1.GameLevels.MENU);
-                                    myGame.gameManager.save();
+                                    if (myGame.prevButtonPressed == 9)
+                                    {
+                                        myGame.currentChar = myGame.currentCharcc;
+                                        myGame.gameManager.save();
+                                    }
                                     break;
                                 case Game1.GameLevels.MENU:
                                     if (myGame.prevButtonPressed == 3)
@@ -162,7 +167,7 @@ namespace Quarter3Project.Managers
                                 timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                                 if (timer > .1F)
                                 {
-                                    myGame.currentChar -= 1;
+                                    myGame.currentCharcc -= 1;
                                     timer = 0;
                                 }
                             }
@@ -183,7 +188,7 @@ namespace Quarter3Project.Managers
                             timer += (float)gameTime.ElapsedGameTime.TotalSeconds;
                             if (timer > .1F)
                             {
-                                myGame.currentChar += 1;
+                                myGame.currentCharcc += 1;
                                 timer = 0;
                             }
                             

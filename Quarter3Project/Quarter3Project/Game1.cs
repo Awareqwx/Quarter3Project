@@ -29,7 +29,7 @@ namespace Quarter3Project
         PopUpManager popUpManager;
         CCManager ccManager;
 
-        public int buttonPressed, prevButtonPressed, currentChar = 1;
+        public int buttonPressed, prevButtonPressed, currentCharcc = 1, currentChar;
         public string msg;
 
 
