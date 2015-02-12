@@ -21,7 +21,7 @@ namespace Quarter3Project.EntityTypes
             size = fs;
             direction = Collision.unitVector(d);
             speed = s;
-            rotation = (float) Math.Atan(direction.Y / direction.X);
+            rotation = (float)Math.Atan(direction.Y / direction.X);
             flip = Math.Sign(direction.X) == 1;
             colors = new Color[] { c };
             addAnimations();
@@ -41,7 +41,7 @@ namespace Quarter3Project.EntityTypes
 
         public override void Update(GameTime gameTime)
         {
-            position += (direction * (float) speed);
+            position += (direction * (float)speed);
             base.Update(gameTime);
         }
 
@@ -66,6 +66,19 @@ namespace Quarter3Project.EntityTypes
         Rectangle getTexRectangle()
         {
             return new Rectangle(currentSet.frameSize.X * currentFrame.X + currentSet.frameSize.X * currentSet.startPos.X, currentSet.frameSize.Y * currentFrame.Y + currentSet.frameSize.Y * currentSet.startPos.Y, currentSet.frameSize.X, currentSet.frameSize.Y);
+        }
+
+        public Point[] getPoints()
+        {
+            Point[] points = new Point[] { new Point((int)position.X, (int)position.Y), new Point((int)(position.X + (Math.Cos(rotation) * currentSet.frameSize.X)), (int)(position.Y + (Math.Sin(rotation) * currentSet.frameSize.X))), new Point((int)(position.X + (Math.Sin(rotation) * currentSet.frameSize.Y)), (int)(position.Y + (Math.Cos(rotation) * currentSet.frameSize.Y))),new Point((int)(position.X + (Math.Cos(rotation) * currentSet.frameSize.X) + (Math.Sin(rotation) * currentSet.frameSize.Y)),(int)(position.Y + (Math.Sin(rotation) * currentSet.frameSize.X) + (Math.Cos(rotation) * currentSet.frameSize.Y)))};
+            return points;
+        }
+
+        public Collision.mapSegment[] getSegments()
+        {
+            Point[] points = getPoints();
+            Collision.mapSegment[] segs = new Collision.mapSegment[] { new Collision.mapSegment(points[0], points[2]), new Collision.mapSegment(points[2], points[3]), new Collision.mapSegment(points[3], points[1]), new Collision.mapSegment(points[1], points[0]) };
+            return segs;
         }
 
     }

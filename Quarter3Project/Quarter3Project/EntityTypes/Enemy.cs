@@ -25,12 +25,10 @@ namespace Quarter3Project.EntityTypes
         public override void Update(GameTime gameTime)
         {
 
-            /*
             for (int i = 0; i < myGame.friendlyShots.Count; i++)
             {
 
             }
-            */
             
             base.Update(gameTime);
         }

@@ -110,7 +110,7 @@ namespace Quarter3Project.EntityTypes
             {
                 Vector2 p = new Vector2(mouse.X - position.X, mouse.Y - position.Y);
                 myGame.friendlyShots.Add(new Attack(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12)));
-                shotTimer = 1000;
+                shotTimer = 500;
             }
             
             base.Update(gameTime);

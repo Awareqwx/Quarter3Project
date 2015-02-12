@@ -168,6 +168,18 @@ namespace Quarter3Project
             return false;
         }
 
+        public static bool CheckCircleRectangleCollision(Circle C, Rectangle R)
+        {
+            Point[] points = new Point[] { new Point(R.X, R.Y), new Point(R.X + R.Width, R.Y), new Point(R.X, R.Y + R.Height), new Point(R.X + R.Width, R.Y + R.Height) };
+            mapSegment[] segs = new mapSegment[] { new mapSegment(points[0], points[2]), new mapSegment(points[2], points[3]), new mapSegment(points[3], points[1]), new mapSegment(points[1], points[0]) };
+            Boolean loopBreak = false;
+            for (int i = 0; i < segs.Length && !loopBreak; i++)
+            {
+                loopBreak = CheckCircleSegmentCollision(C, segs[i]);
+            }
+            return loopBreak;
+        }
+
 
     }
 }
