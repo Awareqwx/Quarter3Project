@@ -7,12 +7,16 @@ Content\Images\buildingTest.xnb
 Content\Images\PotionShopBase.xnb
 Content\Images\PotionShopShadow.xnb
 Content\Images\Wizard.xnb
+Content\Fonts\Consolas.xnb
 Content\Images\DialogBox.xnb
 Content\Images\Wizard_C.xnb
-Content\Fonts\Consolas.xnb
 Content\Images\ccImage.xnb
 Content\Images\ccArrows.xnb
 Content\Images\ccClass.xnb
 Content\Images\ccBase.xnb
 Content\Images\ccStats.xnb
 Content\Fonts\consolassmall.xnb
+Content\Images\Cleric.xnb
+Content\Images\Cleric_C.xnb
+Content\Images\knight.xnb
+Content\Images\Knight_C.xnb

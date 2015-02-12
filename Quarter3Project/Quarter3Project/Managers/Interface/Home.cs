@@ -6,6 +6,7 @@ using Microsoft.Xna.Framework;
 using Quarter3Project;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
+using System.IO;
 
 /*
  * Buttons are as follows:
@@ -112,8 +113,9 @@ namespace Quarter3Project.Managers
                                     {
                                         myGame.Exit();
                                     }
-                                    if (myGame.prevButtonPressed == 2)
+                                    if (myGame.prevButtonPressed == 2 && File.Exists(@"Save/Save.txt"))
                                     {
+                                        myGame.gameManager.load();
                                         myGame.SetCurrentLevel(Game1.GameLevels.PLAY);
                                     }
                                     break;
@@ -207,6 +209,26 @@ namespace Quarter3Project.Managers
                         setAnimation("IDLE9");
                     }
                     break;
+                case "10":
+                    if (collisionRect().Contains(mousePos))
+                    {
+                        setAnimation("PRESS10");
+                        if (mouseState.LeftButton == ButtonState.Pressed)
+                        {
+                            myGame.buttonPressed = 10;
+                            switch (myGame.currentLevel)
+                            {
+                                case Game1.GameLevels.MENU:
+                                    myGame.SetCurrentLevel(Game1.GameLevels.MENU);
+                                    break;
+                            }
+                        }
+                    }
+                    else
+                    {
+                        setAnimation("IDLE10");
+                    }
+                    break;
             }            
                         
             prevMouseState = mouseState;
@@ -231,6 +253,8 @@ namespace Quarter3Project.Managers
             AnimationSet rightArrow = new AnimationSet("RIGHT", new Point(25, 30), new Point(1, 1), new Point(1, 0), 0, false);
             AnimationSet idle9 = new AnimationSet("IDLE9", new Point(100, 45), new Point(1, 1), new Point(0, 5), 0, false);
             AnimationSet press9 = new AnimationSet("PRESS9", new Point(100, 45), new Point(1, 1), new Point(1, 5), 0, false);
+            AnimationSet idle10 = new AnimationSet("IDLE10", new Point(100, 45), new Point(1, 1), new Point(0, 6), 0, false);
+            AnimationSet press10 = new AnimationSet("PRESS10", new Point(100, 45), new Point(1, 1), new Point(1, 6), 0, false);
             sets.Add(idle);
             sets.Add(press);
             sets.Add(idle2);
@@ -245,6 +269,8 @@ namespace Quarter3Project.Managers
             sets.Add(rightArrow);
             sets.Add(idle9);
             sets.Add(press9);
+            sets.Add(idle10);
+            sets.Add(press10);
             setAnimation("IDLE1");
             base.addAnimations();
         }

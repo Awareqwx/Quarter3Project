@@ -23,7 +23,7 @@ namespace Quarter3Project
         Game1 myGame;
         Random RNG;
 
-        Texture2D[] testTexture;
+        Texture2D[] testTexture, testTexture1, testTexture2;
         Texture2D[] bT;
         public SpriteFont consolas;
 
@@ -69,8 +69,20 @@ namespace Quarter3Project
         protected override void LoadContent()
         {
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
+            
+            if (myGame.currentChar == 1)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C") };
+            }
+            else if (myGame.currentChar == 2)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Cleric"), Game.Content.Load<Texture2D>(@"Images/Cleric_C") };
+            }
+            else if (myGame.currentChar == 3)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Knight"), Game.Content.Load<Texture2D>(@"Images/Knight_C") };
+            }
 
-            testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C") };
             bT = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/PotionShopBase"), Game.Content.Load<Texture2D>(@"Images/PotionShopShadow") };
             consolas = Game.Content.Load<SpriteFont>(@"Fonts/consolas");
 
@@ -153,14 +165,20 @@ namespace Quarter3Project
             string chr = myGame.currentChar.ToString();
             sw.WriteLine(names);
             sw.WriteLine(chr);
+            LoadContent();
             sw.Close();
         }
 
         public void load()
         {
             StreamReader sr = new StreamReader(@"Save/Save.txt", Encoding.ASCII);
+            if (!File.Exists(@"Save/Save.txt"))
+            {
+                myGame.SetCurrentLevel(Game1.GameLevels.UI);
+            }
             name = sr.ReadLine();
             myGame.currentChar = Int32.Parse(sr.ReadLine());
+            sr.Close();
         }
     }
 }

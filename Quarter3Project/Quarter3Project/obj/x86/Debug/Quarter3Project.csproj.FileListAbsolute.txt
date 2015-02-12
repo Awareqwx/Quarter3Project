@@ -47,3 +47,13 @@ C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Projec
 \\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb
 \\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb
 \\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric_C.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
+C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight_C.xnb
