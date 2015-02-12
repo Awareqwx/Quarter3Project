@@ -57,6 +57,14 @@ namespace Quarter3Project.EntityTypes
             base.addAnimations();
         }
 
+        
+
+        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
+        {
+            spriteBatch.DrawString(myGame.consolas, myGame.name, new Vector2(position.X, position.Y - 25), Color.Beige);
+            base.Draw(gameTime, spriteBatch);
+        }
+
         public override void Update(GameTime gameTime)
         {
             timer += (float)gameTime.ElapsedGameTime.TotalSeconds;

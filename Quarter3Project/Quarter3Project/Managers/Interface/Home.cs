@@ -105,6 +105,7 @@ namespace Quarter3Project.Managers
                                 case Game1.GameLevels.PLAY:
                                 case Game1.GameLevels.CC:
                                     myGame.SetCurrentLevel(Game1.GameLevels.MENU);
+                                    myGame.gameManager.save();
                                     break;
                                 case Game1.GameLevels.MENU:
                                     if (myGame.prevButtonPressed == 3)

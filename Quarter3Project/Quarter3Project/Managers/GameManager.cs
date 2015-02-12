@@ -1,6 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Text;
+using System.Threading;
+using System.IO;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Audio;
 using Microsoft.Xna.Framework.Content;
@@ -18,16 +21,14 @@ namespace Quarter3Project
     {
         SpriteBatch spriteBatch;
         Game1 myGame;
-
         Random RNG;
 
         Texture2D[] testTexture;
         Texture2D[] bT;
+        public SpriteFont consolas;
 
         TestEntity[] tests;
-
         TestEnemy[] mooks;
-
         public BuildingEntity[] bE;
 
         public List<Collision.mapSegment> buildingSegments;
@@ -37,6 +38,11 @@ namespace Quarter3Project
         KeyboardState keyBoardState;
 
         float timer;
+        public string name;
+
+        FileStream fs;
+
+        
 
         public GameManager(Game1 game) : base(game)
         {
@@ -46,6 +52,8 @@ namespace Quarter3Project
         public override void Initialize() 
         {
             buildingSegments = new List<Collision.mapSegment>();
+
+            name = "";
 
             RNG = new Random();
 
@@ -64,6 +72,7 @@ namespace Quarter3Project
 
             testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C") };
             bT = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/PotionShopBase"), Game.Content.Load<Texture2D>(@"Images/PotionShopShadow") };
+            consolas = Game.Content.Load<SpriteFont>(@"Fonts/consolas");
 
             tests = new TestEntity[1];
             bE = new BuildingEntity[3];
@@ -131,6 +140,27 @@ namespace Quarter3Project
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+
+        public void save()
+        {
+            fs = new FileStream(@"Save/Save.txt", FileMode.OpenOrCreate, FileAccess.Write);
+            fs.Close();
+            fs = new FileStream(@"Save/Save.txt", FileMode.Truncate, FileAccess.Write);
+            fs.Close();
+            StreamWriter sw = new StreamWriter(@"Save/Save.txt", true, Encoding.ASCII);
+            string names = name;
+            string chr = myGame.currentChar.ToString();
+            sw.WriteLine(names);
+            sw.WriteLine(chr);
+            sw.Close();
+        }
+
+        public void load()
+        {
+            StreamReader sr = new StreamReader(@"Save/Save.txt", Encoding.ASCII);
+            name = sr.ReadLine();
+            myGame.currentChar = Int32.Parse(sr.ReadLine());
         }
     }
 }

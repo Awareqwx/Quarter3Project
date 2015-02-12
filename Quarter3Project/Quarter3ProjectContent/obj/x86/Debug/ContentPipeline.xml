@@ -7,7 +7,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -16,7 +16,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -25,8 +25,8 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
-      <Time>2015-02-09T07:56:58-08:00</Time>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
     </Item>
     <Item>
       <Source>Images\menus.png</Source>
@@ -34,7 +34,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -43,7 +43,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -52,7 +52,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -61,7 +61,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -70,7 +70,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -79,7 +79,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -88,7 +88,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\DialogBox.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\DialogBox.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -97,7 +97,16 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb</Output>
+      <Time>2015-02-09T07:56:58-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Consolas.spritefont</Source>
+      <Name>Fonts\Consolas</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
       <Time>2015-02-09T07:56:58-08:00</Time>
     </Item>
     <Item>
@@ -106,7 +115,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb</Output>
       <Time>2015-02-09T09:02:52-08:00</Time>
     </Item>
     <Item>
@@ -115,7 +124,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb</Output>
       <Time>2015-02-09T09:14:30-08:00</Time>
     </Item>
     <Item>
@@ -124,26 +133,35 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb</Output>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb</Output>
       <Time>2015-02-09T09:32:54-08:00</Time>
     </Item>
     <Item>
-      <Source>Images\EnemyTest.png</Source>
-      <Name>Images\EnemyTest</Name>
+      <Source>Images\ccBase.png</Source>
+      <Name>Images\ccBase</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb</Output>
-      <Time>2015-02-10T08:24:36.2506004-08:00</Time>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
     </Item>
     <Item>
-      <Source>Fonts\Consolas.spritefont</Source>
-      <Name>Fonts\Consolas</Name>
+      <Source>Images\ccStats.png</Source>
+      <Name>Images\ccStats</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\consolassmall.spritefont</Source>
+      <Name>Fonts\consolassmall</Name>
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
-      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
-      <Time>2015-02-09T07:56:58-08:00</Time>
+      <Output>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
+      <Time>2015-02-11T07:18:26-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
@@ -151,39 +169,39 @@
       <TargetProfile>HiDef</TargetProfile>
       <BuildConfiguration>Debug</BuildConfiguration>
       <CompressContent>false</CompressContent>
-      <RootDirectory>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3ProjectContent\</RootDirectory>
-      <LoggerRootDirectory>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\</LoggerRootDirectory>
-      <IntermediateDirectory>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3ProjectContent\obj\x86\Debug\</IntermediateDirectory>
-      <OutputDirectory>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\</OutputDirectory>
+      <RootDirectory>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3ProjectContent\</RootDirectory>
+      <LoggerRootDirectory>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\</LoggerRootDirectory>
+      <IntermediateDirectory>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3ProjectContent\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\</OutputDirectory>
     </Settings>
     <Assemblies>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
-        <Value>2010-08-23T13:41:18-07:00</Value>
+        <Key>C:\Program Files\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2010-08-23T12:41:18-07:00</Value>
       </Assembly>
       <Assembly>
-        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
-        <Value>2014-12-15T21:59:22.3820181-08:00</Value>
+        <Key>C:\WINDOWS\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-04-01T14:35:52.1488829-07:00</Value>
       </Assembly>
     </Assemblies>
   </Asset>

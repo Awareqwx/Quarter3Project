@@ -42,7 +42,7 @@ namespace Quarter3Project.Managers
             YesNoDialog[0] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Do you want to quit the game?");
             YesNoDialog[1] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Do you want to return to the menu?");
             YesNoDialog[2] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Continue previous save game?");
-            YesNoDialog[3] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Create new character?");
+            YesNoDialog[3] = new YesNo(myGame, DialogBox, new Vector2((myGame.GraphicsDevice.Viewport.Width / 2) - 300, (myGame.GraphicsDevice.Viewport.Height / 2) - 100), this, "Create new character? This will delete any previous\ncharacters.");
             
             home[0] = new Home(myGame, buttons, new Vector2((YesNoDialog[0].getPos().X + YesNoDialog[0].getFrameSize().X - 110),
                                                             (YesNoDialog[0].getPos().Y + YesNoDialog[0].getFrameSize().Y) - 55), "4");
