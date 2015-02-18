@@ -18,3 +18,4 @@ Content\Fonts\Consolas.xnb
 Content\Fonts\consolassmall.xnb
 Content\Images\Spell.xnb
 Content\Images\Wizard_S.xnb
+Content\Images\EnemyTest.xnb

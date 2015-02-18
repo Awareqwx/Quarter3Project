@@ -81,5 +81,12 @@ namespace Quarter3Project.EntityTypes
             return segs;
         }
 
+        public override Collision.Ellipse getEllipse()
+        {
+            Collision.Ellipse E = base.getEllipse();
+            E.rotation = rotation;
+            return E;
+        }
+
     }
 }

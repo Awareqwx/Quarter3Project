@@ -27,7 +27,10 @@ namespace Quarter3Project.EntityTypes
 
             for (int i = 0; i < myGame.friendlyShots.Count; i++)
             {
-
+                if(Collision.CheckEllipseEllipseCollision(getEllipse(), myGame.friendlyShots[i].getEllipse()))
+                {
+                    colors[0].R += 10;
+                }
             }
             
             base.Update(gameTime);

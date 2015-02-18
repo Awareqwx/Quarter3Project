@@ -64,6 +64,22 @@ namespace Quarter3Project
             }
         }
 
+        public struct Ellipse
+        {
+            public Vector2 P;
+            public double radX;
+            public double radY;
+            public double rotation;
+
+            public Ellipse(Vector2 p, double x, double y, double r)
+            {
+                P = p;
+                radX = x;
+                radY = y;
+                rotation = r;
+            }
+        }
+
         public static float magnitude(Vector2 v)
         {
             return (float)Math.Sqrt((v.X * v.X) + (v.Y * v.Y));
@@ -133,7 +149,6 @@ namespace Quarter3Project
             return false;
         }
 
-
         public static bool CheckSegmentSegmentCollision(mapSegment s1, mapSegment s2)
         {
             line2D l1, l2;
@@ -179,7 +194,36 @@ namespace Quarter3Project
             }
             return loopBreak;
         }
+        
+        public static bool CheckEllipseEllipseCollision(Ellipse E, Ellipse F)
+        {
+            Vector2 v = new Vector2(F.P.X - E.P.X, F.P.Y - E.P.Y);
+            double a = getAngleFromVector(v);
+            double b = getAngleFromVector(new Vector2(-v.X, -v.Y));
+            double Er, Fr;
+            Er = Math.Sqrt(Math.Pow((Math.Cos(a - E.rotation) * E.radX), 2) + Math.Pow(Math.Cos(90 - a - E.rotation) * E.radY, 2));
+            Fr = Math.Sqrt(Math.Pow((Math.Cos(b - F.rotation) * F.radX), 2) + Math.Pow(Math.Cos(90 - b - F.rotation) * F.radY, 2));
+            double z = Er + Fr;
+            double x = magnitude(v);
+            if (Er + Fr >= magnitude(v))
+            {
+                Console.WriteLine("It worked!");
+                return true;
+            }
+            return false;
+        }
 
-
+        public static double getAngleFromVector(Vector2 v)
+        {
+            double a = Math.Atan(v.Y / v.X);
+            if (Math.Sign(v.Y) == 1)
+            {
+                return a;
+            }
+            else
+            {
+                return 360 - a;
+            }
+        }
     }
 }

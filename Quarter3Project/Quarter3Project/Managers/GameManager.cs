@@ -85,7 +85,7 @@ namespace Quarter3Project
             
             if (myGame.currentChar == 1)
             {
-                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C") };
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") };
             }
             else if (myGame.currentChar == 2)
             {
@@ -150,11 +150,24 @@ namespace Quarter3Project
                 mooks[i].Update(gameTime);
 
             for (int i = 0; i < enemyShots.Count; i++)
+            {
                 enemyShots[i].Update(gameTime);
+                if (enemyShots[i].getPos().X > 960 || enemyShots[i].getPos().X < 0 || enemyShots[i].getPos().Y > 620 || enemyShots[i].getPos().Y < 0)
+                {
+                    enemyShots.RemoveAt(i);
+                    i--;
+                }
+            }
 
             for (int i = 0; i < friendlyShots.Count; i++)
+            {
                 friendlyShots[i].Update(gameTime);
-
+                if (friendlyShots[i].getPos().X > 960 || friendlyShots[i].getPos().X < 0 || friendlyShots[i].getPos().Y > 620 || friendlyShots[i].getPos().Y < 0)
+                {
+                    friendlyShots.RemoveAt(i);
+                    i--;
+                }
+            }
             base.Update(gameTime);
         }
 

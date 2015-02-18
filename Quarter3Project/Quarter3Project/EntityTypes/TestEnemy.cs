@@ -13,7 +13,7 @@ namespace Quarter3Project.EntityTypes
         KeyboardState keyboardState, prevKBState;
         Random r;
         int timer;
-        int shotTime = 500;
+        int shotTime = 1;
 
         Texture2D atk;
 
@@ -61,6 +61,7 @@ namespace Quarter3Project.EntityTypes
             AnimationSet idle = new AnimationSet("IDLE", new Point(100, 100), new Point(1, 1), new Point(0, 0), 16, false);
             sets.Add(idle);
             setAnimation("IDLE");
+            colors[0] = Color.Black;
             base.addAnimations();
         }
 
