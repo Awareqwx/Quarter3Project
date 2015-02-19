@@ -197,33 +197,28 @@ namespace Quarter3Project
         
         public static bool CheckEllipseEllipseCollision(Ellipse E, Ellipse F)
         {
+            /* 
+             * rotation = (float)Math.Atan(direction.Y / direction.X);
+             * flip = Math.Sign(direction.X) == 1;
+             */
             Vector2 v = new Vector2(F.P.X - E.P.X, F.P.Y - E.P.Y);
             double a = getAngleFromVector(v);
             double b = getAngleFromVector(new Vector2(-v.X, -v.Y));
             double Er, Fr;
-            Er = Math.Sqrt(Math.Pow((Math.Cos(a - E.rotation) * E.radX), 2) + Math.Pow(Math.Cos(90 - a - E.rotation) * E.radY, 2));
-            Fr = Math.Sqrt(Math.Pow((Math.Cos(b - F.rotation) * F.radX), 2) + Math.Pow(Math.Cos(90 - b - F.rotation) * F.radY, 2));
+            Er = Math.Sqrt(Math.Pow((Math.Cos(a + E.rotation) * E.radX), 2) + Math.Pow(Math.Cos(90 - a + E.rotation) * E.radY, 2));
+            Fr = Math.Sqrt(Math.Pow((Math.Cos(b + F.rotation) * F.radX), 2) + Math.Pow(Math.Cos(90 - b + F.rotation) * F.radY, 2));
             double z = Er + Fr;
             double x = magnitude(v);
             if (Er + Fr >= magnitude(v))
             {
-                Console.WriteLine("It worked!");
-                return true;
+               return true;
             }
             return false;
         }
 
         public static double getAngleFromVector(Vector2 v)
         {
-            double a = Math.Atan(v.Y / v.X);
-            if (Math.Sign(v.Y) == 1)
-            {
-                return a;
-            }
-            else
-            {
-                return 360 - a;
-            }
+            return Math.Atan2(v.Y, v.X) * 180 / Math.PI;
         }
     }
 }

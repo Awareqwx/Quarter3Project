@@ -13,7 +13,7 @@ namespace Quarter3Project.EntityTypes
         KeyboardState keyboardState, prevKBState;
         Random r;
         int timer;
-        int shotTime = 1;
+        int shotTime = 100;
 
         Texture2D atk;
 

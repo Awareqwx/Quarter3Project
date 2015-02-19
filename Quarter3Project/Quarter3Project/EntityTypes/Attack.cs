@@ -21,7 +21,7 @@ namespace Quarter3Project.EntityTypes
             size = fs;
             direction = Collision.unitVector(d);
             speed = s;
-            rotation = (float)Math.Atan(direction.Y / direction.X);
+            rotation = (float)(Math.Atan2(direction.Y, direction.X));
             flip = Math.Sign(direction.X) == 1;
             colors = new Color[] { c };
             addAnimations();
@@ -84,7 +84,7 @@ namespace Quarter3Project.EntityTypes
         public override Collision.Ellipse getEllipse()
         {
             Collision.Ellipse E = base.getEllipse();
-            E.rotation = rotation;
+            E.rotation = rotation * 180 / Math.PI;
             return E;
         }
 
