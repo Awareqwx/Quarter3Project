@@ -25,7 +25,7 @@ namespace Quarter3Project
         Game1 myGame;
         public int classType, prevClassType, health, mana, exp;
         KeyboardState keyBoardState, prevKeyState;
-        public List<Attack> enemyShots, friendlyShots;
+        public List<Projectile> enemyShots, friendlyShots;
         public List<Collision.mapSegment> buildingSegments, mapSegments;
         Random RNG;
         SpriteBatch spriteBatch;   
@@ -47,8 +47,8 @@ namespace Quarter3Project
             buildingSegments = new List<Collision.mapSegment>();
             RNG = new Random();
             mapSegments = new List<Collision.mapSegment>();
-            enemyShots = new List<Attack>();
-            friendlyShots = new List<Attack>();
+            enemyShots = new List<Projectile>();
+            friendlyShots = new List<Projectile>();
 
             mapSegments.Add(new Collision.mapSegment(new Point(960, 0), new Point(0, 0)));
             mapSegments.Add(new Collision.mapSegment(new Point(0, 0), new Point(0, 620)));

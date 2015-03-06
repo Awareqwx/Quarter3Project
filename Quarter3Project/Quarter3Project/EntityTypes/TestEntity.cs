@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Quarter3Project.EntityTypes
 {
-    public class TestEntity : Quarter3Project.Entity
+    public class TestEntity : Player
     {
         KeyboardState keyboardState, prevKBState;
         MouseState mouse;
@@ -17,7 +17,7 @@ namespace Quarter3Project.EntityTypes
         int shotTimer;
         Texture2D atkTex;
         int walkDir;
-        Boolean isAttacking, isWalking;
+        Boolean isProjectileing, isWalking;
 
         public TestEntity(GameManager g, Texture2D[] t, Vector2 v)
             : base(t, v, g)
@@ -82,12 +82,12 @@ namespace Quarter3Project.EntityTypes
                     colorTimer = 0;
                 }
             }
-            /*colors[1] = Color.Gold;
-            colors[2] = Color.LightGray;*/
+            colors[1] = Color.Gold;
+            colors[2] = Color.Cyan;
                 speed = 3;
             keyboardState = Keyboard.GetState();
             isWalking = false;
-            if (!isAttacking)
+            if (!isProjectileing)
             {
                 if (keyboardState.IsKeyDown(Keys.S))
                 {
@@ -147,7 +147,7 @@ namespace Quarter3Project.EntityTypes
             {
                 if (animIsOver)
                 {
-                    isAttacking = false;
+                    isProjectileing = false;
                     if (walkDir == 3)
                     {
                         position.X += 30;
@@ -198,7 +198,7 @@ namespace Quarter3Project.EntityTypes
                 if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
                 {
                     Vector2 p = new Vector2(mouse.X - position.X, mouse.Y - position.Y);
-                    myGame.friendlyShots.Add(new Attack(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12)));
+                    myGame.friendlyShots.Add(new Projectile(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12)));
                     shotTimer = 100;
                 }
             }
@@ -206,7 +206,7 @@ namespace Quarter3Project.EntityTypes
             {
                 if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
                 {
-                    if (!isAttacking)
+                    if (!isProjectileing)
                     {
                         setAnimation("IDLEF");
                     }
@@ -230,8 +230,9 @@ namespace Quarter3Project.EntityTypes
                             setAnimation("ATKF");
                             break;
                     }
-                    isAttacking = true;
+                    isProjectileing = true;
                 }
+                myGame.friendlyShots.Add(new 
             }
 
             base.Update(gameTime);

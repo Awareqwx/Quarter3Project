@@ -152,7 +152,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb</Output>
-      <Time>2015-02-24T20:47:10-08:00</Time>
+      <Time>2015-03-03T09:06:02-08:00</Time>
     </Item>
     <Item>
       <Source>Images\passive.png</Source>
@@ -206,7 +206,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
-      <Time>2015-02-20T08:53:12-08:00</Time>
+      <Time>2015-03-06T08:27:39.8347124-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\consolassmall.spritefont</Source>
@@ -215,7 +215,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-06T08:27:39.8176965-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ConsolasLarge.spritefont</Source>
@@ -224,7 +224,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb</Output>
-      <Time>2015-02-20T08:53:12-08:00</Time>
+      <Time>2015-03-06T08:27:39.8227039-08:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ConsolasTiny.spritefont</Source>
@@ -233,7 +233,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb</Output>
-      <Time>2015-02-25T09:12:34-08:00</Time>
+      <Time>2015-03-06T08:27:39.8077083-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Knight\Knight_Armor.png</Source>
@@ -242,7 +242,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Armor.xnb</Output>
-      <Time>2015-03-03T09:52:24.1791917-08:00</Time>
+      <Time>2015-03-03T09:52:24-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Knight\Knight_Base.png</Source>
@@ -251,7 +251,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Base.xnb</Output>
-      <Time>2015-03-03T09:52:24.1791917-08:00</Time>
+      <Time>2015-03-03T09:52:24-08:00</Time>
     </Item>
     <Item>
       <Source>Images\Knight\Knight_Sword.png</Source>
@@ -260,7 +260,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Sword.xnb</Output>
-      <Time>2015-03-03T09:52:24.1791917-08:00</Time>
+      <Time>2015-03-03T09:52:24-08:00</Time>
     </Item>
     <Item>
       <Source>Images\knight.jpg</Source>
@@ -269,7 +269,34 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb</Output>
-      <Time>2015-03-03T09:12:00.6919024-08:00</Time>
+      <Time>2015-03-03T09:12:00-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard\Wizard_Base.png</Source>
+      <Name>Images\Wizard\Wizard_Base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Base.xnb</Output>
+      <Time>2015-03-06T09:18:50.6129438-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard\Wizard_Cloak.png</Source>
+      <Name>Images\Wizard\Wizard_Cloak</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Cloak.xnb</Output>
+      <Time>2015-03-06T09:19:26.9881749-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard\Wizard_Staff.png</Source>
+      <Name>Images\Wizard\Wizard_Staff</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Staff.xnb</Output>
+      <Time>2015-03-06T09:20:36.8382507-08:00</Time>
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
