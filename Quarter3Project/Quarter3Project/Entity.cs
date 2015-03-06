@@ -38,7 +38,7 @@ namespace Quarter3Project
 
         public virtual Collision.Ellipse getEllipse()
         {
-            Collision.Ellipse E = new Collision.Ellipse(new Vector2(position.X + currentSet.frameSize.X, position.Y + currentSet.frameSize.Y), currentSet.frameSize.X / 2, currentSet.frameSize.Y / 2, 0);
+            Collision.Ellipse E = new Collision.Ellipse(new Vector2(position.X + (currentSet.frameSize.X / 2), position.Y + (currentSet.frameSize.Y / 2)), currentSet.frameSize.X / 2, currentSet.frameSize.Y / 2, 0);
             return E;
         }
     }

@@ -1,0 +1,6 @@
+Content\Fonts\Consolas.xnb
+Content\Fonts\ConsolasLarge.xnb
+Content\Images\ccArrows.xnb
+Content\Images\Healer.xnb
+Content\Images\Knight.xnb
+Content\Images\Wizard.xnb

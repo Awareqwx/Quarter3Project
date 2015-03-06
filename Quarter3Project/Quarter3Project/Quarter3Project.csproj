@@ -108,6 +108,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="AnimatedSprite.cs" />
+    <Compile Include="ButtonEvents.cs" />
     <Compile Include="EntityTypes\Attack.cs" />
     <Compile Include="EntityTypes\BuildingEntity.cs" />
     <Compile Include="Collision.cs" />
@@ -115,12 +116,12 @@
     <Compile Include="EntityTypes\Enemy.cs" />
     <Compile Include="EntityTypes\TestEnemy.cs" />
     <Compile Include="EntityTypes\TestEntity.cs" />
-    <Compile Include="Managers\CCManager.cs" />
+    <Compile Include="GameLevels.cs" />
+    <Compile Include="ItemData.cs" />
+    <Compile Include="Managers\CreateManager.cs" />
+    <Compile Include="Managers\DebugManager.cs" />
     <Compile Include="Managers\GameManager.cs" />
-    <Compile Include="Managers\Interface\CCUI.cs" />
-    <Compile Include="Managers\Interface\YesNo.cs" />
     <Compile Include="Managers\MenuManager.cs" />
-    <Compile Include="Managers\Interface\Home.cs" />
     <Compile Include="Managers\PopUpManager.cs" />
     <Compile Include="Managers\SplashScreenManager.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,7 +131,6 @@
   <ItemGroup>
     <Content Include="Game.ico" />
     <Content Include="GameThumbnail.png" />
-    <None Include="Save\Save.txt" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Quarter3ProjectContent\Quarter3ProjectContent.contentproj">

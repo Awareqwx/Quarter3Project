@@ -63,6 +63,7 @@ namespace Quarter3Project
             collisionCircle.P.Y = (float) (position.Y + collisionCircle.R);
             addAnimations();
         }
+
         public AnimatedSprite(Texture2D t)
         {
             textures = new Texture2D[]{t};
@@ -146,6 +147,11 @@ namespace Quarter3Project
         public Vector2 getPos()
         {
             return position;
+        }
+
+        public void setPos(int x, int y)
+        {
+            position = new Vector2(x, y);
         }
 
         public Point getFrameSize()

@@ -43,7 +43,7 @@ namespace Quarter3Project.Managers
             countdown -= gameTime.ElapsedGameTime.Milliseconds;
             if (countdown <= 0)
             {
-                myGame.SetCurrentLevel(Game1.GameLevels.MENU);
+                myGame.SetCurrentLevel(GameLevels.GameLevels.MENU);
             }
 
             base.Update(gameTime);

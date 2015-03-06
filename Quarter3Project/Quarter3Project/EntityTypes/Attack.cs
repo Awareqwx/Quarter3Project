@@ -12,7 +12,6 @@ namespace Quarter3Project.EntityTypes
 
         Vector2 direction;
         float rotation;
-        Boolean flip;
         public Point size;
 
         public Attack(Texture2D t, Vector2 v, GameManager g, Vector2 d, float s, Color c, Point fs)
@@ -22,7 +21,6 @@ namespace Quarter3Project.EntityTypes
             direction = Collision.unitVector(d);
             speed = s;
             rotation = (float)(Math.Atan2(direction.Y, direction.X));
-            flip = Math.Sign(direction.X) == 1;
             colors = new Color[] { c };
             addAnimations();
         }
@@ -34,7 +32,6 @@ namespace Quarter3Project.EntityTypes
             direction = Collision.unitVector(d);
             speed = s;
             rotation = (float)Math.Atan(direction.Y / direction.X);
-            flip = Math.Sign(direction.X) == 1;
             colors = c;
             addAnimations();
         }
@@ -60,7 +57,7 @@ namespace Quarter3Project.EntityTypes
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-            spriteBatch.Draw(textures[0], position, getTexRectangle(), colors[0], rotation, new Vector2(0, 0), new Vector2(1, 1), flip ? SpriteEffects.None : SpriteEffects.FlipHorizontally, 0);
+            spriteBatch.Draw(textures[0], position, getTexRectangle(), colors[0], rotation, new Vector2(0, 0), new Vector2(1, 1), SpriteEffects.None, 0);
         }
 
         Rectangle getTexRectangle()
