@@ -82,8 +82,8 @@ namespace Quarter3Project.EntityTypes
                     colorTimer = 0;
                 }
             }
-            scolors[1] = Color.Gold;
-            colors[2] = Color.LightGray;
+            /*colors[1] = Color.Gold;
+            colors[2] = Color.LightGray;*/
                 speed = 3;
             keyboardState = Keyboard.GetState();
             isWalking = false;
