@@ -232,7 +232,7 @@ namespace Quarter3Project.EntityTypes
                     }
                     isProjectileing = true;
                 }
-                myGame.friendlyShots.Add(new 
+                //myGame.friendlyShots.Add(new 
             }
 
             base.Update(gameTime);
