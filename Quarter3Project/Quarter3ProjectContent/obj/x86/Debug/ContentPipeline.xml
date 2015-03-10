@@ -8,7 +8,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-09T08:07:00.4563603-07:00</Time>
     </Item>
     <Item>
       <Source>Images\Menu.png</Source>
@@ -17,7 +17,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-09T08:07:00.4513572-07:00</Time>
     </Item>
     <Item>
       <Source>Images\MenuOpts.png</Source>
@@ -26,7 +26,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-09T08:07:00.4533338-07:00</Time>
     </Item>
     <Item>
       <Source>Images\menus.png</Source>
@@ -35,7 +35,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
-      <Time>2015-02-20T08:22:46-08:00</Time>
+      <Time>2015-03-09T08:07:00.4883836-07:00</Time>
     </Item>
     <Item>
       <Source>Images\Splash.png</Source>
@@ -44,7 +44,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
-      <Time>2015-02-20T08:22:46-08:00</Time>
+      <Time>2015-03-09T08:07:00.4683693-07:00</Time>
     </Item>
     <Item>
       <Source>Images\buildingTest.png</Source>
@@ -53,7 +53,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb</Output>
-      <Time>2015-02-20T08:22:46-08:00</Time>
+      <Time>2015-03-09T08:07:00.4853814-07:00</Time>
     </Item>
     <Item>
       <Source>Images\PotionShopBase.png</Source>
@@ -62,7 +62,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-09T08:07:00.4593625-07:00</Time>
     </Item>
     <Item>
       <Source>Images\PotionShopShadow.png</Source>
@@ -71,7 +71,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-09T08:07:00.4613635-07:00</Time>
     </Item>
     <Item>
       <Source>Images\Wizard.png</Source>
@@ -89,7 +89,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb</Output>
-      <Time>2015-02-20T08:22:46-08:00</Time>
+      <Time>2015-03-09T08:07:00.4703498-07:00</Time>
     </Item>
     <Item>
       <Source>Images\ccArrows.png</Source>
@@ -107,7 +107,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb</Output>
-      <Time>2015-02-20T08:22:46-08:00</Time>
+      <Time>2015-03-09T08:07:00.463338-07:00</Time>
     </Item>
     <Item>
       <Source>Images\Wizard_S.png</Source>
@@ -116,7 +116,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb</Output>
-      <Time>2015-02-20T08:22:46-08:00</Time>
+      <Time>2015-03-09T08:07:00.4823575-07:00</Time>
     </Item>
     <Item>
       <Source>Images\EnemyTest.png</Source>
@@ -125,7 +125,7 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb</Output>
-      <Time>2015-02-20T08:22:44-08:00</Time>
+      <Time>2015-03-09T08:07:00.4113295-07:00</Time>
     </Item>
     <Item>
       <Source>Images\Healer.png</Source>
@@ -215,7 +215,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
-      <Time>2015-03-06T08:27:39.8176965-08:00</Time>
+      <Time>2015-03-09T08:07:00.403302-07:00</Time>
     </Item>
     <Item>
       <Source>Fonts\ConsolasLarge.spritefont</Source>

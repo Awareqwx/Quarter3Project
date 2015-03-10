@@ -120,12 +120,15 @@
     <Compile Include="EntityTypes\TestEntity.cs" />
     <Compile Include="GameLevels.cs" />
     <Compile Include="ItemData.cs" />
+    <Compile Include="Location.cs" />
+    <Compile Include="Locations\Town.cs" />
     <Compile Include="Managers\CreateManager.cs" />
     <Compile Include="Managers\DebugManager.cs" />
     <Compile Include="Managers\GameManager.cs" />
     <Compile Include="Managers\MenuManager.cs" />
     <Compile Include="Managers\PopUpManager.cs" />
     <Compile Include="Managers\SplashScreenManager.cs" />
+    <Compile Include="Portal.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Game1.cs" />
