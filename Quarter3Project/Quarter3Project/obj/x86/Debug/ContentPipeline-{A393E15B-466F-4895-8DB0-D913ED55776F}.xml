@@ -1,0 +1,317 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<XnaContent xmlns:Pipeline="Microsoft.Xna.Framework.Content.Pipeline">
+  <Asset Type="Pipeline:BuildItemCollection">
+    <Item>
+      <Source>Images\PlayerTest.png</Source>
+      <Name>Images\PlayerTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Menu.png</Source>
+      <Name>Images\Menu</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\MenuOpts.png</Source>
+      <Name>Images\MenuOpts</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\menus.png</Source>
+      <Name>Images\menus</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb</Output>
+      <Time>2015-02-20T08:22:46-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Splash.png</Source>
+      <Name>Images\Splash</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb</Output>
+      <Time>2015-02-20T08:22:46-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\buildingTest.png</Source>
+      <Name>Images\buildingTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb</Output>
+      <Time>2015-02-20T08:22:46-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\PotionShopBase.png</Source>
+      <Name>Images\PotionShopBase</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\PotionShopShadow.png</Source>
+      <Name>Images\PotionShopShadow</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard.png</Source>
+      <Name>Images\Wizard</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb</Output>
+      <Time>2015-02-20T08:48:36-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard_C.png</Source>
+      <Name>Images\Wizard_C</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb</Output>
+      <Time>2015-02-20T08:22:46-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\ccArrows.png</Source>
+      <Name>Images\ccArrows</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb</Output>
+      <Time>2015-02-24T08:46:56-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Spell.png</Source>
+      <Name>Images\Spell</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb</Output>
+      <Time>2015-02-20T08:22:46-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Wizard_S.png</Source>
+      <Name>Images\Wizard_S</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb</Output>
+      <Time>2015-02-20T08:22:46-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\EnemyTest.png</Source>
+      <Name>Images\EnemyTest</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Healer.png</Source>
+      <Name>Images\Healer</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb</Output>
+      <Time>2015-02-20T08:48:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\knight.png</Source>
+      <Name>Images\knight</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb</Output>
+      <Time>2015-02-20T08:48:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\Consolas.spritefont</Source>
+      <Name>Fonts\Consolas</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb</Output>
+      <Time>2015-02-20T08:53:12-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\consolassmall.spritefont</Source>
+      <Name>Fonts\consolassmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb</Output>
+      <Time>2015-02-20T08:22:44-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\ConsolasLarge.spritefont</Source>
+      <Name>Fonts\ConsolasLarge</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb</Output>
+      <Time>2015-02-20T08:53:12-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\gameBG.png</Source>
+      <Name>Images\gameBG</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\gameBG.xnb</Output>
+      <Time>2015-02-24T08:27:32-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\health_bar.png</Source>
+      <Name>Images\health_bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb</Output>
+      <Time>2015-03-03T09:06:02-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\passive.png</Source>
+      <Name>Images\passive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\passive.xnb</Output>
+      <Time>2015-02-25T08:04:24-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\Spell_Icon.png</Source>
+      <Name>Images\Spell_Icon</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell_Icon.xnb</Output>
+      <Time>2015-02-24T09:38:54-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\cleric_offensive.png</Source>
+      <Name>Images\cleric_offensive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_offensive.xnb</Output>
+      <Time>2015-02-25T10:07:56-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\cleric_passive.png</Source>
+      <Name>Images\cleric_passive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_passive.xnb</Output>
+      <Time>2015-02-25T09:58:38-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Fonts\ConsolasTiny.spritefont</Source>
+      <Name>Fonts\ConsolasTiny</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb</Output>
+      <Time>2015-03-08T19:55:28-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\warr_defensive.png</Source>
+      <Name>Images\warr_defensive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\warr_defensive.xnb</Output>
+      <Time>2015-02-26T08:05:36-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\warr_offensive.png</Source>
+      <Name>Images\warr_offensive</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\warr_offensive.xnb</Output>
+      <Time>2015-02-26T08:18:16-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\blue_potion.png</Source>
+      <Name>Images\blue_potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\blue_potion.xnb</Output>
+      <Time>2015-03-10T18:10:31.5627338-07:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\red_potion.png</Source>
+      <Name>Images\red_potion</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\red_potion.xnb</Output>
+      <Time>2015-03-10T18:10:14.5336561-07:00</Time>
+    </Item>
+    <BuildSuccessful>true</BuildSuccessful>
+    <Settings>
+      <ContentProjectGUID>{A393E15B-466F-4895-8DB0-D913ED55776F}</ContentProjectGUID>
+      <TargetPlatform>Windows</TargetPlatform>
+      <TargetProfile>HiDef</TargetProfile>
+      <BuildConfiguration>Debug</BuildConfiguration>
+      <CompressContent>false</CompressContent>
+      <RootDirectory>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3ProjectContent\</RootDirectory>
+      <LoggerRootDirectory>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\</LoggerRootDirectory>
+      <IntermediateDirectory>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\</IntermediateDirectory>
+      <OutputDirectory>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\</OutputDirectory>
+    </Settings>
+    <Assemblies>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.XImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.VideoImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.TextureImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.FBXImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.EffectImporter.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Program Files (x86)\Microsoft XNA\XNA Game Studio\v4.0\References\Windows\x86\Microsoft.Xna.Framework.Content.Pipeline.AudioImporters.dll</Key>
+        <Value>2011-09-01T17:22:30-07:00</Value>
+      </Assembly>
+      <Assembly>
+        <Key>C:\Windows\Microsoft.Net\assembly\GAC_32\Microsoft.Xna.Framework.Content.Pipeline\v4.0_4.0.0.0__842cf8be1de50553\Microsoft.Xna.Framework.Content.Pipeline.dll</Key>
+        <Value>2014-11-13T20:45:46.8216596-08:00</Value>
+      </Assembly>
+    </Assemblies>
+  </Asset>
+</XnaContent>
