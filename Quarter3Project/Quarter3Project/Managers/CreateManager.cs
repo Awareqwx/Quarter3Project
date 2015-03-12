@@ -18,7 +18,11 @@ namespace Quarter3Project.Managers
     {
         Game1 g;
         SpriteBatch spriteBatch;
+<<<<<<< HEAD
         Texture2D bg, bbg, border1, btn, btn2, arrows, h, k, w, gameBG, wizPassive, wizOffense, cleActive, cleOffense, warOffensive, warActive;
+=======
+        Texture2D bg, bbg, border1, btn, btn2, arrows, h, k, w, gameBG, wizPassive, wizOffense, clePassive, cleOffense;
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
         public List<ItemData.chr> chrSelection;
         List<ItemData.btn> btnList2;
         List<ItemData.skill> skillList;
@@ -70,6 +74,7 @@ namespace Quarter3Project.Managers
             wizPassive = Game.Content.Load<Texture2D>(@"Images/passive");
             wizOffense = Game.Content.Load<Texture2D>(@"Images/Spell_Icon");
             cleOffense = Game.Content.Load<Texture2D>(@"Images/cleric_offensive");
+<<<<<<< HEAD
             cleActive = Game.Content.Load<Texture2D>(@"Images/cleric_passive");
             warOffensive = Game.Content.Load<Texture2D>(@"Images/warr_offensive");
             warActive = Game.Content.Load<Texture2D>(@"Images/warr_defensive");
@@ -94,6 +99,23 @@ namespace Quarter3Project.Managers
             chrSelection.Add(new ItemData.chr(h, new Vector2(0, 0), "Cleric", "The Cleric is a mana based \nprofession, all of its skills \nrequire mana to be used. The \nCleric gets its power from the \nFaith attribute, this means \nthat Clerics are stronger \nagainst undead and unholy \nbeasts. Although this \nprofession has a low \namount of health it is made \nup by being able to regain \nhealth at a cost to \nsome mana.", 200, true));
             chrSelection.Add(new ItemData.chr(k, new Vector2(0, 0), "Knight", "The Knight is based on health, \nbeing able to take a lot of \ndamage and do a lot of damage. \nAs a Knight you are able to do \npowerful attacks at a cost to \nmana, you can also ignore \ndamage while under the \neffects of Oblivion.", 300, false));
             
+=======
+            clePassive = Game.Content.Load<Texture2D>(@"Images/cleric_passive");
+
+            skillList.Add(new ItemData.skill(wizPassive, new Vector2(150, 450), new Point(50, 50), 3, 3000)); // Wizard Passive
+            skillList.Add(new ItemData.skill(wizOffense, new Vector2(210, 450), new Point(50, 50), 3, 3001)); // Wizard Offensive
+            skillList.Add(new ItemData.skill(clePassive, new Vector2(150, 450), new Point(50, 50), 1, 1000)); // Cleric Passive
+            skillList.Add(new ItemData.skill(cleOffense, new Vector2(210, 450), new Point(50, 50), 1, 1001)); // Cleric Offensive
+            skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 3000, 3000, "Mana Heal", "Eats Mana instead\nof Health.", "(Passive)"));
+            skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 3001, 3001, "Fire Bolt", "Shoots a bolt of\nfire. \n\nCost: 5MP\nDmg: 5", "(Active)"));
+            skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 1000, 1000, "Regeneration", "Slowly regain\nhealth over time.", "(Passive)"));
+            skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 1001, 1001, "Holy Arrow", "Conjure an arrow\nof light. \n\nCost: 5MP\nDmg: 5", "(Active)"));
+           
+            chrSelection.Add(new ItemData.chr(h, new Vector2(0, 0), "Healer", "This is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.\nThis is the Healer.", 1, true));
+            chrSelection.Add(new ItemData.chr(k, new Vector2(0, 0), "Knight", "This is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.\nThis is the Knight.", 2, false));
+            chrSelection.Add(new ItemData.chr(w, new Vector2(0, 0), "Wizard", "This is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.\nThis is the Wizard.", 3, false));
+
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
             Consolas = Game.Content.Load<SpriteFont>(@"Fonts/Consolas");
             ConsolasLarge = Game.Content.Load<SpriteFont>(@"Fonts/ConsolasLarge");
             ConsolasSmall = Game.Content.Load<SpriteFont>(@"Fonts/consolassmall");
@@ -163,21 +185,33 @@ namespace Quarter3Project.Managers
                                 {
                                     if (chrSelection[s].visible == true)
                                     {
+<<<<<<< HEAD
                                         if (chrSelection[s].id == 100 && supermansafetylock == false)
+=======
+                                        if (chrSelection[s].id == 1 && supermansafetylock == false)
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                         {
                                             chrSelection[0] = new ItemData.chr(chrSelection[0].tex, chrSelection[0].pos, chrSelection[0].name, chrSelection[0].descr, chrSelection[0].id, false);
                                             chrSelection[1] = new ItemData.chr(chrSelection[1].tex, chrSelection[1].pos, chrSelection[1].name, chrSelection[1].descr, chrSelection[1].id, true);
                                             supermansafetylock = true;
                                             supermansafetytimer = 0.4f;
                                         }
+<<<<<<< HEAD
                                         else if (chrSelection[s].id == 200 && supermansafetylock == false)
+=======
+                                        else if (chrSelection[s].id == 2 && supermansafetylock == false)
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                         {
                                             chrSelection[1] = new ItemData.chr(chrSelection[1].tex, chrSelection[1].pos, chrSelection[1].name, chrSelection[1].descr, chrSelection[1].id, false);
                                             chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, true);
                                             supermansafetylock = true;
                                             supermansafetytimer = 0.4f;
                                         }
+<<<<<<< HEAD
                                         else if (chrSelection[s].id == 300 && supermansafetylock == false)
+=======
+                                        else if (chrSelection[s].id == 3 && supermansafetylock == false)
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                         {
                                             chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, false);
                                             chrSelection[0] = new ItemData.chr(chrSelection[0].tex, chrSelection[0].pos, chrSelection[0].name, chrSelection[0].descr, chrSelection[0].id, true);
@@ -192,21 +226,33 @@ namespace Quarter3Project.Managers
                                     {
                                         if (chrSelection[s].visible == true)
                                         {
+<<<<<<< HEAD
                                             if (chrSelection[s].id == 100 && supermansafetylock == false)
+=======
+                                            if (chrSelection[s].id == 1 && supermansafetylock == false)
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                             {
                                                 chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, true);
                                                 chrSelection[0] = new ItemData.chr(chrSelection[0].tex, chrSelection[0].pos, chrSelection[0].name, chrSelection[0].descr, chrSelection[0].id, false);
                                                 supermansafetylock = true;
                                                 supermansafetytimer = 0.4f;
                                             }
+<<<<<<< HEAD
                                             else if (chrSelection[s].id == 200 && supermansafetylock == false)
+=======
+                                            else if (chrSelection[s].id == 2 && supermansafetylock == false)
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                             {
                                                 chrSelection[0] = new ItemData.chr(chrSelection[0].tex, chrSelection[0].pos, chrSelection[0].name, chrSelection[0].descr, chrSelection[0].id, true);
                                                 chrSelection[1] = new ItemData.chr(chrSelection[1].tex, chrSelection[1].pos, chrSelection[1].name, chrSelection[1].descr, chrSelection[1].id, false);
                                                 supermansafetylock = true;
                                                 supermansafetytimer = 0.4f;
                                             }
+<<<<<<< HEAD
                                             else if (chrSelection[s].id == 300 && supermansafetylock == false)
+=======
+                                            else if (chrSelection[s].id == 3 && supermansafetylock == false)
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                             {
                                                 chrSelection[1] = new ItemData.chr(chrSelection[1].tex, chrSelection[1].pos, chrSelection[1].name, chrSelection[1].descr, chrSelection[1].id, true);
                                                 chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, false);
@@ -271,6 +317,7 @@ namespace Quarter3Project.Managers
                 if (c.visible == true)
                 {
                     spriteBatch.DrawString(ConsolasLarge, c.name, new Vector2((GraphicsDevice.Viewport.Width / 2) - (Consolas.MeasureString(c.name).Length() / 2 + 10), (GraphicsDevice.Viewport.Height / 2) - 240), Color.Black);
+<<<<<<< HEAD
                     spriteBatch.DrawString(Consolas, c.descr, new Vector2(600, (GraphicsDevice.Viewport.Height / 2) - 200), Color.Black);
                     spriteBatch.DrawString(Consolas, "Skills", new Vector2(130, 420), Color.Black);
 
@@ -308,10 +355,44 @@ namespace Quarter3Project.Managers
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + (int)2.5f, skillDList[z].size.X - 5, 1), Color.White);
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + skillDList[z].size.Y - (int)3.0f, skillDList[z].size.X - 5, 1), Color.White);
 
+=======
+                    spriteBatch.DrawString(Consolas, c.descr, new Vector2(600, (GraphicsDevice.Viewport.Height / 2) - 200), Color.Transparent);
+                    spriteBatch.DrawString(Consolas, "Skills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\nSkills & Stats\n", new Vector2(220, (GraphicsDevice.Viewport.Height / 2) - 200), Color.Transparent);
+                    spriteBatch.DrawString(Consolas, "Skills", new Vector2(130, 420), Color.Black);
+
+                    if (c.id == 1)
+                    {
+                        for (int i = 0; i < skillList.Count; i++)
+                        {
+                            if (skillList[i].classid == 1)
+                            {
+                                spriteBatch.Draw(skillList[i].texture, new Rectangle((int)skillList[i].position.X, (int)skillList[i].position.Y, skillList[i].size.X, skillList[i].size.Y), Color.White);
+                            }
+                        }
+                        for (int i = 0; i < skillList.Count; i++)
+                        {
+                            if (skillList[i].classid == 1)
+                            {
+                                if (skillList[i].collisionRect().Intersects(new Rectangle((int)mousePos.X, (int)mousePos.Y, 1, 1)))
+                                {
+                                    for (int g = 0; g < skillDList.Count; g++)
+                                    {
+                                        if (skillDList[g].popid == skillList[i].skillid)
+                                        {
+                                            spriteBatch.Draw(skillDList[g].background, new Rectangle((int)skillDList[g].position.X, (int)skillDList[g].position.Y, skillDList[g].size.X, skillDList[g].size.Y), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 5, (int)skillDList[g].position.Y + 5, 140, 1), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 5, (int)skillDList[g].position.Y + 145, 140, 1), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 5, (int)skillDList[g].position.Y + 5, 1, 140), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 145, (int)skillDList[g].position.Y + 5, 1, 140), Color.White);
+                                            spriteBatch.DrawString(Consolas, skillDList[i].skillName, new Vector2((int)skillDList[g].position.X + 10, (int)skillDList[g].position.Y + 5), Color.White);
+                                            spriteBatch.DrawString(ConsolasTiny, skillDList[i].skillType, new Vector2((int)skillDList[g].position.X + 10, (int)skillDList[g].position.Y + 25), Color.White);
+                                            spriteBatch.DrawString(ConsolasSmall, skillDList[i].skillDesc, new Vector2((int)skillDList[g].position.X + 10, (int)skillDList[g].position.Y + 40), Color.White);
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                         }
                                     }
                                 }
                             }
+<<<<<<< HEAD
                             break;
                         case 200:
                             for (int i = 0; i < skillList.Count; i++)
@@ -378,11 +459,50 @@ namespace Quarter3Project.Managers
                                             spriteBatch.Draw(border1, new Rectangle(((int)skillDList[z].position.X  + skillDList[z].size.X) - (int)3.0f, (int)skillDList[z].position.Y + (int)2.5f, 1, skillDList[z].size.Y - 5), Color.White);
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + (int)2.5f, skillDList[z].size.X - 5, 1), Color.White);
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + skillDList[z].size.Y - (int)3.0f, skillDList[z].size.X - 5, 1), Color.White);
+=======
+                        }
+                    }
+                    else if (c.id == 2)
+                    {
+
+                    }
+                    else if (c.id == 3)
+                    {
+                        for (int i = 0; i < skillList.Count; i++)
+                        {
+                            if (skillList[i].classid == 3)
+                            {
+                                spriteBatch.Draw(skillList[i].texture, new Rectangle((int)skillList[i].position.X, (int)skillList[i].position.Y, skillList[i].size.X, skillList[i].size.Y), Color.White);
+                            }
+                        }
+                        for (int i = 0; i < skillList.Count; i++)
+                        {
+                            if (skillList[i].classid == 3)
+                            {
+                                if (skillList[i].collisionRect().Intersects(new Rectangle((int)mousePos.X, (int)mousePos.Y, 1, 1)))
+                                {
+                                    for (int g = 0; g < skillDList.Count; g++)
+                                    {
+                                        if (skillDList[g].popid == skillList[i].skillid)
+                                        {
+                                            spriteBatch.Draw(skillDList[g].background, new Rectangle((int)skillDList[g].position.X, (int)skillDList[g].position.Y, skillDList[g].size.X, skillDList[g].size.Y), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 5, (int)skillDList[g].position.Y + 5, 140, 1), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 5, (int)skillDList[g].position.Y + 145, 140, 1), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 5, (int)skillDList[g].position.Y + 5, 1, 140), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[g].position.X + 145, (int)skillDList[g].position.Y + 5, 1, 140), Color.White);
+                                            spriteBatch.DrawString(Consolas, skillDList[i].skillName, new Vector2((int)skillDList[g].position.X + 10, (int)skillDList[g].position.Y + 5), Color.White);
+                                            spriteBatch.DrawString(ConsolasTiny, skillDList[i].skillType, new Vector2((int)skillDList[g].position.X + 10, (int)skillDList[g].position.Y + 25), Color.White);
+                                            spriteBatch.DrawString(ConsolasSmall, skillDList[i].skillDesc, new Vector2((int)skillDList[g].position.X + 10, (int)skillDList[g].position.Y + 40), Color.White);
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                                         }
                                     }
                                 }
                             }
+<<<<<<< HEAD
                             break;
+=======
+                        }
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
                     }
 
                 }

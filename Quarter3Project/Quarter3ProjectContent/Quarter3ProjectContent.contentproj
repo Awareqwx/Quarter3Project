@@ -97,6 +97,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Fonts\Consolas.spritefont">
       <Name>Consolas</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -104,6 +105,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     <Compile Include="Images\Wizard_C.png">
       <Name>Wizard_C</Name>
       <Importer>TextureImporter</Importer>
@@ -118,6 +121,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Fonts\consolassmall.spritefont">
       <Name>consolassmall</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -125,6 +129,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     <Compile Include="Images\Spell.png">
       <Name>Spell</Name>
       <Importer>TextureImporter</Importer>
@@ -151,6 +157,7 @@
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
+<<<<<<< HEAD
     <Compile Include="Images\knight.png">
       <Name>knight</Name>
       <Importer>TextureImporter</Importer>
@@ -163,6 +170,8 @@
       <Importer>FontDescriptionImporter</Importer>
       <Processor>FontDescriptionProcessor</Processor>
     </Compile>
+=======
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Images\gameBG.png">
@@ -172,6 +181,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Images\health_bar.png">
       <Name>health_bar</Name>
       <Importer>TextureImporter</Importer>
@@ -179,6 +189,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     <Compile Include="Images\passive.png">
       <Name>passive</Name>
       <Importer>TextureImporter</Importer>
@@ -193,6 +205,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Fonts\ConsolasTiny.spritefont">
       <Name>ConsolasTiny</Name>
       <Importer>FontDescriptionImporter</Importer>
@@ -200,6 +213,8 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+=======
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     <Compile Include="Images\cleric_offensive.png">
       <Name>cleric_offensive</Name>
       <Importer>TextureImporter</Importer>
@@ -212,6 +227,7 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Images\warr_defensive.png">
       <Name>warr_defensive</Name>
       <Importer>TextureImporter</Importer>
@@ -219,11 +235,23 @@
     </Compile>
     <Compile Include="Images\warr_offensive.png">
       <Name>warr_offensive</Name>
+=======
+    <Compile Include="Images\bricks.png">
+      <Name>bricks</Name>
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Images\knight.jpg">
+      <Name>knight</Name>
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+<<<<<<< HEAD
     <Compile Include="Images\blue_potion.png">
       <Name>blue_potion</Name>
       <Importer>TextureImporter</Importer>
@@ -231,6 +259,72 @@
     </Compile>
     <Compile Include="Images\red_potion.png">
       <Name>red_potion</Name>
+=======
+    <Compile Include="Images\Knight\Knight_Armor.png">
+      <Name>Knight_Armor</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\Knight\Knight_Base.png">
+      <Name>Knight_Base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\Knight\Knight_Sword.png">
+      <Name>Knight_Sword</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\Consolas.spritefont">
+      <Name>Consolas</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\ConsolasLarge.spritefont">
+      <Name>ConsolasLarge</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\Consolassmall.spritefont">
+      <Name>Consolassmall</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Fonts\ConsolasTiny.spritefont">
+      <Name>ConsolasTiny</Name>
+      <Importer>FontDescriptionImporter</Importer>
+      <Processor>FontDescriptionProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\health_bar.png">
+      <Name>health_bar</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Images\Wizard\Wizard_Base.png">
+      <Name>Wizard_Base</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\Wizard\Wizard_Cloak.png">
+      <Name>Wizard_Cloak</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+    </Compile>
+    <Compile Include="Images\Wizard\Wizard_Staff.png">
+      <Name>Wizard_Staff</Name>
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
       <Importer>TextureImporter</Importer>
       <Processor>TextureProcessor</Processor>
     </Compile>

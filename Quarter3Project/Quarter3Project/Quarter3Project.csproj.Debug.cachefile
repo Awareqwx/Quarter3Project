@@ -12,15 +12,20 @@ Content\Images\ccArrows.xnb
 Content\Images\Spell.xnb
 Content\Images\Wizard_S.xnb
 Content\Images\EnemyTest.xnb
+<<<<<<< HEAD
 Content\Fonts\Consolas.xnb
 Content\Fonts\consolassmall.xnb
 Content\Images\Healer.xnb
 Content\Images\knight.xnb
 Content\Fonts\ConsolasLarge.xnb
+=======
+Content\Images\Healer.xnb
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 Content\Images\gameBG.xnb
 Content\Images\health_bar.xnb
 Content\Images\passive.xnb
 Content\Images\Spell_Icon.xnb
+<<<<<<< HEAD
 Content\Fonts\ConsolasTiny.xnb
 Content\Images\cleric_offensive.xnb
 Content\Images\cleric_passive.xnb
@@ -28,3 +33,19 @@ Content\Images\warr_defensive.xnb
 Content\Images\warr_offensive.xnb
 Content\Images\blue_potion.xnb
 Content\Images\red_potion.xnb
+=======
+Content\Images\cleric_offensive.xnb
+Content\Images\cleric_passive.xnb
+Content\Images\bricks.xnb
+Content\Fonts\Consolas.xnb
+Content\Fonts\consolassmall.xnb
+Content\Fonts\ConsolasLarge.xnb
+Content\Fonts\ConsolasTiny.xnb
+Content\Images\Knight\Knight_Armor.xnb
+Content\Images\Knight\Knight_Base.xnb
+Content\Images\Knight\Knight_Sword.xnb
+Content\Images\knight.xnb
+Content\Images\Wizard\Wizard_Base.xnb
+Content\Images\Wizard\Wizard_Cloak.xnb
+Content\Images\Wizard\Wizard_Staff.xnb
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910

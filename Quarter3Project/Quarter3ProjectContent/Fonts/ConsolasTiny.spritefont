@@ -17,13 +17,21 @@ with.
     Size is a float value, measured in points. Modify this value to change
     the size of the font.
     -->
+<<<<<<< HEAD
     <Size>7.4</Size>
+=======
+    <Size>7</Size>
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
     <!--
     Spacing is a float value, measured in pixels. Modify this value to change
     the amount of spacing in between characters.
     -->
+<<<<<<< HEAD
     <Spacing>.1</Spacing>
+=======
+    <Spacing>0</Spacing>
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
     <!--
     UseKerning controls the layout of the font. If this value is true, kerning information

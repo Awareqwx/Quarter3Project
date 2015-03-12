@@ -188,7 +188,11 @@
       <Processor>TextureProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb</Output>
+<<<<<<< HEAD
       <Time>2015-03-03T09:06:02-08:00</Time>
+=======
+      <Time>2015-02-24T20:47:10-08:00</Time>
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     </Item>
     <Item>
       <Source>Images\passive.png</Source>
@@ -233,6 +237,7 @@
       <Processor>FontDescriptionProcessor</Processor>
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb</Output>
+<<<<<<< HEAD
       <Time>2015-03-08T19:55:28-07:00</Time>
     </Item>
     <Item>
@@ -270,6 +275,18 @@
       <Options>None</Options>
       <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\red_potion.xnb</Output>
       <Time>2015-03-10T18:10:14.5336561-07:00</Time>
+=======
+      <Time>2015-02-25T09:12:34-08:00</Time>
+    </Item>
+    <Item>
+      <Source>Images\bricks.png</Source>
+      <Name>Images\bricks</Name>
+      <Importer>TextureImporter</Importer>
+      <Processor>TextureProcessor</Processor>
+      <Options>None</Options>
+      <Output>C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bricks.xnb</Output>
+      <Time>2015-02-26T20:52:01.4095988-08:00</Time>
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     </Item>
     <BuildSuccessful>true</BuildSuccessful>
     <Settings>
