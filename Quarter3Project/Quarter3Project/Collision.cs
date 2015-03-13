@@ -216,6 +216,22 @@ namespace Quarter3Project
             return false;
         }
 
+        public static bool CheckCircleEllipseCollision(Circle E, Ellipse F)
+        {
+            Vector2 v = new Vector2(F.P.X - E.P.X, F.P.Y - E.P.Y);
+            double a = getAngleFromVector(v);
+            double b = getAngleFromVector(new Vector2(-v.X, -v.Y));
+            double Fr;
+            Fr = Math.Sqrt(Math.Pow((Math.Cos(degToRad(b + F.rotation)) * F.radX), 2) + Math.Pow(Math.Sin(degToRad(b + F.rotation)) * F.radY, 2));
+            double z = E.R + Fr;
+            double x = magnitude(v);
+            if (E.R + Fr >= magnitude(v))
+            {
+                return true;
+            }
+            return false;
+        }
+
         public static double getAngleFromVector(Vector2 v)
         {
             return Math.Atan2(v.Y, v.X) * 180 / Math.PI;

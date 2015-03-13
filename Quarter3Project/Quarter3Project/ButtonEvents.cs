@@ -61,8 +61,8 @@ namespace Quarter3Project
                     sw.WriteLine(3);
                     break;
             }
-            sw.WriteLine(myGame.gameManager.tests[0].getPos().X);
-            sw.WriteLine(myGame.gameManager.tests[0].getPos().Y);
+            sw.WriteLine(myGame.gameManager.player.getPos().X);
+            sw.WriteLine(myGame.gameManager.player.getPos().Y);
              
             sw.Close();
             closePop();

@@ -109,6 +109,7 @@
   <ItemGroup>
     <Compile Include="AnimatedSprite.cs" />
     <Compile Include="ButtonEvents.cs" />
+    <Compile Include="Classes\Knight.cs" />
     <Compile Include="EntityTypes\Attack.cs" />
     <Compile Include="EntityTypes\Projectile.cs" />
     <Compile Include="EntityTypes\BuildingEntity.cs" />
@@ -121,7 +122,6 @@
     <Compile Include="GameLevels.cs" />
     <Compile Include="ItemData.cs" />
     <Compile Include="Location.cs" />
-    <Compile Include="Locations\Town.cs" />
     <Compile Include="Managers\CreateManager.cs" />
     <Compile Include="Managers\DebugManager.cs" />
     <Compile Include="Managers\GameManager.cs" />

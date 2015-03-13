@@ -13,27 +13,29 @@ using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Quarter3Project.Managers;
 using Quarter3Project.EntityTypes;
+using Quarter3Project.Classes;
 
 namespace Quarter3Project
 {
 
     public class GameManager : Microsoft.Xna.Framework.DrawableGameComponent
     {
-        public BuildingEntity[] bE;
         public ButtonEvents bE2;
         public Collision.mapSegment[] playerSegments = new Collision.mapSegment[4];
         Game1 myGame;
         public int classType, prevClassType, health, mana, exp;
         KeyboardState keyBoardState, prevKeyState;
-        public List<Projectile> enemyShots, friendlyShots;
-        public List<Collision.mapSegment> buildingSegments, mapSegments;
+        public List<Attack> enemyShots, friendlyShots;
         Random RNG;
-        SpriteBatch spriteBatch;   
+        SpriteBatch spriteBatch;
         public SpriteFont consolas;
-        TestEnemy[] mooks;
-        public TestEntity[] tests;
+        public Player player;
         Texture2D[] testTexture, mage, cler, warr, bT;
         Texture2D enemy, uiBG, redUI, blueUI, yellowUI;
+
+        public Location Test;
+
+        public Location currentLoc;
 
         public GameManager(Game1 game)
             : base(game)
@@ -44,18 +46,13 @@ namespace Quarter3Project
 
         public override void Initialize()
         {
-            buildingSegments = new List<Collision.mapSegment>();
             RNG = new Random();
-            mapSegments = new List<Collision.mapSegment>();
-            enemyShots = new List<Projectile>();
-            friendlyShots = new List<Projectile>();
-
-            mapSegments.Add(new Collision.mapSegment(new Point(960, 0), new Point(0, 0)));
-            mapSegments.Add(new Collision.mapSegment(new Point(0, 0), new Point(0, 620)));
-            mapSegments.Add(new Collision.mapSegment(new Point(0, 619), new Point(960, 620)));
-            mapSegments.Add(new Collision.mapSegment(new Point(960, 618), new Point(959, 0)));
+            enemyShots = new List<Attack>();
+            friendlyShots = new List<Attack>();
 
             bE2.loadGame();
+
+            addLocs();
 
             base.Initialize();
         }
@@ -99,18 +96,7 @@ namespace Quarter3Project
                 yellowUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
                 yellowUI.SetData<Color>(new Color[] { new Color(232, 205, 0) });
 
-                tests = new TestEntity[1];
-                bE = new BuildingEntity[1];
-                mooks = new TestEnemy[1];
-
-                for (int i = 0; i < tests.Length; i++)
-                    tests[i] = new TestEntity(this, testTexture, new Vector2(10, 10));
-                
-                for (int i = 0; i < mooks.Length; i++)
-                    mooks[i] = new TestEnemy(this, enemy, new Vector2(RNG.Next(0, 540), RNG.Next(0, 380)));
-
-                for (int i = 0; i < bE.Length; i++ )
-                    bE[i] = new BuildingEntity(this, bT, new Vector2(650, 450));
+                player = new Knight(testTexture, new Vector2(10, 10), this);
 
             }
 
@@ -126,20 +112,17 @@ namespace Quarter3Project
                 if (classType == 1)
                 {
                     testTexture = cler;
-                    for (int i = 0; i < tests.Length; i++)
-                        tests[i] = new TestEntity(this, new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Healer") }, new Vector2(10, 10));
+                        player = new TestEntity(this, new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Healer") }, new Vector2(10, 10));
                 }
                 else if (classType == 3)
                 {
                     testTexture = mage;
-                    for (int i = 0; i < tests.Length; i++)
-                        tests[i] = new TestEntity(this, new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") }, new Vector2(10, 10));
+                        player = new TestEntity(this, new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") }, new Vector2(10, 10));
                 }
                 else if (classType == 2)
                 {
                     testTexture = warr;
-                    for (int i = 0; i < tests.Length; i++)
-                        tests[i] = new TestEntity(this, testTexture, new Vector2(10, 10));
+                        player = new Knight(testTexture, new Vector2(10, 10), this);
                 }
             }
 
@@ -148,14 +131,7 @@ namespace Quarter3Project
                 bE2.showPop(2002);
             }
 
-            for (int i = 0; i < tests.Length; i++)
-                tests[i].Update(gameTime);
-
-            for (int i = 0; i < bE.Length; i++)
-                bE[i].Update(gameTime);
-
-            for (int i = 0; i < mooks.Length; i++)
-                mooks[i].Update(gameTime);
+            player.Update(gameTime);
 
             for (int i = 0; i < enemyShots.Count; i++)
             {
@@ -177,45 +153,33 @@ namespace Quarter3Project
                 }
             }
 
-            if (keyBoardState.IsKeyDown(Keys.OemPlus))
-            {
-                health += 1;
-                mana += 1;
-                exp += 1;
-            }
-
-            if (keyBoardState.IsKeyDown(Keys.OemMinus))
-            {
-                health -= 1;
-                mana -= 1;
-                exp -= 1;
-            }
+            currentLoc.Update(gameTime);
 
             if (health <= 0)
             {
-                health = 0;
+                player.health = 0;
             }
             else if (health >= 50)
             {
-                health = 50;
+                player.health = 50;
             }
 
             if (mana <= 0)
             {
-                mana = 0;
+                player.mana = 0;
             }
             else if (mana >= 115)
             {
-                mana = 115;
+                player.mana = 115;
             }
 
             if (exp <= 0)
             {
-                exp = 0;
+                player.exp = 0;
             }
             else if (exp >= 115)
             {
-                exp = 115;
+                player.exp = 115;
             }
 
             prevKeyState = keyBoardState;
@@ -228,14 +192,7 @@ namespace Quarter3Project
 
             spriteBatch.Begin();
 
-            for (int i = 0; i < tests.Length; i++)
-                tests[i].Draw(gameTime, spriteBatch);
-
-            for (int i = 0; i < bE.Length; i++)
-                bE[i].Draw(gameTime, spriteBatch);
-
-            for (int i = 0; i < mooks.Length; i++)
-                mooks[i].Draw(gameTime, spriteBatch);
+            player.Draw(gameTime, spriteBatch);
 
             for (int i = 0; i < enemyShots.Count; i++)
                 enemyShots[i].Draw(gameTime, spriteBatch);
@@ -243,7 +200,8 @@ namespace Quarter3Project
             for (int i = 0; i < friendlyShots.Count; i++)
                 friendlyShots[i].Draw(gameTime, spriteBatch);
 
-            
+            currentLoc.Draw(gameTime, spriteBatch);
+
             DrawUI();
 
             spriteBatch.End();
@@ -253,18 +211,42 @@ namespace Quarter3Project
 
         public void DrawUI()
         {
-            
-            spriteBatch.Draw(blueUI, new Rectangle(830, 24, mana, 12), new Rectangle(0, 0, 1, 1), Color.White, 0.0f, new Vector2(0, 0), SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(consolas, mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(mana.ToString()).Length() / 2) + 1, (24 - 5) + 1), Color.Black);
-            spriteBatch.DrawString(consolas, mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(mana.ToString()).Length() / 2), (24 - 5)), Color.White);
-            spriteBatch.Draw(yellowUI, new Rectangle(830, 43, exp, 12), new Rectangle(0, 0, 1, 1), Color.White, 0.0f, new Vector2(0, 0), SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(consolas, exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(exp.ToString()).Length() / 2) + 1, (43 - 5) + 1), Color.Black);
-            spriteBatch.DrawString(consolas, exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(exp.ToString()).Length() / 2), (43 - 5)), Color.White);
+
+            spriteBatch.Draw(blueUI, new Rectangle(830, 24, player.mana, 12), new Rectangle(0, 0, 1, 1), Color.White, 0.0f, new Vector2(0, 0), SpriteEffects.None, 0.0f);
+            spriteBatch.DrawString(consolas, player.mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(mana.ToString()).Length() / 2) + 1, (24 - 5) + 1), Color.Black);
+            spriteBatch.DrawString(consolas, player.mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(mana.ToString()).Length() / 2), (24 - 5)), Color.White);
+            spriteBatch.Draw(yellowUI, new Rectangle(830, 43, player.exp, 12), new Rectangle(0, 0, 1, 1), Color.White, 0.0f, new Vector2(0, 0), SpriteEffects.None, 0.0f);
+            spriteBatch.DrawString(consolas, player.exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(exp.ToString()).Length() / 2) + 1, (43 - 5) + 1), Color.Black);
+            spriteBatch.DrawString(consolas, player.exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(exp.ToString()).Length() / 2), (43 - 5)), Color.White);
             spriteBatch.Draw(redUI, new Rectangle(825, 65, 50, health), new Rectangle(0, 0, 1, 1), Color.White, (float)Math.PI, new Vector2(0, 0), SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(consolas, health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(health.ToString()).Length() / 2) + 1, (65 - 25) - (consolas.MeasureString(health.ToString()).Y / 2) + 1), Color.Black);
-            spriteBatch.DrawString(consolas, health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(health.ToString()).Length() / 2), (65 - 25) - (consolas.MeasureString(health.ToString()).Y / 2)), Color.White);
+            spriteBatch.DrawString(consolas, player.health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(health.ToString()).Length() / 2) + 1, (65 - 25) - (consolas.MeasureString(health.ToString()).Y / 2) + 1), Color.Black);
+            spriteBatch.DrawString(consolas, player.health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(health.ToString()).Length() / 2), (65 - 25) - (consolas.MeasureString(health.ToString()).Y / 2)), Color.White);
             spriteBatch.Draw(uiBG, new Rectangle((GraphicsDevice.Viewport.Width - 204), 10, 194, 59), Color.White);
-            
+
+        }
+
+        public void Teleport(Portal p)
+        {
+            currentLoc = p.dest;
+
+        }
+
+
+        private void addLocs()
+        {
+            List<Collision.mapSegment> ml = new List<Collision.mapSegment>();
+            List<Collision.Ellipse> el = new List<Collision.Ellipse>();
+            List<Collision.Circle> cl = new List<Collision.Circle>();
+            List<BuildingEntity> bl = new List<BuildingEntity>();
+            List<Portal> p = new List<Portal>();
+            List<Enemy> enemies = new List<Enemy>();
+
+            for (int i = 0; i < 1; i++)
+                enemies.Add(new TestEnemy(this, enemy, new Vector2(RNG.Next(0, 540), RNG.Next(0, 380))));
+
+            Test = new Location(ml, cl, el, p, bl, enemies);
+
+            currentLoc = Test;
         }
     }
 }

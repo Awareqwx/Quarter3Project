@@ -82,8 +82,8 @@ namespace Quarter3Project.EntityTypes
 
         void fireShot()
         {
-            Vector2 p = myGame.tests[0].getCenter() - position;
-            myGame.enemyShots.Add(new Projectile(atk, position, myGame, p, 5, Color.Red, new Point(40, 12)));
+            Vector2 p = myGame.player.getCenter() - position;
+            myGame.enemyShots.Add(new Projectile(atk, position, myGame, p, 5, Color.Red, new Point(40, 12), 5));
         }
 
     }

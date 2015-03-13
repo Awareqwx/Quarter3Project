@@ -9,36 +9,34 @@ namespace Quarter3Project.EntityTypes
 {
     public class Attack : Entity
     {
-
-        Vector2 direction;
-        float rotation;
+        protected float rotation;
         public Point size;
+        public int damage;
 
-        public Attack(Texture2D t, Vector2 v, GameManager g, Vector2 d, float s, Color c, Point fs)
+        public Attack(Texture2D t, Vector2 v, GameManager g, float r, float s, Color c, Point fs, int dmg)
             : base(t, v, g)
         {
             size = fs;
-            direction = Collision.unitVector(d);
             speed = s;
-            rotation = (float)(Math.Atan2(direction.Y, direction.X));
+            rotation = r;
             colors = new Color[] { c };
+            damage = dmg;
             addAnimations();
         }
 
-        public Attack(Texture2D[] t, Vector2 v, GameManager g, Vector2 d, float s, Color[] c, Point fs)
+        public Attack(Texture2D[] t, Vector2 v, GameManager g, float r, float s, Color[] c, Point fs, int dmg)
             : base(t, v, g)
         {
             size = fs;
-            direction = Collision.unitVector(d);
             speed = s;
-            rotation = (float)Math.Atan(direction.Y / direction.X);
+            rotation = r;
             colors = c;
+            damage = dmg;
             addAnimations();
         }
 
         public override void Update(GameTime gameTime)
         {
-            position += (direction * (float)speed);
             base.Update(gameTime);
         }
 

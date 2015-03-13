@@ -19,7 +19,6 @@ namespace Quarter3Project.Managers
 
         public List<ItemData.pop> popList;
         public List<ItemData.btn> btnList;
-        string stringList;
         public int idn = 0, prevIDN;
         ButtonEvents bE;
         bool lockMove;

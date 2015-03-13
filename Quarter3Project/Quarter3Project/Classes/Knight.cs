@@ -2,32 +2,36 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using Quarter3Project.EntityTypes;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Input;
 
-namespace Quarter3Project.EntityTypes
+namespace Quarter3Project.Classes
 {
-    public class TestEntity : Player
+    class Knight : Player
     {
+
         KeyboardState keyboardState, prevKBState;
         MouseState mouse;
         Random r;
         float colorTimer;
         int shotTimer;
-        Texture2D atkTex;
         int walkDir;
-        Boolean isProjectileing, isWalking;
+        Boolean isAttacking, isWalking;
 
-        public TestEntity(GameManager g, Texture2D[] t, Vector2 v)
+        public Knight(Texture2D[] t, Vector2 v, GameManager g)
             : base(t, v, g)
         {
+            health = 50;
             keyboardState = prevKBState = Keyboard.GetState();
             mouse = Mouse.GetState();
             myGame = g;
             speed = 2;
             r = new Random();
-            atkTex = myGame.Game.Content.Load<Texture2D>(@"Images/Spell");
+            shotTimer = 0;
+            colors = new Color[3];
+            addAnimations();
         }
 
         public override void addAnimations()
@@ -60,15 +64,9 @@ namespace Quarter3Project.EntityTypes
             base.addAnimations();
         }        
 
-        public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
-        {
-            base.Draw(gameTime, spriteBatch);
-        }
-
         public override void Update(GameTime gameTime)
         {
             colorTimer += (float)gameTime.ElapsedGameTime.TotalSeconds;
-            shotTimer -= gameTime.ElapsedGameTime.Milliseconds;
 
             mouse = Mouse.GetState();
 
@@ -84,10 +82,10 @@ namespace Quarter3Project.EntityTypes
             }
             colors[1] = Color.Gold;
             colors[2] = Color.Cyan;
-                speed = 3;
+            speed = 3;
             keyboardState = Keyboard.GetState();
             isWalking = false;
-            if (!isProjectileing)
+            if (!isAttacking)
             {
                 if (keyboardState.IsKeyDown(Keys.S))
                 {
@@ -147,7 +145,7 @@ namespace Quarter3Project.EntityTypes
             {
                 if (animIsOver)
                 {
-                    isProjectileing = false;
+                    isAttacking = false;
                     if (walkDir == 3)
                     {
                         position.X += 30;
@@ -155,50 +153,38 @@ namespace Quarter3Project.EntityTypes
                 }
             }
 
-            if (myGame.classType == 3)
+            if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
             {
-                if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
+                if (!isAttacking)
                 {
-                    Vector2 p = new Vector2(mouse.X - position.X, mouse.Y - position.Y);
-                    myGame.friendlyShots.Add(new Projectile(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12), 1));
-                    shotTimer = 100;
+                    setAnimation("IDLEF");
                 }
-            }
-            else if (myGame.classType == 2)
-            {
-                if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
+                switch (walkDir)
                 {
-                    if (!isProjectileing)
-                    {
-                        setAnimation("IDLEF");
-                    }
-                    switch (walkDir)
-                    {
-                        case 1:
-                            setAnimation("ATKB");
-                            break;
-                        case 2:
-                            setAnimation("ATKR");
-                            break;
-                        case 3:
-                            if (currentSet.name != "ATKL")
-                            {
-                                position.X -= 30;
-                            }
-                            setAnimation("ATKL");
-                            break;
-                        case 0:
-                        default:
-                            setAnimation("ATKF");
-                            break;
-                    }
-                    isProjectileing = true;
+                    case 1:
+                        setAnimation("ATKB");
+                        break;
+                    case 2:
+                        setAnimation("ATKR");
+                        break;
+                    case 3:
+                        if (currentSet.name != "ATKL")
+                        {
+                            position.X -= 30;
+                        }
+                        setAnimation("ATKL");
+                        break;
+                    case 0:
+                    default:
+                        setAnimation("ATKF");
+                        break;
                 }
+                isAttacking = true;
+
                 //myGame.friendlyShots.Add(new 
             }
 
             base.Update(gameTime);
         }
-
     }
 }
