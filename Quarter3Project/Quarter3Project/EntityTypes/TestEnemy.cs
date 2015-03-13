@@ -84,6 +84,9 @@ namespace Quarter3Project.EntityTypes
         {
             Vector2 p = myGame.player.getCenter() - position;
             myGame.enemyShots.Add(new Projectile(atk, position, myGame, p, 5, Color.Red, new Point(40, 12), 5));
+            myGame.enemyShots.Add(new Attack(atk, position, myGame, p, 5, Color.Red, new Point(40, 12)));
+=======
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
         }
 
     }

@@ -8,7 +8,11 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Quarter3Project.EntityTypes
 {
+<<<<<<< HEAD
+    public class TestEntity : Quarter3Project.Entity
+=======
     public class TestEntity : Player
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     {
         KeyboardState keyboardState, prevKBState;
         MouseState mouse;
@@ -16,8 +20,11 @@ namespace Quarter3Project.EntityTypes
         float colorTimer;
         int shotTimer;
         Texture2D atkTex;
+<<<<<<< HEAD
+=======
         int walkDir;
         Boolean isProjectileing, isWalking;
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
         public TestEntity(GameManager g, Texture2D[] t, Vector2 v)
             : base(t, v, g)
@@ -32,6 +39,11 @@ namespace Quarter3Project.EntityTypes
 
         public override void addAnimations()
         {
+<<<<<<< HEAD
+            AnimationSet idle = new AnimationSet("IDLE", new Point(108, 142), new Point(1, 1), new Point(0, 0), 16, false);
+            sets.Add(idle);
+            setAnimation("IDLE");
+=======
             AnimationSet idlef = new AnimationSet("IDLEF", new Point(60, 97), new Point(1, 1), new Point(0, 0), 16, false);
             AnimationSet idleb = new AnimationSet("IDLEB", new Point(60, 97), new Point(1, 1), new Point(0, 2), 16, false);
             AnimationSet idlel = new AnimationSet("IDLEL", new Point(60, 97), new Point(1, 1), new Point(0, 3), 16, false);
@@ -57,6 +69,7 @@ namespace Quarter3Project.EntityTypes
             sets.Add(atkl);
             sets.Add(atkr);
             setAnimation("IDLEF");
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
             base.addAnimations();
         }        
 
@@ -77,6 +90,30 @@ namespace Quarter3Project.EntityTypes
             {
                 if (colorTimer >= .1F)
                 {
+<<<<<<< HEAD
+                    colors[1] = colors[2] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
+                    colorTimer = 0;
+                }
+            }
+                speed = 3;
+            keyboardState = Keyboard.GetState();
+            if (keyboardState.IsKeyDown(Keys.S))
+            {
+                position.Y += speed;
+            }
+            else if(keyboardState.IsKeyDown(Keys.W))
+            {
+                position.Y -= speed;
+            }
+            if (keyboardState.IsKeyDown(Keys.D))
+            {
+                position.X += speed;
+            }
+            else if (keyboardState.IsKeyDown(Keys.A))
+            {
+                position.X -= speed;
+            }            
+=======
                     colors[1] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
                     colors[2] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
                     colorTimer = 0;
@@ -154,6 +191,7 @@ namespace Quarter3Project.EntityTypes
                     }
                 }
             }
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
             if (myGame.classType == 3)
             {
@@ -161,6 +199,11 @@ namespace Quarter3Project.EntityTypes
                 {
                     Vector2 p = new Vector2(mouse.X - position.X, mouse.Y - position.Y);
                     myGame.friendlyShots.Add(new Projectile(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12), 1));
+                    myGame.friendlyShots.Add(new Attack(atkTex, position, myGame, p, 5, colors[1], new Point(40, 12)));
+                    shotTimer = 100;
+                }
+            }
+=======
                     shotTimer = 100;
                 }
             }
@@ -196,6 +239,7 @@ namespace Quarter3Project.EntityTypes
                 }
                 //myGame.friendlyShots.Add(new 
             }
+>>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
             base.Update(gameTime);
         }
