@@ -51,14 +51,17 @@ namespace Quarter3Project
             StreamWriter sw = new StreamWriter(@"Save/Save.txt", true, Encoding.ASCII);
             switch (myGame.gameManager.classType)
             {
-                case 1:
+                case 100:
                     sw.WriteLine(1);
                     break;
-                case 2:
+                case 200:
                     sw.WriteLine(2);
                     break;
-                case 3:
+                case 300:
                     sw.WriteLine(3);
+                    break;
+                default:
+                    sw.WriteLine(1);
                     break;
             }
             sw.WriteLine(myGame.gameManager.player.getPos().X);
@@ -116,14 +119,17 @@ namespace Quarter3Project
                     case true:
                         switch (myGame.createManager.chrSelection[i].id)
                         {
-                            case 1:
-                                sw.WriteLine(1);
+                            case 100:
+                                sw.WriteLine(100);
                                 break;
-                            case 2:
-                                sw.WriteLine(2);
+                            case 200:
+                                sw.WriteLine(200);
                                 break;
-                            case 3:
-                                sw.WriteLine(3);
+                            case 300:
+                                sw.WriteLine(300);
+                                break;
+                            default:
+                                sw.WriteLine(100);
                                 break;
                         }
                         break;

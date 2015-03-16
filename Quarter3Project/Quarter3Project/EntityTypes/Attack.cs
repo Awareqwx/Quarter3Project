@@ -1,27 +1,15 @@
-<<<<<<< HEAD
-﻿using System;
-using System.Collections.Generic;
-=======
 ﻿using System.Collections.Generic;
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 using System.Linq;
 using System.Text;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework;
-<<<<<<< HEAD
-=======
 using System;
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
 namespace Quarter3Project.EntityTypes
 {
     public class Attack : Entity
     {
         protected float rotation;
-<<<<<<< HEAD
-        Boolean flip;
-=======
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
         public Point size;
         public int damage;
 
@@ -31,10 +19,6 @@ namespace Quarter3Project.EntityTypes
             size = fs;
             speed = s;
             rotation = r;
-<<<<<<< HEAD
-            flip = Math.Sign(direction.X) == 1;
-=======
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
             colors = new Color[] { c };
             damage = dmg;
             addAnimations();
@@ -46,10 +30,6 @@ namespace Quarter3Project.EntityTypes
             size = fs;
             speed = s;
             rotation = r;
-<<<<<<< HEAD
-            flip = Math.Sign(direction.X) == 1;
-=======
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
             colors = c;
             damage = dmg;
             addAnimations();
@@ -75,11 +55,7 @@ namespace Quarter3Project.EntityTypes
 
         public override void Draw(GameTime gameTime, SpriteBatch spriteBatch)
         {
-<<<<<<< HEAD
-            spriteBatch.Draw(textures[0], position, getTexRectangle(), colors[0], rotation, new Vector2(0, 0), new Vector2(1, 1), flip ? SpriteEffects.None : SpriteEffects.FlipHorizontally, 0);
-=======
             spriteBatch.Draw(textures[0], position, getTexRectangle(), colors[0], rotation, new Vector2(0, 0), new Vector2(1, 1), SpriteEffects.None, 0);
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
         }
 
         Rectangle getTexRectangle()
@@ -89,11 +65,7 @@ namespace Quarter3Project.EntityTypes
 
         public Point[] getPoints()
         {
-<<<<<<< HEAD
-            Point[] points = new Point[] { new Point((int)position.X, (int)position.Y), new Point((int)(position.X + (Math.Cos(rotation) * currentSet.frameSize.X)), (int)(position.Y + (Math.Sin(rotation) * currentSet.frameSize.X))), new Point((int)(position.X + (Math.Sin(rotation) * currentSet.frameSize.Y)), (int)(position.Y + (Math.Cos(rotation) * currentSet.frameSize.Y))),new Point((int)(position.X + (Math.Cos(rotation) * currentSet.frameSize.X) + (Math.Sin(rotation) * currentSet.frameSize.Y)),(int)(position.Y + (Math.Sin(rotation) * currentSet.frameSize.X) + (Math.Cos(rotation) * currentSet.frameSize.Y)))};
-=======
             Point[] points = new Point[] { new Point((int)position.X, (int)position.Y), new Point((int)(position.X + (Math.Cos(rotation) * currentSet.frameSize.X)), (int)(position.Y + (Math.Sin(rotation) * currentSet.frameSize.X))), new Point((int)(position.X + (Math.Sin(rotation) * currentSet.frameSize.Y)), (int)(position.Y + (Math.Cos(rotation) * currentSet.frameSize.Y))), new Point((int)(position.X + (Math.Cos(rotation) * currentSet.frameSize.X) + (Math.Sin(rotation) * currentSet.frameSize.Y)), (int)(position.Y + (Math.Sin(rotation) * currentSet.frameSize.X) + (Math.Cos(rotation) * currentSet.frameSize.Y))) };
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
             return points;
         }
 

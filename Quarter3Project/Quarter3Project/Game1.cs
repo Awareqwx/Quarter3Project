@@ -18,7 +18,6 @@ namespace Quarter3Project
     public class Game1 : Microsoft.Xna.Framework.Game
     {
         public CreateManager createManager;
-<<<<<<< HEAD
         public DebugManager debugManager;
         public GameManager gameManager;
         GraphicsDeviceManager graphics;
@@ -26,15 +25,6 @@ namespace Quarter3Project
         public PopManager popManager;
         SpriteBatch spriteBatch;
         public SplashScreenManager splashScreenManager;
-=======
-        DebugManager debugManager;
-        public GameManager gameManager;
-        GraphicsDeviceManager graphics;
-        MenuManager menuManager;
-        public PopManager popManager;
-        SpriteBatch spriteBatch;
-        SplashScreenManager splashScreenManager;
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
         public int buttonPressed, prevButtonPressed, currentCharcc = 1, currentChar;
         public string msg;
@@ -78,13 +68,6 @@ namespace Quarter3Project
             Components.Add(createManager);
             createManager.DrawOrder = 1;
 
-<<<<<<< HEAD
-=======
-            gameManager = new GameManager(this);
-            Components.Add(gameManager);
-            gameManager.DrawOrder = 1;
-
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
             popManager = new PopManager(this);
             Components.Add(popManager);
             popManager.DrawOrder = 2;
@@ -96,13 +79,10 @@ namespace Quarter3Project
             debugManager = new DebugManager(this, menuManager);
             Components.Add(debugManager);
             debugManager.DrawOrder = 3;
-<<<<<<< HEAD
             
             gameManager = new GameManager(this);
             Components.Add(gameManager);
             gameManager.DrawOrder = 1;
-=======
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
 
             SetCurrentLevel(GameLevels.GameLevels.SPLASH);
 
@@ -158,11 +138,7 @@ namespace Quarter3Project
 
         public void showPop(int id)
         {
-<<<<<<< HEAD
-            popManager.showPop(id, popManager.popList);
-=======
             popManager.showPop(id);
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
         }
 
         public void SetCurrentLevel(GameLevels.GameLevels gL)

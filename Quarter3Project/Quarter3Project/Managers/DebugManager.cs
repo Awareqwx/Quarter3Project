@@ -8,11 +8,7 @@ using System.Text;
 
 namespace Quarter3Project.Managers
 {
-<<<<<<< HEAD
     public class DebugManager : DrawableGameComponent
-=======
-    class DebugManager : DrawableGameComponent
->>>>>>> c8cdf4fa39cc8a4e5d2d3639a439402ad136f910
     {
         Game1 g;
         MenuManager m;
