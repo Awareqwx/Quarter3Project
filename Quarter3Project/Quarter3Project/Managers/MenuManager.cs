@@ -1,56 +1,95 @@
-﻿using Microsoft.Xna.Framework;
+﻿#region File Description
+// MenuManager.cs
+#endregion
+
+#region Using Statements
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+#endregion
 
 namespace Quarter3Project.Managers
 {
     public class MenuManager : DrawableGameComponent
     {
-        ButtonEvents bE;
-        float[] RotationAngle = { 0, 0, 0 };
+
+        #region Fields
+
         Game1 g;
-        List<ItemData.btn> buttonList;
-        MouseState mouseState, prevMouseState;
-        Random r;
+
+        ButtonEvents bE;
+
         SpriteBatch spriteBatch;
         SpriteFont Consolas;
+
+        Texture2D gameBG;
+
         Texture2D[] r1;
-        Texture2D btn, gameBG;        
+        float[] RotationAngle = { 0,
+                                  0,
+                                  0 };
+
+        List<ItemData.btn> buttonList;
+        Texture2D btn;  
+
+        MouseState mouseState, prevMouseState;
         Vector2 mousePos;
+
+        Random r;
+
+        #endregion
+
+        #region Initialization
 
         public MenuManager(Game1 G)
             : base(G)
         {
             g = G;
-            r = new Random();
-            bE = new ButtonEvents(g);
         }
 
-        protected override void LoadContent()
+        public override void Initialize()
         {
-            spriteBatch = new SpriteBatch(GraphicsDevice);
+
+            r = new Random();
+
+            bE = new ButtonEvents(g);
+
             buttonList = new List<ItemData.btn>();
-            Consolas = Game.Content.Load<SpriteFont>(@"Fonts/Consolas");
-            btn = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            r1 = new Texture2D[] { new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color), new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color), new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color) };
-            gameBG = Game.Content.Load<Texture2D>(@"Images/gameBG");
 
-            btn.SetData<Color>(new Color[] { new Color(r.Next(0, 255) / 100, r.Next(0, 255) / 100, r.Next(0, 255) / 100, 0.5f) });
-
-            for (int i = 0; i < r1.Length; i++)
-                r1[i].SetData<Color>(new Color[] { new Color(r.Next(0, 255) / 101, r.Next(0, 255) / 101, r.Next(0, 255) / 101, 0.5f) });
+            base.Initialize();
 
             buttonList.Add(new ItemData.btn(btn, new Vector2(100, 100), new Point(100, 50), "Create New", Color.White, false, false, true, 200, 201));
             buttonList.Add(new ItemData.btn(btn, new Vector2(100, 150), new Point(100, 50), "Start", Color.White, false, false, true, 200, 202));
             buttonList.Add(new ItemData.btn(btn, new Vector2(100, 200), new Point(100, 50), "Credits", Color.White, false, false, true, 200, 203));
             buttonList.Add(new ItemData.btn(btn, new Vector2(100, 250), new Point(100, 100), "Quit", Color.White, false, false, true, 200, 204));
 
+        }
+
+        protected override void LoadContent()
+        {
+            spriteBatch = new SpriteBatch(GraphicsDevice);
+            
+            Consolas = Game.Content.Load<SpriteFont>(@"Fonts/Consolas");
+
+            gameBG = Game.Content.Load<Texture2D>(@"Images/gameBG");
+
+            btn = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            btn.SetData<Color>(new Color[] { new Color(r.Next(0, 255) / 100, r.Next(0, 255) / 100, r.Next(0, 255) / 100, 0.5f) });
+
+            r1 = new Texture2D[] { new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color), new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color), new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color) };
+            for (int i = 0; i < r1.Length; i++)
+                r1[i].SetData<Color>(new Color[] { new Color(r.Next(0, 255) / 101, r.Next(0, 255) / 101, r.Next(0, 255) / 101, 0.5f) });            
+
             base.LoadContent();
         }
+
+        #endregion
+
+        #region Update and Draw
 
         public override void Update(GameTime gameTime)
         {
@@ -80,7 +119,7 @@ namespace Quarter3Project.Managers
             spriteBatch.Draw(gameBG, new Rectangle(0, 0, 960, 620), Color.White);
 
             DrawMenu();
-            FancyShit();
+            SpinningCircleOfDoomDestructionAndDespairAndChaosAndEvilnessAndSuch();
 
             spriteBatch.End();
 
@@ -157,11 +196,10 @@ namespace Quarter3Project.Managers
             }
         }
 
-
         /// <summary>
         /// Draws out the spinning rectangles stored in the r1 texture2d array
         /// </summary>
-        public void FancyShit()
+        public void SpinningCircleOfDoomDestructionAndDespairAndChaosAndEvilnessAndSuch()
         {
             for (int i = 0; i < r1.Length; i++)
             {
@@ -185,5 +223,8 @@ namespace Quarter3Project.Managers
             }
 
         }
+
+        #endregion
+
     }
 }

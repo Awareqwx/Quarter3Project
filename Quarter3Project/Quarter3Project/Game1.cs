@@ -1,3 +1,8 @@
+#region File Description
+// Game1.cs
+#endregion
+
+#region Using Statements
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -9,6 +14,7 @@ using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using Microsoft.Xna.Framework.Media;
 using Quarter3Project.Managers;
+#endregion
 
 namespace Quarter3Project
 {
@@ -17,30 +23,26 @@ namespace Quarter3Project
     /// </summary>
     public class Game1 : Microsoft.Xna.Framework.Game
     {
+
+        #region Fields
+
+        GraphicsDeviceManager graphics;
+
+        SpriteBatch spriteBatch;
+
         public CreateManager createManager;
         public DebugManager debugManager;
         public GameManager gameManager;
-        GraphicsDeviceManager graphics;
         public MenuManager menuManager;
         public PopManager popManager;
-        SpriteBatch spriteBatch;
         public SplashScreenManager splashScreenManager;
 
-        public int buttonPressed, prevButtonPressed, currentCharcc = 1, currentChar;
-        public string msg;
+        public GameLevels.GameLevels cL { get; private set; }
+        public GameLevels.GameLevels pL { get; private set; }
 
-        private GameLevels.GameLevels cL;
-        private GameLevels.GameLevels pL;
+        #endregion
 
-        public GameLevels.GameLevels PrevLevel
-        {
-            get { return pL; }
-        }
-
-        public GameLevels.GameLevels CurrentLevel
-        {
-            get { return cL; }
-        }
+        #region Initialization
 
         public Game1()
         {
@@ -109,6 +111,10 @@ namespace Quarter3Project
         {
         }
 
+        #endregion
+
+        #region Update and Draw
+
         /// <summary>
         /// Allows the game to run logic such as updating the world,
         /// checking for collisions, gathering input, and playing audio.
@@ -136,9 +142,13 @@ namespace Quarter3Project
             base.Draw(gameTime);
         }
 
+        #endregion
+
+        #region Methods
+
         public void showPop(int id)
         {
-            popManager.showPop(id);
+            popManager.showPop(id, popManager.popList);
         }
 
         public void SetCurrentLevel(GameLevels.GameLevels gL)
@@ -180,6 +190,8 @@ namespace Quarter3Project
                     break;
             }
         }
+
+        #endregion
 
     }
 }
