@@ -108,13 +108,7 @@ namespace Quarter3Project
 
         public struct pop
         {
-            /*
-             * TODO: 
-             * Change all the accessors Example:
-             * public Texture2D bgTex { get; private set; }
-             * Why? It's more simple and efficient.
-             */
-            public pop(Texture2D backgroundTexture, Texture2D borderTexture, Vector2 position, Point size, int boxType, string[] boxText, bool visibility, bool hoverState, bool prevHoverState, int boxID, Vector2 origPos, int drawO)
+            public pop(Texture2D backgroundTexture, Texture2D borderTexture, Vector2 position, Point size, int boxType, string[] boxText, bool visibility, bool hoverState, bool prevHoverState, int boxID)
                 : this()
             {
                 this.bgTex = backgroundTexture;
@@ -127,8 +121,6 @@ namespace Quarter3Project
                 this.hs = hoverState;
                 this.phs = prevHoverState;
                 this.ID = boxID;
-                this.oPos = origPos;
-                this.drawOrder = drawO;
             }
 
             private Texture2D bgTex { get; set; }
@@ -161,12 +153,6 @@ namespace Quarter3Project
             private int ID { get; set; }
             public int getID { get { return ID; } }
 
-            private Vector2 oPos { get; set; }
-            public Vector2 getOPos { get { return oPos; } }
-
-            private int drawOrder { get; set; }
-            public int getDrawOrder { get { return drawOrder; } }
-
             public Rectangle collisionRect()
             {
                 return new Rectangle((int)pos.X, (int)pos.Y, (int)s.X, (int)s.Y);
@@ -178,6 +164,7 @@ namespace Quarter3Project
             }
 
         }
+
 
         public struct skill
         {
@@ -224,55 +211,5 @@ namespace Quarter3Project
             public String skillDesc { get; set; }
             public String skillType { get; set; }
         }
-
-        public struct itemSpace
-        {
-            public itemSpace(Texture2D backgroundTexture, Texture2D itemTexture, Vector2 position, Point size, int itemNumber, int spaceNumber, int amount)
-                : this()
-            {
-                this.bgTex = backgroundTexture;
-                this.itemTex = itemTexture;
-                this.pos = position;
-                this.s = size;
-                this.itemID = itemNumber;
-                this.itemSpaceID = spaceNumber;
-                this.qty = amount;                
-            }
-            public Texture2D bgTex { get; private set; }
-            public Texture2D itemTex { get; private set; }
-            public Vector2 pos { get; private set; }
-            public Point s { get; private set; }
-            public int itemID { get; private set; }
-            public int itemSpaceID { get; private set; }
-            public int qty { get; private set; }
-            
-            public Rectangle collisionRect()
-            {
-                return new Rectangle((int)pos.X, (int)pos.Y, s.X, s.Y);
-            }
-        }
-
-        public struct item
-        {
-            public item(Texture2D itemTex, int itemID, string itemName, Texture2D popBG, string popDesc, bool popVis)
-                : this()
-            {
-                this.iTex = itemTex;
-                this.iID = itemID;
-                this.iName = itemName;
-                this.pBG = popBG;
-                this.pDesc = popDesc;
-                this.pVis = popVis;
-            }
-
-            public Texture2D iTex { get; private set; }
-            public int iID { get; private set; }
-            public string iName { get; private set; }
-            public Texture2D pBG { get; private set; }
-            public string pDesc { get; private set; }
-            public bool pVis { get; private set; }
-                        
-        }
-
     }
 }
