@@ -12,14 +12,14 @@ namespace Quarter3Project.EntityTypes
 
         Vector2 direction;
 
-        public Projectile(Texture2D t, Vector2 v, GameManager g, Vector2 d, float s, Color c, Point fs, int dmg)
-            : base(t, v, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg)
+        public Projectile(Texture2D t, Vector2 p, GameManager g, Vector2 d, float s, Color c, Point fs, int dmg)
+            : base(t, p, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg)
         {
             direction = Collision.unitVector(d);
         }
 
-        public Projectile(Texture2D[] t, Vector2 v, GameManager g, Vector2 d, float s, Color[] c, Point fs, int dmg)
-            : base(t, v, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg)
+        public Projectile(Texture2D[] t, Vector2 p, GameManager g, Vector2 d, float s, Color[] c, Point fs, int dmg)
+            : base(t, p, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg)
         {
             direction = Collision.unitVector(d);
         }

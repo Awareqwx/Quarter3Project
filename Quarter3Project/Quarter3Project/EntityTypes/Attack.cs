@@ -13,8 +13,8 @@ namespace Quarter3Project.EntityTypes
         public Point size;
         public int damage;
 
-        public Attack(Texture2D t, Vector2 v, GameManager g, float r, float s, Color c, Point fs, int dmg)
-            : base(t, v, g)
+        public Attack(Texture2D t, Vector2 p, GameManager g, float r, float s, Color c, Point fs, int dmg)
+            : base(t, p, g)
         {
             size = fs;
             speed = s;
