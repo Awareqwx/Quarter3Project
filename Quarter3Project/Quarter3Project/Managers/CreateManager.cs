@@ -3,7 +3,7 @@
 #endregion
 
 #region Using Statements
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -34,17 +34,20 @@ namespace Quarter3Project.Managers
         public List<ItemData.chr> chrSelection;
         Texture2D h,
                   k,
-                  w;
+                  w,
+                  a;
         float supermansafetytimer = 0.0f;
         bool supermansafetylock = false;
 
         List<ItemData.skill> skillList;
         Texture2D wizPassive,
-                  wizOffense, 
-                  cleActive, 
-                  cleOffense, 
-                  warOffensive, 
-                  warActive;
+                  wizOffense,
+                  cleActive,
+                  cleOffense,
+                  warOffensive,
+                  warActive,
+                  arcOffensive,
+                  arcPassive;
         List<ItemData.skillDescr> skillDList;
 
         List<ItemData.btn> btnList2;
@@ -96,20 +99,23 @@ namespace Quarter3Project.Managers
             skillList.Add(new ItemData.skill(cleActive, new Vector2(210, 450), new Point(50, 50), 200, 20200)); // Rejuvenation - Active - Uses mana to regain some health.
             skillList.Add(new ItemData.skill(warOffensive, new Vector2(150, 450), new Point(50, 50), 300, 30000)); // Power Strike - Offensive - Uses Mana to increase the damage of the strike.
             skillList.Add(new ItemData.skill(warActive, new Vector2(210, 450), new Point(50, 50), 300, 30200)); // Oblivion - Active - You become oblivious and ignore a percentage of damage.
-            //skillList.Add(new ItemData.skill(arcOffense, new Vector2(150, 450), new Point(50, 50), 1, 40000)); // Triple Shot - Offensive - Fire three arrows at your target.
-            //skillList.Add(new ItemData.skill(arcPassive, new Vector2(210, 450), new Point(50, 50), 1, 40100)); // Steady Aim - Active - Increases precision and critical damage.
-            
+            skillList.Add(new ItemData.skill(arcOffensive, new Vector2(150, 450), new Point(50, 50), 400, 40000)); // Volley - Offensive - Fire three arrows at your target.
+            skillList.Add(new ItemData.skill(arcPassive, new Vector2(210, 450), new Point(50, 50), 400, 40200)); // Leech Arrows - Passive - Your arrows restore a portion of damage dealt as health.
+
             skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 100, 10000, "Fire Bolt", "Shoot a projectile \nof fire at your \ntarget.", "(Offensive)"));
             skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 100, 10100, "Health Transmogrify", "A percentage of damage \ntaken will reduce Mana \ninstead of Health.", "(Passive)"));
             skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 200, 20000, "Holy Arrow", "Shoots an arrow of \nlight at your \ntarget.", "(Offensive)"));
             skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 200, 20200, "Rejuvenation", "Uses Mana to regain \nsome Health.", "(Active)"));
             skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 300, 30000, "Power Strike", "Uses Mana to \nincrease the power \nof your attack.", "(Offensive)"));
             skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 300, 30200, "Oblivion", "You become oblivious \nand ignore a \npercentage of \ndamage.", "(Offensive)"));
+            skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 400, 40000, "Volley", "Fire three arrows at \nyour target.", "(Offensive)"));
+            skillDList.Add(new ItemData.skillDescr(bbg, new Vector2(mousePos.X, mousePos.Y), new Point(150, 150), 400, 40200, "Leech Arrows", "Your arrows restore \na portion of damage \ndealt as health.", "(Passive)"));
 
             chrSelection.Add(new ItemData.chr(w, new Vector2(0, 0), "Wizard", "The Wizard is mana based and \nis more powerful than the \nCleric. This profession is able \nto do a lot of damage and can \nalso take a lot of damage by \nbeing able to reduce a \npercentage of mana instead \nof health based on the \namount of damage taken.", 100, false));
             chrSelection.Add(new ItemData.chr(h, new Vector2(0, 0), "Cleric", "The Cleric is a mana based \nprofession, all of its skills \nrequire mana to be used. The \nCleric gets its power from the \nFaith attribute, this means \nthat Clerics are stronger \nagainst undead and unholy \nbeasts. Although this \nprofession has a low \namount of health it is made \nup by being able to regain \nhealth at a cost to \nsome mana.", 200, true));
             chrSelection.Add(new ItemData.chr(k, new Vector2(0, 0), "Knight", "The Knight is based on health, \nbeing able to take a lot of \ndamage and do a lot of damage. \nAs a Knight you are able to do \npowerful attacks at a cost to \nmana, you can also ignore \ndamage while under the \neffects of Oblivion.", 300, false));
-            
+            chrSelection.Add(new ItemData.chr(a, new Vector2(0, 0), "Archer", "The Archer is based on keeping \nyour distance, taking out \nmultiple enemies at once with \nVolley and regaining missing \nhealth with Draining Arrows.", 400, false));
+
         }
 
         protected override void LoadContent()
@@ -138,6 +144,7 @@ namespace Quarter3Project.Managers
             h = Game.Content.Load<Texture2D>(@"Images/Healer");
             k = Game.Content.Load<Texture2D>(@"Images/Knight");
             w = Game.Content.Load<Texture2D>(@"Images/Wizard");
+            a = Game.Content.Load<Texture2D>(@"Images/Archer");
             
             wizPassive = Game.Content.Load<Texture2D>(@"Images/passive");
             wizOffense = Game.Content.Load<Texture2D>(@"Images/Spell_Icon");
@@ -145,6 +152,8 @@ namespace Quarter3Project.Managers
             cleActive = Game.Content.Load<Texture2D>(@"Images/cleric_passive");
             warOffensive = Game.Content.Load<Texture2D>(@"Images/warr_offensive");
             warActive = Game.Content.Load<Texture2D>(@"Images/warr_defensive");
+            arcOffensive = Game.Content.Load<Texture2D>(@"Images/archer_offensive");
+            arcPassive = Game.Content.Load<Texture2D>(@"Images/archer_passive");
 
             base.LoadContent();
         }
@@ -231,6 +240,13 @@ namespace Quarter3Project.Managers
                                         else if (chrSelection[s].id == 300 && supermansafetylock == false)
                                         {
                                             chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, false);
+                                            chrSelection[3] = new ItemData.chr(chrSelection[3].tex, chrSelection[3].pos, chrSelection[3].name, chrSelection[3].descr, chrSelection[3].id, true);
+                                            supermansafetylock = true;
+                                            supermansafetytimer = 0.4f;
+                                        }
+                                        else if (chrSelection[s].id == 400 && supermansafetylock == false)
+                                        {
+                                            chrSelection[3] = new ItemData.chr(chrSelection[3].tex, chrSelection[3].pos, chrSelection[3].name, chrSelection[3].descr, chrSelection[3].id, false);
                                             chrSelection[0] = new ItemData.chr(chrSelection[0].tex, chrSelection[0].pos, chrSelection[0].name, chrSelection[0].descr, chrSelection[0].id, true);
                                             supermansafetylock = true;
                                             supermansafetytimer = 0.4f;
@@ -245,7 +261,7 @@ namespace Quarter3Project.Managers
                                         {
                                             if (chrSelection[s].id == 100 && supermansafetylock == false)
                                             {
-                                                chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, true);
+                                                chrSelection[3] = new ItemData.chr(chrSelection[3].tex, chrSelection[3].pos, chrSelection[3].name, chrSelection[3].descr, chrSelection[3].id, true);
                                                 chrSelection[0] = new ItemData.chr(chrSelection[0].tex, chrSelection[0].pos, chrSelection[0].name, chrSelection[0].descr, chrSelection[0].id, false);
                                                 supermansafetylock = true;
                                                 supermansafetytimer = 0.4f;
@@ -261,6 +277,13 @@ namespace Quarter3Project.Managers
                                             {
                                                 chrSelection[1] = new ItemData.chr(chrSelection[1].tex, chrSelection[1].pos, chrSelection[1].name, chrSelection[1].descr, chrSelection[1].id, true);
                                                 chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, false);
+                                                supermansafetylock = true;
+                                                supermansafetytimer = 0.4f;
+                                            }
+                                            else if(chrSelection[s].id == 400 && supermansafetylock == false)
+                                            {
+                                                chrSelection[3] = new ItemData.chr(chrSelection[3].tex, chrSelection[3].pos, chrSelection[3].name, chrSelection[3].descr, chrSelection[3].id, false);
+                                                chrSelection[2] = new ItemData.chr(chrSelection[2].tex, chrSelection[2].pos, chrSelection[2].name, chrSelection[2].descr, chrSelection[2].id, true);
                                                 supermansafetylock = true;
                                                 supermansafetytimer = 0.4f;
                                             }
@@ -426,7 +449,42 @@ namespace Quarter3Project.Managers
                                             spriteBatch.DrawString(ConsolasTiny, skillDList[z].skillType, new Vector2(skillDList[z].position.X + 6, skillDList[z].position.Y + 1.5f + Consolas.MeasureString(skillDList[z].skillName).Y), Color.White);
                                             spriteBatch.DrawString(ConsolasSmall, skillDList[z].skillDesc, new Vector2(skillDList[z].position.X + 7.5f, skillDList[z].position.Y + 12.0f + Consolas.MeasureString(skillDList[z].skillName).Y), Color.White);
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + (int)2.5f, 1, skillDList[z].size.Y - 5), Color.White);
-                                            spriteBatch.Draw(border1, new Rectangle(((int)skillDList[z].position.X  + skillDList[z].size.X) - (int)3.0f, (int)skillDList[z].position.Y + (int)2.5f, 1, skillDList[z].size.Y - 5), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle(((int)skillDList[z].position.X + skillDList[z].size.X) - (int)3.0f, (int)skillDList[z].position.Y + (int)2.5f, 1, skillDList[z].size.Y - 5), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + (int)2.5f, skillDList[z].size.X - 5, 1), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + skillDList[z].size.Y - (int)3.0f, skillDList[z].size.X - 5, 1), Color.White);
+                                        }
+                                    }
+                                }
+                            }
+                            break;
+                        case 400:
+                            for (int i = 0; i < skillList.Count; i++)
+                            {
+                                if (skillList[i].classid == 400)
+                                {
+                                    spriteBatch.Draw(skillList[i].texture, new Rectangle((int)skillList[i].position.X, (int)skillList[i].position.Y, skillList[i].size.X, skillList[i].size.Y), Color.White);
+                                    spriteBatch.DrawString(Consolas, "Attributes: \n\n Power: 10 \n\n Presage: 5 \n\n Agility: 15 \n\n Faith: 5", new Vector2(130, (GraphicsDevice.Viewport.Height / 2) - 200), Color.Black);
+                                }
+                            }
+
+                            for (int i = 0; i < skillList.Count; i++)
+                            {
+                                if (skillList[i].collisionRect().Contains(new Rectangle((int)mousePos.X, (int)mousePos.Y, 1, 1)))
+                                {
+                                    for (int z = 0; z < skillDList.Count; z++)
+                                    {
+                                        if (skillList[i].skillid == skillDList[z].skillid && skillList[i].classid == 400)
+                                        {
+                                            spriteBatch.Draw(skillDList[z].background, new Rectangle((int)skillDList[z].position.X, (int)skillDList[z].position.Y, skillDList[z].size.X, skillDList[z].size.Y), Color.White);
+                                            if (Consolas.MeasureString(skillDList[z].skillName).Length() > skillDList[z].size.X)
+                                            {
+                                                skillDList[z] = new ItemData.skillDescr(skillDList[z].background, skillDList[z].position, new Point((int)Consolas.MeasureString(skillDList[z].skillName).Length() + 10, skillDList[z].size.Y), skillDList[z].popid, skillDList[z].skillid, skillDList[z].skillName, skillDList[z].skillDesc, skillDList[z].skillType);
+                                            }
+                                            spriteBatch.DrawString(Consolas, skillDList[z].skillName, new Vector2(skillDList[z].position.X + 5, skillDList[z].position.Y + 5), Color.White);
+                                            spriteBatch.DrawString(ConsolasTiny, skillDList[z].skillType, new Vector2(skillDList[z].position.X + 6, skillDList[z].position.Y + 1.5f + Consolas.MeasureString(skillDList[z].skillName).Y), Color.White);
+                                            spriteBatch.DrawString(ConsolasSmall, skillDList[z].skillDesc, new Vector2(skillDList[z].position.X + 7.5f, skillDList[z].position.Y + 12.0f + Consolas.MeasureString(skillDList[z].skillName).Y), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + (int)2.5f, 1, skillDList[z].size.Y - 5), Color.White);
+                                            spriteBatch.Draw(border1, new Rectangle(((int)skillDList[z].position.X + skillDList[z].size.X) - (int)3.0f, (int)skillDList[z].position.Y + (int)2.5f, 1, skillDList[z].size.Y - 5), Color.White);
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + (int)2.5f, skillDList[z].size.X - 5, 1), Color.White);
                                             spriteBatch.Draw(border1, new Rectangle((int)skillDList[z].position.X + (int)2.5f, (int)skillDList[z].position.Y + skillDList[z].size.Y - (int)3.0f, skillDList[z].size.X - 5, 1), Color.White);
                                         }

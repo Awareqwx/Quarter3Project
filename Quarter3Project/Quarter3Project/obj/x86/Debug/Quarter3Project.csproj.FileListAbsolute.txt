@@ -1,130 +1,131 @@
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
-E:\Quarter3Project-master\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\gameBG.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\gameBG.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\passive.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell_Icon.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_offensive.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_passive.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\passive.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell_Icon.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_offensive.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_passive.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb
-C:\Users\Tree Wood\Desktop\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bricks.xnb
-\\sitech2.sno.tech\Home$\vgd\Ryan_Williams-C\My Documents\Visual Studio 2010\Projects\Quarter3Project-master\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bricks.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\gameBG.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\passive.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell_Icon.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_offensive.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_passive.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bricks.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Armor.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Base.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Sword.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Base.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Cloak.xnb
-C:\Git\Video Game Design\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Staff.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\asdfk.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\blue_potion.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bricks.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric_C.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_offensive.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_passive.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\DialogBox.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\gameBG.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight_C.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\passive.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\potion.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\red_potion.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\someshit.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell_Icon.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\warr_defensive.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\warr_offensive.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Armor.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Base.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Sword.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Base.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Cloak.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Staff.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\yellow_potion.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\rainbowRarity.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\under_earth_title_screen.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\btnTex.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\long_board_ui.xnb
+C:\Users\Ryan\Documents\Visual Studio 2013\Projects\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bossmap.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\Consolas.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasLarge.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\consolassmall.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Fonts\ConsolasTiny.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\asdfk.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\blue_potion.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bricks.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\buildingTest.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccArrows.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccBase.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccClass.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccImage.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\ccStats.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric_C.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_offensive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\cleric_passive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\DialogBox.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\EnemyTest.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\gameBG.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Healer.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\health_bar.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\knight.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight_C.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Menu.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\MenuOpts.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\menus.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\passive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PlayerTest.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\potion.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopBase.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\PotionShopShadow.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\red_potion.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\someshit.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Spell_Icon.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Splash.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\warr_defensive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\warr_offensive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_C.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard_S.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Armor.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Base.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Knight\Knight_Sword.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Base.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Cloak.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Wizard_Staff.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\yellow_potion.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\rainbowRarity.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\under_earth_title_screen.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\btnTex.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\long_board_ui.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\bossmap.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.exe
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Quarter3Project.pdb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.csprojResolveAssemblyReference.cache
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Microsoft.Xna.Framework.RuntimeProfile.txt
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.exe
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\obj\x86\Debug\Quarter3Project.pdb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\credits_screen.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Wizard\Fireball.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric\lightArrow.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Cleric\Cleric.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\archer_passive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\archer_offensive.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Archer.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Archer\Archer_Base.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Archer\Archer_Feather.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Archer\Arrow_Head.xnb
+C:\Users\Awareqwx\Desktop\Interface\Quarter3Project\Quarter3Project\Quarter3Project\bin\x86\Debug\Content\Images\Archer\Arrow_Shaft.xnb

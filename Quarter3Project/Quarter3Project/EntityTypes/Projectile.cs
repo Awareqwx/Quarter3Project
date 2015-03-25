@@ -12,14 +12,14 @@ namespace Quarter3Project.EntityTypes
 
         Vector2 direction;
 
-        public Projectile(Texture2D t, Vector2 p, GameManager g, Vector2 d, float s, Color c, Point fs, int dmg)
-            : base(t, p, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg)
+        public Projectile(Texture2D t, Vector2 v, GameManager g, Vector2 d, float s, Color c, Point fs, int dmg, int l, int i, bool b)
+            : base(t, v, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg, l, i, b)
         {
             direction = Collision.unitVector(d);
         }
 
-        public Projectile(Texture2D[] t, Vector2 p, GameManager g, Vector2 d, float s, Color[] c, Point fs, int dmg)
-            : base(t, p, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg)
+        public Projectile(Texture2D[] t, Vector2 v, GameManager g, Vector2 d, float s, Color[] c, Point fs, int dmg, int l, int i, bool b)
+            : base(t, v, g, (float)(Math.Atan2(d.Y, d.X)), s, c, fs, dmg, l, i, b)
         {
             direction = Collision.unitVector(d);
         }
@@ -48,7 +48,7 @@ namespace Quarter3Project.EntityTypes
             spriteBatch.Draw(textures[0], position, getTexRectangle(), colors[0], rotation, new Vector2(0, 0), new Vector2(1, 1), SpriteEffects.None, 0);
         }
 
-        Rectangle getTexRectangle()
+        protected Rectangle getTexRectangle()
         {
             return new Rectangle(currentSet.frameSize.X * currentFrame.X + currentSet.frameSize.X * currentSet.startPos.X, currentSet.frameSize.Y * currentFrame.Y + currentSet.frameSize.Y * currentSet.startPos.Y, currentSet.frameSize.X, currentSet.frameSize.Y);
         }

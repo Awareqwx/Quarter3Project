@@ -24,27 +24,19 @@ using Quarter3Project.Classes;
 
 namespace Quarter3Project
 {
-
-    public class GameManager : Microsoft.Xna.Framework.DrawableGameComponent
+    public class GameManager : DrawableGameComponent
     {
 
         #region Fields
 
         Game1 myGame;
-        public int classType, prevClassType, health, mana, exp;
-        KeyboardState keyBoardState, prevKeyState;
-        public List<Attack> enemyShots, friendlyShots;
-        Random RNG;
+
         SpriteBatch spriteBatch;
-        public SpriteFont consolas;
-        public Player player;
-        Texture2D[] testTexture, mage, cler, warr, bT;
-        Texture2D enemy, uiBG, redUI, blueUI, yellowUI;
+        SpriteFont consolas;
 
         KeyboardState keyBoardState,
-        prevKeyState;
-        public Location currentLoc;
-        
+                      prevKeyState;
+
         MouseState mouseState,
                    prevMouseState;
         Vector2 mousePos;
@@ -52,7 +44,8 @@ namespace Quarter3Project
         Texture2D[] testTexture,
                     mage,
                     cler,
-                    warr;
+                    warr,
+                    arch;
 
         public Collision.mapSegment[] playerSegments = new Collision.mapSegment[4];
         public int classType,
@@ -67,17 +60,15 @@ namespace Quarter3Project
                                           mapSegments;
 
         Texture2D enemy;
-        //TestEnemy[] mooks;
 
         Texture2D atk;
-        public TestEntity[] tests;
         public List<Attack> enemyShots,
                             friendlyShots;
-        int timer;
 
         public List<ItemData.item> itemList;
         Texture2D redPotion,
-                  bluePotion;
+                  bluePotion,
+                  yellowPotion;
 
         Texture2D uiBG,
                   redUI,
@@ -85,12 +76,26 @@ namespace Quarter3Project
                   yellowUI,
                   blackUI,
                   transparentTex,
-                  blueTUI;
+                  blueTUI,
+                  yellowTUI,
+                  whiteRarity,
+                  blueRarity,
+                  greenRarity,
+                  yellowRarity,
+                  purpleRarity,
+                  redRarity,
+                  rainbowRarity;
 
         List<ItemData.btn> btnList;
 
         public ButtonEvents bE2;
         public GlobalEvents gE;
+
+        public Location Test;
+        public Location currentLoc;
+        Texture2D mapBG;
+
+        public Player player;
 
         Random RNG = new Random();
 
@@ -110,20 +115,20 @@ namespace Quarter3Project
             buildingSegments = new List<Collision.mapSegment>();
 
             mapSegments = new List<Collision.mapSegment>();
-            RNG = new Random();
 
             enemyShots = new List<Attack>();
+
             friendlyShots = new List<Attack>();
 
             bE2 = new ButtonEvents(myGame); //ButtonEvents bE2, BuildingEntity bE
-addLocs();
+
             gE = new GlobalEvents(myGame);
 
             btnList = new List<ItemData.btn>();
 
             itemList = new List<ItemData.item>();
 
-            tests = new TestEntity[1];
+            RNG = new Random();
 
             bE = new BuildingEntity[1];
 
@@ -141,28 +146,23 @@ addLocs();
 
                 loadPlayer();
 
-                loadEnemy();
-
-                loadBuildings();
-
-                loadItems();
-
-                loadButtons();
-
-                loadMissiles();
-
-                gE.addItemToInv(20000000, 5);
-                gE.addItemToInv(20000001, 8);
-                gE.addItemToInv(20000002, 1231);
-                gE.addItemToInv(20000003, 1123);
-
             }
+            
+            loadBuildings();
 
-        }
+            loadItems();         
 
-        public void LoadContent2()
-        {
-            LoadContent();
+            loadButtons();
+
+            addLocs();
+
+            gE.addItemToInv(20000000, 5); // Health Potion
+            gE.addItemToInv(20000001, 8); // Mana Potion
+            gE.addItemToInv(20000002, 1231); // Superior Health Potion
+            gE.addItemToInv(20000003, 1123); // Superior Mana Potion
+            gE.addItemToInv(20000004, 23); // Experience Potion
+            gE.addItemToInv(20000005, 2); // Superior Experience Potion
+            
         }
 
         /// <summary>
@@ -173,31 +173,27 @@ addLocs();
             if (classType == 200)
             {
                 testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Healer") };
-                cler = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Healer") };
+                cler = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Cleric/Cleric")};
+                player = new Cleric(cler, new Vector2(10, 10), this, myGame);
             }
             else if (classType == 100)
             {
-                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") };
-                mage = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") };
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard/Wizard_Base"), Game.Content.Load<Texture2D>(@"Images/Wizard/Wizard_Cloak"), Game.Content.Load<Texture2D>(@"Images/Wizard/Wizard_Staff") };
+                mage = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard/Wizard_Base"), Game.Content.Load<Texture2D>(@"Images/Wizard/Wizard_Cloak"), Game.Content.Load<Texture2D>(@"Images/Wizard/Wizard_Staff") };
+                player = new Mage(mage, new Vector2(10, 10), this, myGame);
             }
             else if (classType == 300)
             {
-                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/knight") };
-                warr = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/knight") };
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Knight/Knight_Base"), Game.Content.Load<Texture2D>(@"Images/Knight/Knight_Armor"), Game.Content.Load<Texture2D>(@"Images/Knight/Knight_Sword") };
+                warr = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Knight/Knight_Base"), Game.Content.Load<Texture2D>(@"Images/Knight/Knight_Armor"), Game.Content.Load<Texture2D>(@"Images/Knight/Knight_Sword") };
+                player = new Knight(warr, new Vector2(10, 10), this, myGame);
             }
-        }
-
-        /// <summary>
-        /// Add enemies
-        /// </summary>
-        public void loadEnemy()
-        {
-            //mooks = new TestEnemy[1];  
-
-            /*
-            for (int i = 0; i < mooks.Length; i++)
-                mooks[i] = new TestEnemy(this, enemy, new Vector2(RNG.Next(0, 540), RNG.Next(0, 380)));
-            */
+            else if(classType == 400)
+            {
+                testTexture = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Archer/Archer_Base"), Game.Content.Load<Texture2D>(@"Images/Archer/Archer_Feather") };
+                arch = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Archer/Archer_Base"), Game.Content.Load<Texture2D>(@"Images/Archer/Archer_Feather") };
+                player = new Archer(arch, new Vector2(10, 10), this, myGame);
+            }
         }
 
         /// <summary>
@@ -205,7 +201,7 @@ addLocs();
         /// </summary>
         public void loadBuildings()
         {
-            for (int i = 0; i < bE.Length; i++)
+             for (int i = 0; i < bE.Length; i++)
                 bE[i] = new BuildingEntity(this, bT, new Vector2(650, 450));
         }
 
@@ -214,10 +210,12 @@ addLocs();
         /// </summary>
         public void loadItems()
         {
-            itemList.Add(new ItemData.item(redPotion, 20000000, "Potion of Healing", blueTUI, "This is a Potion of Healing. It will \nheal you for 5 Health.", false));
-            itemList.Add(new ItemData.item(bluePotion, 20000001, "Potion of Mana", blueTUI, "This is a Potion of Mana. It will \ngive you 5 Mana.", false));
-            itemList.Add(new ItemData.item(redPotion, 20000002, "Potion of Superior Healing", blueTUI, "This is a Potion of Superior Healing. It will \nheal you for 50 Health.", false));
-            itemList.Add(new ItemData.item(bluePotion, 20000003, "Potion of Superior Mana", blueTUI, "This is a Potion of Superior Mana. It will \ngive you for 50 Mana.", false));
+            itemList.Add(new ItemData.item(redPotion, 20000000, "Potion of Healing", blueTUI, "This is a Potion of Healing. It will \nheal you for 5 Health.", false, whiteRarity));
+            itemList.Add(new ItemData.item(bluePotion, 20000001, "Potion of Mana", blueTUI, "This is a Potion of Mana. It will \ngive you 5 Mana.", false, whiteRarity));
+            itemList.Add(new ItemData.item(redPotion, 20000002, "Potion of Superior Healing", blueTUI, "This is a Potion of Superior Healing. It will \nheal you for 50 Health.", false, whiteRarity));
+            itemList.Add(new ItemData.item(bluePotion, 20000003, "Potion of Superior Mana", blueTUI, "This is a Potion of Superior Mana. It will \ngive you 50 Mana.", false, whiteRarity));
+            itemList.Add(new ItemData.item(yellowPotion, 20000004, "Potion of Experience", yellowTUI, "This is a Potion of Experience. It will \ngive you 5 Experience.", false, whiteRarity));
+            itemList.Add(new ItemData.item(yellowPotion, 20000005, "Potion of Superior Experience", yellowTUI, "This is a Potion of Superior Experience. It will \ngive you 50 Experience.", false, whiteRarity));
         }
 
         /// <summary>
@@ -225,17 +223,33 @@ addLocs();
         /// </summary>
         public void loadButtons()
         {
-            btnList.Add(new ItemData.btn(transparentTex, new Vector2(875, 67), new Point(25, 25), "X", Color.White, false, false, true, 300, 300));
-            btnList.Add(new ItemData.btn(transparentTex, new Vector2(853, 67), new Point(25, 25), "Y", Color.White, false, false, true, 300, 301));
+            btnList.Add(new ItemData.btn(transparentTex, new Vector2(875, 67), new Point(25, 25), "X", Color.White, false, false, true, 300, 301));
+            btnList.Add(new ItemData.btn(transparentTex, new Vector2(852, 67), new Point(25, 25), "I", Color.White, false, false, true, 300, 300));
+        }
+               
+        /// <summary>
+        /// 
+        /// </summary>
+        private void addLocs()
+        {
+            List<Collision.mapSegment> ml = new List<Collision.mapSegment>();
+            List<Collision.Ellipse> el = new List<Collision.Ellipse>();
+            List<Collision.Circle> cl = new List<Collision.Circle>();
+            List<BuildingEntity> bl = new List<BuildingEntity>();
+            List<Portal> p = new List<Portal>();
+            List<Enemy> enemies = new List<Enemy>();
+
+            for (int i = 0; i < 1; i++)
+                enemies.Add(new TestEnemy(this, enemy, new Vector2(RNG.Next(0, 540), RNG.Next(0, 380))));
+
+            Test = new Location(ml, cl, el, p, bl, enemies, mapBG);
+
+            currentLoc = Test;
         }
 
-        /// <summary>
-        /// add missiles.
-        /// </summary>
-        public void loadMissiles()
+        public void LoadContent2()
         {
-            for (int i = 0; i < tests.Length; i++)
-                tests[i] = new TestEntity(this, testTexture, new Vector2(10, 10));
+            LoadContent();
         }
 
         protected override void LoadContent()
@@ -243,25 +257,50 @@ addLocs();
 
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
 
-            bT = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/PotionShopBase"), Game.Content.Load<Texture2D>(@"Images/PotionShopShadow") };
-            enemy = Game.Content.Load<Texture2D>(@"Images/EnemyTest");
             consolas = Game.Content.Load<SpriteFont>(@"Fonts/consolas");
-            uiBG = Game.Content.Load<Texture2D>(@"Images/health_bar");
+
+            bT = new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/PotionShopBase"), Game.Content.Load<Texture2D>(@"Images/PotionShopShadow") };
+
+            enemy = Game.Content.Load<Texture2D>(@"Images/EnemyTest");
+
+            atk = Game.Content.Load<Texture2D>(@"Images/Spell");
+
             redPotion = Game.Content.Load<Texture2D>(@"Images/red_potion");
             bluePotion = Game.Content.Load<Texture2D>(@"Images/blue_potion");
+            yellowPotion = Game.Content.Load<Texture2D>(@"Images/yellow_potion");
+            uiBG = Game.Content.Load<Texture2D>(@"Images/health_bar");
+            mapBG = Game.Content.Load<Texture2D>(@"Images/bossmap");
+
             redUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            redUI.SetData<Color>(new Color[] { new Color(255, 0, 0) });
             blueUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            blueUI.SetData<Color>(new Color[] { new Color(0, 0, 255) });
             yellowUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            yellowUI.SetData<Color>(new Color[] { new Color(232, 205, 0) });
             blackUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            blackUI.SetData<Color>(new Color[] { new Color(0, 0, 0) });
             transparentTex = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            transparentTex.SetData<Color>(new Color[] { new Color(0, 0, 0, 0f) });
             blueTUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            yellowTUI = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            whiteRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            blueRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            greenRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            yellowRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            purpleRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            redRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            rainbowRarity = new Texture2D(Game.GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+                
+
+            redUI.SetData<Color>(new Color[] { new Color(255, 0, 0) });
+            blueUI.SetData<Color>(new Color[] { new Color(0, 0, 255) });
+            yellowUI.SetData<Color>(new Color[] { new Color(232, 205, 0) });
+            blackUI.SetData<Color>(new Color[] { new Color(0, 0, 0) });
+            transparentTex.SetData<Color>(new Color[] { new Color(0, 0, 0, 0f) });
             blueTUI.SetData<Color>(new Color[] { new Color(0, 55, 122) });
-            atk = Game.Content.Load<Texture2D>(@"Images/Spell");
+            yellowTUI.SetData<Color>(new Color[] { new Color(255, 204, 0) });
+            whiteRarity.SetData<Color>(new Color[] { new Color(255, 255, 255) });
+            blueRarity.SetData<Color>(new Color[] { new Color(0, 166, 255) });
+            greenRarity.SetData<Color>(new Color[] { new Color(0, 255, 21) });
+            yellowRarity.SetData<Color>(new Color[] { new Color(255, 255, 64) });
+            purpleRarity.SetData<Color>(new Color[] { new Color(187, 0, 194) });
+            redRarity.SetData<Color>(new Color[] { new Color(194, 0, 26) });
+            rainbowRarity = Game.Content.Load<Texture2D>(@"Images/rainbowRarity");
 
             base.LoadContent();
         }
@@ -306,7 +345,7 @@ addLocs();
                                 gE.showPop(2004);
                                 break;
                             case 301:
-                                gE.showPop(2005);
+                                gE.showPop(2002);
                                 break;
                         }
                     }
@@ -317,65 +356,29 @@ addLocs();
         /// <summary>
         /// Update class textures.
         /// </summary>
-        private void updateClassTexture()
+        private void updatePlayer(GameTime gameTime)
         {
-            if (prevClassType != classType)
-            {
-                if (classType == 100)
-                {
-                    testTexture = cler;
-                        player = new TestEntity(this, new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Healer") }, new Vector2(10, 10));
-                }
-                else if (classType == 200)
-                {
-                    testTexture = mage;
-                        player = new TestEntity(this, new Texture2D[] { Game.Content.Load<Texture2D>(@"Images/Wizard"), Game.Content.Load<Texture2D>(@"Images/Wizard_C"), Game.Content.Load<Texture2D>(@"Images/Wizard_S") }, new Vector2(10, 10));
-                }
-                else if (classType == 300)
-                {
-                    testTexture = warr;
-                        player = new Knight(testTexture, new Vector2(10, 10), this);
-                }
-            }
-
-            if (keyBoardState.IsKeyDown(Keys.Escape) && prevKeyState.IsKeyUp(Keys.Escape))
-            {
-                bE2.showPop(2002);
-            }
-            
             player.Update(gameTime);
+            currentLoc.Update(gameTime);
+        }
 
         /// <summary>
         /// Update projectiles.
         /// </summary>
         /// <param name="gameTime"></param>
         private void updateProjectiles(GameTime gameTime)
-        {
-            for (int i = 0; i < tests.Length; i++)
-                tests[i].Update(gameTime);
-
+        {           
             for (int i = 0; i < enemyShots.Count; i++)
             {
                 enemyShots[i].Update(gameTime);
-                if (enemyShots[i].getPos().X > 960 || enemyShots[i].getPos().X < 0 || enemyShots[i].getPos().Y > 620 || enemyShots[i].getPos().Y < 0)
-                {
-                    enemyShots.RemoveAt(i);
-                    i--;
-                }
             }
 
             for (int i = 0; i < friendlyShots.Count; i++)
             {
                 friendlyShots[i].Update(gameTime);
-                if (friendlyShots[i].getPos().X > 960 || friendlyShots[i].getPos().X < 0 || friendlyShots[i].getPos().Y > 620 || friendlyShots[i].getPos().Y < 0)
-                {
-                    friendlyShots.RemoveAt(i);
-                    i--;
-                }
             }
+        }
 
-                }
-                currentLoc.Update(gameTime);
         /// <summary>
         /// Update and executes events on user input.
         /// </summary>
@@ -394,19 +397,7 @@ addLocs();
         private void updateBuildings(GameTime gameTime)
         {
             for (int i = 0; i < bE.Length; i++)
-                bE[i].Update(gameTime);
-        }
-
-        /// <summary>
-        /// Update Enemies.
-        /// </summary>
-        /// <param name="gameTime">Timing values</param>
-        private void updateEnemies(GameTime gameTime)
-        {
-            /*
-            for (int i = 0; i < mooks.Length; i++)
-                mooks[i].Update(gameTime);
-            */
+               bE[i].Update(gameTime);
         }
 
         /// <summary>
@@ -424,39 +415,38 @@ addLocs();
         /// </summary>
         private void updateUI()
         {
-            if (health <= 0)
+            if (player.health <= 0)
             {
                 player.health = 0;
             }
-            else if (health >= 50)
+            
+            if (player.health >= 50)
             {
                 player.health = 50;
             }
 
-            if (mana <= 0)
+            if (player.mana <= 0)
             {
                 player.mana = 0;
             }
-            else if (mana >= 115)
+            else if (player.mana >= 115)
             {
                 player.mana = 115;
             }
 
-            if (exp <= 0)
+            if (player.exp <= 0)
             {
                 player.exp = 0;
             }
-            else if (exp >= 115)
+            else if (player.exp >= 115)
             {
-                player.exp = 115;
+                player.exp = 0;
+                player.health = 50;
+                player.mana = 115;
             }
-
-            prevKeyState = keyBoardState;
-            prevClassType = classType;
-            base.Update(gameTime);
         }
-        
-               public override void Update(GameTime gameTime)
+
+        public override void Update(GameTime gameTime)
         {
             //Sets keyboard and mouse state.
             setStates();
@@ -465,16 +455,13 @@ addLocs();
             updateButtons();
 
             //updates the texture based on class being used.
-            updateClassTexture();
+            updatePlayer(gameTime);
 
             //updates position of projectiles and removes them.
             updateProjectiles(gameTime);
 
             //Checks if buttons are being pressed and starts an event
             updateUserInput();
-
-            //updates enemies
-            updateEnemies(gameTime);
 
             //updates buildings
             updateBuildings(gameTime);
@@ -487,55 +474,32 @@ addLocs();
             base.Update(gameTime);
         }
 
-
-        public override void Draw(GameTime gameTime)
-        {
-
-            spriteBatch.Begin();
-
-            player.Draw(gameTime, spriteBatch);
-
-            for (int i = 0; i < enemyShots.Count; i++)
-                enemyShots[i].Draw(gameTime, spriteBatch);
-
-            for (int i = 0; i < friendlyShots.Count; i++)
-                friendlyShots[i].Draw(gameTime, spriteBatch);
-
-            currentLoc.Draw(gameTime, spriteBatch);
-
-            DrawUI();
-
-            spriteBatch.End();
-
-            base.Draw(gameTime);
-        }
-
         /// <summary>
         /// Draws all user interface.
         /// </summary>
         private void DrawUI()
         {
-
             spriteBatch.Draw(blueUI, new Rectangle(830, 24, player.mana, 12), new Rectangle(0, 0, 1, 1), Color.White, 0.0f, new Vector2(0, 0), SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(consolas, player.mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(mana.ToString()).Length() / 2) + 1, (24 - 5) + 1), Color.Black);
-            spriteBatch.DrawString(consolas, player.mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(mana.ToString()).Length() / 2), (24 - 5)), Color.White);
+            spriteBatch.DrawString(consolas, player.mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(player.mana.ToString()).Length() / 2) + 1, (24 - 5) + 1), Color.Black);
+            spriteBatch.DrawString(consolas, player.mana.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(player.mana.ToString()).Length() / 2), (24 - 5)), Color.White);
             spriteBatch.Draw(yellowUI, new Rectangle(830, 43, player.exp, 12), new Rectangle(0, 0, 1, 1), Color.White, 0.0f, new Vector2(0, 0), SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(consolas, player.exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(exp.ToString()).Length() / 2) + 1, (43 - 5) + 1), Color.Black);
-            spriteBatch.DrawString(consolas, player.exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(exp.ToString()).Length() / 2), (43 - 5)), Color.White);
-            spriteBatch.Draw(redUI, new Rectangle(825, 65, 50, health), new Rectangle(0, 0, 1, 1), Color.White, (float)Math.PI, new Vector2(0, 0), SpriteEffects.None, 0.0f);
-            spriteBatch.DrawString(consolas, player.health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(health.ToString()).Length() / 2) + 1, (65 - 25) - (consolas.MeasureString(health.ToString()).Y / 2) + 1), Color.Black);
-            spriteBatch.DrawString(consolas, player.health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(health.ToString()).Length() / 2), (65 - 25) - (consolas.MeasureString(health.ToString()).Y / 2)), Color.White);
-            spriteBatch.Draw(uiBG, new Rectangle((GraphicsDevice.Viewport.Width - 204), 10, 194, 59), Color.White);
+            spriteBatch.DrawString(consolas, player.exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(player.exp.ToString()).Length() / 2) + 1, (43 - 5) + 1), Color.Black);
+            spriteBatch.DrawString(consolas, player.exp.ToString(), new Vector2((830 + 57) - (consolas.MeasureString(player.exp.ToString()).Length() / 2), (43 - 5)), Color.White);
+            spriteBatch.Draw(redUI, new Rectangle(825, 65, 50, player.health), new Rectangle(0, 0, 1, 1), Color.White, (float)Math.PI, new Vector2(0, 0), SpriteEffects.None, 0.0f);
+            spriteBatch.DrawString(consolas, player.health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(player.health.ToString()).Length() / 2) + 1, (65 - 25) - (consolas.MeasureString(player.health.ToString()).Y / 2) + 1), Color.Black);
+            spriteBatch.DrawString(consolas, player.health.ToString(), new Vector2((825 - 23) - (consolas.MeasureString(player.health.ToString()).Length() / 2), (65 - 25) - (consolas.MeasureString(player.health.ToString()).Y / 2)), Color.White);
+            spriteBatch.Draw(uiBG, new Rectangle((GraphicsDevice.Viewport.Width - 204), 10, 194, 81), Color.White);
+
+            for (int i = 0; i < btnList.Count; i++)
+            {
+                if (btnList[i].visible == true)
+                {
+                    spriteBatch.Draw(btnList[i].btnTexture, new Rectangle((int)btnList[i].position.X, (int)btnList[i].position.Y, btnList[i].size.X, btnList[i].size.Y), Color.White);
+                    spriteBatch.DrawString(consolas, btnList[i].text, new Vector2(((int)btnList[i].position.X + (btnList[i].size.X / 2)) - (consolas.MeasureString(btnList[i].text).Length() / 4), ((int)btnList[i].position.Y + (btnList[i].size.Y / 2)) - (consolas.MeasureString(btnList[i].text).Y / 2)), Color.White);
 
                 }
             }
 
-                    public void Teleport(Portal p)
-        {
-            currentLoc = p.dest;
-
-        }
-            
         }
 
         /// <summary>
@@ -544,9 +508,6 @@ addLocs();
         /// <param name="gameTime">Timing values</param>
         private void drawProjectiles(GameTime gameTime)
         {
-            for (int i = 0; i < tests.Length; i++)
-                tests[i].Draw(gameTime, spriteBatch);
-
             for (int i = 0; i < enemyShots.Count; i++)
                 enemyShots[i].Draw(gameTime, spriteBatch);
 
@@ -561,54 +522,57 @@ addLocs();
         private void drawBuildings(GameTime gameTime)
         {
             for (int i = 0; i < bE.Length; i++)
-                bE[i].Draw(gameTime, spriteBatch);
-        }
-        
-        private void addLocs()
-        {
-        List<Collision.mapSegment> ml = new List<Collision.mapSegment>();
-            List<Collision.Ellipse> el = new List<Collision.Ellipse>();
-            List<Collision.Circle> cl = new List<Collision.Circle>();
-            List<BuildingEntity> bl = new List<BuildingEntity>();
-            List<Portal> p = new List<Portal>();
-            List<Enemy> enemies = new List<Enemy>();
-
-            for (int i = 0; i < 1; i++)
-                enemies.Add(new TestEnemy(this, enemy, new Vector2(RNG.Next(0, 540), RNG.Next(0, 380))));
-
-            Test = new Location(ml, cl, el, p, bl, enemies);
-
-            currentLoc = Test;
-
-        }
-
-        /// <summary>
-        /// Draws all enemies.
-        /// </summary>
-        private void drawEnemies()
-        {
-            /*
-            for (int i = 0; i < mooks.Length; i++)
-                mooks[i].Draw(gameTime, spriteBatch);
-            */
+               bE[i].Draw(gameTime, spriteBatch);
         }
 
         public override void Draw(GameTime gameTime)
         {
 
             spriteBatch.Begin();
+            
+            currentLoc.Draw(gameTime, spriteBatch);
+
+            player.Draw(gameTime, spriteBatch);
 
             drawProjectiles(gameTime);
 
             drawBuildings(gameTime);
 
-            drawEnemies();
-
             DrawUI();
+
+            
 
             spriteBatch.End();
 
             base.Draw(gameTime);
+        }
+        
+        #endregion
+
+        #region Methods
+
+        public void Teleport(Portal p)
+        {
+            currentLoc = p.dest;
+        }
+
+        public void deleteFriendly(int index)
+        {
+            
+            friendlyShots.RemoveAt(index);
+            for (int i = 0; i < friendlyShots.Count; i++)
+            {
+                friendlyShots[i].setIndex(i);
+            }
+        }
+
+        public void deleteEnemy(int index)
+        {
+            enemyShots.RemoveAt(index);
+            for (int i = 0; i < enemyShots.Count; i++)
+            {
+                enemyShots[i].setIndex(i);
+            }
         }
 
         #endregion

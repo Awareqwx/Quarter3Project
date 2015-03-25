@@ -263,7 +263,7 @@ namespace Quarter3Project
 
         public struct item
         {
-            public item(Texture2D itemTex, int itemID, string itemName, Texture2D popBG, string popDesc, bool popVis)
+            public item(Texture2D itemTex, int itemID, string itemName, Texture2D popBG, string popDesc, bool popVis, Texture2D rarity)
                 : this()
             {
                 this.iTex = itemTex;
@@ -272,6 +272,7 @@ namespace Quarter3Project
                 this.pBG = popBG;
                 this.pDesc = popDesc;
                 this.pVis = popVis;
+                this.rar = rarity;
             }
 
             public Texture2D iTex { get; private set; }
@@ -280,6 +281,7 @@ namespace Quarter3Project
             public Texture2D pBG { get; private set; }
             public string pDesc { get; private set; }
             public bool pVis { get; private set; }
+            public Texture2D rar { get; private set; }
                         
         }
 

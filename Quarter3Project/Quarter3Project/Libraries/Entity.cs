@@ -44,7 +44,7 @@ namespace Quarter3Project
 
         public Vector2 getCenter()
         {
-            return new Vector2(position.X + (getFrameSize().X / 2), position.Y + (getFrameSize().Y / 2));
+            return new Vector2(position.X + (currentSet.frameSize.X / 2), position.Y + (currentSet.frameSize.Y / 2));
         }
     }
 }

@@ -45,16 +45,22 @@ namespace Quarter3Project.EventManagers
                     switch (id)
                     {
                         case 20000000: // Health Potion
-                            g.gameManager.health += 5;
+                            g.gameManager.player.health += 5;
                             break;
                         case 20000001: // Mana Potion
-                            g.gameManager.mana += 5;
+                            g.gameManager.player.mana += 5;
                             break;
                         case 20000002: // Super Health Potion
-                            g.gameManager.health += 50;
+                            g.gameManager.player.health += 50;
                             break;
                         case 20000003: // Super Mana Potion
-                            g.gameManager.mana += 50;
+                            g.gameManager.player.mana += 50;
+                            break;
+                        case 20000004: // Exp Potion
+                            g.gameManager.player.exp += 5;
+                            break;
+                        case 20000005: // Super Exp Potion
+                            g.gameManager.player.exp += 50;
                             break;
                     }
                 }
@@ -222,7 +228,7 @@ namespace Quarter3Project.EventManagers
                 }
             }
 
-            switch (g.CurrentLevel)
+            switch (g.cL)
             {
                 case GameLevels.GameLevels.CREATE:
                     g.createManager.Enabled = true;

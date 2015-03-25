@@ -1,9 +1,11 @@
 ﻿
-Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual C# Express 2010
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quarter3Project", "Quarter3Project\Quarter3Project\Quarter3Project.csproj", "{F1FE7FB9-3CD3-4396-B593-A3D1946F9B1B}"
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Quarter3Project", "Quarter3Project\Quarter3Project\Quarter3Project.csproj", "{08E23A37-842D-434D-ADD4-551E2AA736AA}"
 EndProject
-Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Quarter3ProjectContent", "Quarter3Project\Quarter3ProjectContent\Quarter3ProjectContent.contentproj", "{A393E15B-466F-4895-8DB0-D913ED55776F}"
+Project("{96E2B04D-8817-42C6-938A-82C39BA4D311}") = "Quarter3ProjectContent", "Quarter3Project\Quarter3ProjectContent\Quarter3ProjectContent.contentproj", "{AA777424-81B5-4729-B318-59B64B604302}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,12 +13,12 @@ Global
 		Release|x86 = Release|x86
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{F1FE7FB9-3CD3-4396-B593-A3D1946F9B1B}.Debug|x86.ActiveCfg = Debug|x86
-		{F1FE7FB9-3CD3-4396-B593-A3D1946F9B1B}.Debug|x86.Build.0 = Debug|x86
-		{F1FE7FB9-3CD3-4396-B593-A3D1946F9B1B}.Release|x86.ActiveCfg = Release|x86
-		{F1FE7FB9-3CD3-4396-B593-A3D1946F9B1B}.Release|x86.Build.0 = Release|x86
-		{A393E15B-466F-4895-8DB0-D913ED55776F}.Debug|x86.ActiveCfg = Debug|x86
-		{A393E15B-466F-4895-8DB0-D913ED55776F}.Release|x86.ActiveCfg = Release|x86
+		{08E23A37-842D-434D-ADD4-551E2AA736AA}.Debug|x86.ActiveCfg = Debug|x86
+		{08E23A37-842D-434D-ADD4-551E2AA736AA}.Debug|x86.Build.0 = Debug|x86
+		{08E23A37-842D-434D-ADD4-551E2AA736AA}.Release|x86.ActiveCfg = Release|x86
+		{08E23A37-842D-434D-ADD4-551E2AA736AA}.Release|x86.Build.0 = Release|x86
+		{AA777424-81B5-4729-B318-59B64B604302}.Debug|x86.ActiveCfg = Debug|x86
+		{AA777424-81B5-4729-B318-59B64B604302}.Release|x86.ActiveCfg = Release|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

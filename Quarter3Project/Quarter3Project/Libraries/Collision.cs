@@ -194,7 +194,7 @@ namespace Quarter3Project
             }
             return loopBreak;
         }
-
+        
         public static bool CheckEllipseEllipseCollision(Ellipse E, Ellipse F)
         {
             /* 
@@ -205,13 +205,13 @@ namespace Quarter3Project
             double a = getAngleFromVector(v);
             double b = getAngleFromVector(new Vector2(-v.X, -v.Y));
             double Er, Fr;
-            Er = Math.Sqrt(Math.Pow((Math.Cos(degToRad(a + E.rotation)) * E.radX), 2) + Math.Pow(Math.Sin(degToRad(a + E.rotation)) * E.radY, 2));
-            Fr = Math.Sqrt(Math.Pow((Math.Cos(degToRad(b + F.rotation)) * F.radX), 2) + Math.Pow(Math.Sin(degToRad(b + F.rotation)) * F.radY, 2));
+            Er = Math.Sqrt(Math.Pow((Math.Cos(a + E.rotation) * E.radX), 2) + Math.Pow(Math.Cos(90 - a + E.rotation) * E.radY, 2));
+            Fr = Math.Sqrt(Math.Pow((Math.Cos(b + F.rotation) * F.radX), 2) + Math.Pow(Math.Cos(90 - b + F.rotation) * F.radY, 2));
             double z = Er + Fr;
             double x = magnitude(v);
             if (Er + Fr >= magnitude(v))
             {
-                return true;
+               return true;
             }
             return false;
         }
@@ -222,7 +222,7 @@ namespace Quarter3Project
             double a = getAngleFromVector(v);
             double b = getAngleFromVector(new Vector2(-v.X, -v.Y));
             double Fr;
-            Fr = Math.Sqrt(Math.Pow((Math.Cos(degToRad(b + F.rotation)) * F.radX), 2) + Math.Pow(Math.Sin(degToRad(b + F.rotation)) * F.radY, 2));
+            Fr = Math.Sqrt(Math.Pow((Math.Cos(degToRad(b + F.rotation)) + F.radX), 2) + Math.Pow(Math.Sin(degToRad(b + F.rotation)) * F.radY, 2));
             double z = E.R + Fr;
             double x = magnitude(v);
             if (E.R + Fr >= magnitude(v))
@@ -246,5 +246,7 @@ namespace Quarter3Project
         {
             return r * 180 / Math.PI;
         }
+
+
     }
 }

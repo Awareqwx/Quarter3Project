@@ -9,7 +9,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Quarter3Project.Classes
 {
-    class Mage : Player
+    public class Mage : Player
     {
 
         KeyboardState keyboardState, prevKBState;
@@ -19,11 +19,13 @@ namespace Quarter3Project.Classes
         int shotTimer;
         int walkDir;
         Boolean isAttacking, isWalking;
+        Texture2D spell, fireball;
 
-        public Mage(Texture2D[] t, Vector2 v, GameManager g)
-            : base(t, v, g)
+        public Mage(Texture2D[] t, Vector2 v, GameManager g, Game1 g2)
+            : base(t, v, g, g2)
         {
             health = 50;
+            mana = 115;
             keyboardState = prevKBState = Keyboard.GetState();
             mouse = Mouse.GetState();
             myGame = g;
@@ -32,22 +34,24 @@ namespace Quarter3Project.Classes
             shotTimer = 0;
             colors = new Color[3];
             addAnimations();
+            spell = myGame.Game.Content.Load<Texture2D>(@"Images\Spell");
+            fireball = myGame.Game.Content.Load<Texture2D>(@"Images\Wizard\Fireball");
         }
 
         public override void addAnimations()
         {
-            AnimationSet idlef = new AnimationSet("IDLEF", new Point(61, 95), new Point(1, 1), new Point(0, 0), 16, false);
-            AnimationSet idleb = new AnimationSet("IDLEB", new Point(60, 97), new Point(1, 1), new Point(0, 2), 16, false);
-            AnimationSet idlel = new AnimationSet("IDLEL", new Point(60, 97), new Point(1, 1), new Point(0, 3), 16, false);
-            AnimationSet idler = new AnimationSet("IDLER", new Point(60, 97), new Point(1, 1), new Point(0, 1), 16, false);
-            AnimationSet walkf = new AnimationSet("WALKF", new Point(60, 97), new Point(4, 1), new Point(0, 0), 150, true);
-            AnimationSet walkb = new AnimationSet("WALKB", new Point(60, 97), new Point(4, 1), new Point(0, 2), 150, true);
-            AnimationSet walkl = new AnimationSet("WALKL", new Point(60, 97), new Point(4, 1), new Point(0, 3), 150, true);
-            AnimationSet walkr = new AnimationSet("WALKR", new Point(60, 97), new Point(4, 1), new Point(0, 1), 150, true);
-            AnimationSet atkf = new AnimationSet("ATKF", new Point(60, 97), new Point(3, 1), new Point(0, 5), 100, false);
-            AnimationSet atkb = new AnimationSet("ATKB", new Point(66, 97), new Point(3, 1), new Point(0, 7), 100, false);
-            AnimationSet atkl = new AnimationSet("ATKL", new Point(90, 97), new Point(3, 1), new Point(0, 6), 100, false);
-            AnimationSet atkr = new AnimationSet("ATKR", new Point(90, 97), new Point(3, 1), new Point(0, 4), 100, false);
+            AnimationSet idlef = new AnimationSet("IDLEF", new Point(60, 97), new Point(1, 1), 0, new Point(0, 104), true);
+            AnimationSet idleb = new AnimationSet("IDLEB", new Point(60, 97), new Point(1, 1), 0, new Point(0, 204), true);
+            AnimationSet idlel = new AnimationSet("IDLEL", new Point(60, 97), new Point(1, 1), 0, new Point(0, 306), true);
+            AnimationSet idler = new AnimationSet("IDLER", new Point(60, 97), new Point(1, 1), 0, new Point(0, 0), true);
+            AnimationSet walkf = new AnimationSet("WALKF", new Point(60, 97), new Point(2, 1), 150, new Point(0, 104), true);
+            AnimationSet walkb = new AnimationSet("WALKB", new Point(60, 97), new Point(2, 1), 150, new Point(0, 204), true);
+            AnimationSet walkl = new AnimationSet("WALKL", new Point(60, 97), new Point(2, 1), 150, new Point(0, 306), true);
+            AnimationSet walkr = new AnimationSet("WALKR", new Point(60, 97), new Point(2, 1), 150, new Point(0, 0), true);
+            AnimationSet atkf = new AnimationSet("ATKF", new Point(59, 97), new Point(2, 0), 150, new Point(61, 104), false);
+            AnimationSet atkb = new AnimationSet("ATKB", new Point(66, 97), new Point(2, 0), 150, new Point(64, 204), false);
+            AnimationSet atkl = new AnimationSet("ATKL", new Point(110, 95), new Point(2, 0), 150, new Point(63, 306), false);
+            AnimationSet atkr = new AnimationSet("ATKR", new Point(110, 95), new Point(2, 0), 150, new Point(61, 0), false);
             sets.Add(idlef);
             sets.Add(idleb);
             sets.Add(idlel);
@@ -62,7 +66,7 @@ namespace Quarter3Project.Classes
             sets.Add(atkr);
             setAnimation("IDLEF");
             base.addAnimations();
-        }        
+        }
 
         public override void Update(GameTime gameTime)
         {
@@ -71,20 +75,27 @@ namespace Quarter3Project.Classes
             mouse = Mouse.GetState();
 
             colors[0] = Color.White;
+            colors[2] = Color.DarkGreen;
             if (colors.Length > 1)
             {
                 if (colorTimer >= .1F)
                 {
-                    colors[1] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
-                    colors[2] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
+                    if (using2)
+                    {
+                        colors[1] = new Color((byte)r.Next(0, 255), (byte)r.Next(0, 255), (byte)r.Next(0, 255));
+                    }
+                    else
+                    {
+
+                        colors[1] = Color.Blue;
+                    }
                     colorTimer = 0;
                 }
             }
-            colors[1] = Color.Gold;
-            colors[2] = Color.Cyan;
             speed = 3;
             keyboardState = Keyboard.GetState();
             isWalking = false;
+
             if (!isAttacking)
             {
                 if (keyboardState.IsKeyDown(Keys.S))
@@ -121,6 +132,7 @@ namespace Quarter3Project.Classes
                     }
                     isWalking = true;
                 }
+
                 if (!isWalking)
                 {
                     switch (walkDir)
@@ -153,38 +165,120 @@ namespace Quarter3Project.Classes
                 }
             }
 
-            if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
+            if (isOff == false)
             {
-                if (!isAttacking)
+                if (mouse.LeftButton == ButtonState.Pressed && shotTimer <= 0)
                 {
-                    setAnimation("IDLEF");
-                }
-                switch (walkDir)
-                {
-                    case 1:
-                        setAnimation("ATKB");
-                        break;
-                    case 2:
-                        setAnimation("ATKR");
-                        break;
-                    case 3:
-                        if (currentSet.name != "ATKL")
+                    if (!isAttacking && !isWalking)
+                    {
+                        switch (walkDir)
                         {
-                            position.X -= 30;
+                            case 0:
+                            default:
+                                setAnimation("IDLEF");
+                                break;
+                            case 1:
+                                setAnimation("IDLEB");
+                                break;
+                            case 2:
+                                setAnimation("IDLER");
+                                break;
+                            case 3:
+                                setAnimation("IDLEL");
+                                break;
                         }
-                        setAnimation("ATKL");
-                        break;
-                    case 0:
-                    default:
-                        setAnimation("ATKF");
-                        break;
-                }
-                isAttacking = true;
 
-                //myGame.friendlyShots.Add(new 
+                    }
+
+                    switch (walkDir)
+                    {
+                        case 1:
+                            setAnimation("ATKB");
+                            break;
+                        case 2:
+                            setAnimation("ATKR");
+                            break;
+                        case 3:
+                            if (currentSet.name != "ATKL")
+                            {
+                                position.X -= 30;
+                            }
+                            setAnimation("ATKL");
+                            break;
+                        case 0:
+                        default:
+                            setAnimation("ATKF");
+                            break;
+                    }
+                    if (!isAttacking)
+                    {
+                        attack();
+                    }
+                    isAttacking = true;
+
+                    //myGame.friendlyShots.Add(new 
+                }
+
+                if (!isWalking && !isAttacking)
+                {
+                    switch (walkDir)
+                    {
+                        case 0:
+                        default:
+                            setAnimation("IDLEF");
+                            break;
+                        case 1:
+                            setAnimation("IDLEB");
+                            break;
+                        case 2:
+                            setAnimation("IDLER");
+                            break;
+                        case 3:
+                            setAnimation("IDLEL");
+                            break;
+                    }
+                }
+            }
+
+            if (mana == 0)
+            {
+                using2 = false;
             }
 
             base.Update(gameTime);
         }
+
+        public override void ability1()
+        {
+            if (mana >= 5)
+            {
+                mana -= 10;
+                myGame.friendlyShots.Add(new Projectile(fireball, getCenter(), myGame, new Vector2(mouse.X -getCenter().X, mouse.Y - getCenter().Y), 10, Color.White, new Point(30, 20), 20, 10000, myGame.friendlyShots.Count, true));
+            }
+        }
+
+        public override void ability2()
+        {
+            using2 = !using2;
+        }
+
+        public override void attack()
+        {
+            myGame.friendlyShots.Add(new Projectile(spell, getCenter(), myGame, new Vector2(mouse.X - getCenter().X, mouse.Y - getCenter().Y), 5, Color.DarkGreen, new Point(40, 12), 10, 10000, myGame.friendlyShots.Count, true));
+        }
+
+        public override void takeDamage(int damage)
+        {
+            if (using2)
+            {
+                health -= damage / 3;
+                mana -= (int)(damage / 1.5);
+            }
+            else
+            {
+                health -= damage;
+            }
+        }
+
     }
 }

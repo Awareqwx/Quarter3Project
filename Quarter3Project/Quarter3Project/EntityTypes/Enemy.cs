@@ -27,14 +27,19 @@ namespace Quarter3Project.EntityTypes
 
             for (int i = 0; i < myGame.friendlyShots.Count; i++)
             {
-                if(Collision.CheckEllipseEllipseCollision(getEllipse(), myGame.friendlyShots[i].getEllipse()))
+                if (Collision.CheckEllipseEllipseCollision(myGame.friendlyShots[i].getEllipse(), getEllipse()))
                 {
-                    colors[0].R += 10;
+                    colors[0] = Color.Red;
+                    takeDamage(myGame.friendlyShots[i].damage);
+                    myGame.friendlyShots[i].killHit();
+                    i--;
                 }
             }
             
             base.Update(gameTime);
         }
+
+        public virtual void takeDamage(int damage) { }
 
     }
 }

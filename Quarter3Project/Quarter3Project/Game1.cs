@@ -35,6 +35,7 @@ namespace Quarter3Project
         public GameManager gameManager;
         public MenuManager menuManager;
         public PopManager popManager;
+        public CreditsManager creditsManager;
         public SplashScreenManager splashScreenManager;
 
         public GameLevels.GameLevels cL { get; private set; }
@@ -78,13 +79,17 @@ namespace Quarter3Project
             Components.Add(splashScreenManager);
             splashScreenManager.DrawOrder = 2;
 
-            debugManager = new DebugManager(this, menuManager);
+            debugManager = new DebugManager(this);
             Components.Add(debugManager);
             debugManager.DrawOrder = 3;
-            
+
             gameManager = new GameManager(this);
             Components.Add(gameManager);
             gameManager.DrawOrder = 1;
+
+            creditsManager = new CreditsManager(this);
+            Components.Add(creditsManager);
+            creditsManager.DrawOrder = 1;
 
             SetCurrentLevel(GameLevels.GameLevels.SPLASH);
 
@@ -100,7 +105,7 @@ namespace Quarter3Project
         {
 
             spriteBatch = new SpriteBatch(GraphicsDevice);
-            
+
         }
 
         /// <summary>
@@ -126,6 +131,8 @@ namespace Quarter3Project
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
 
+            // TODO: Add your update logic here
+
             base.Update(gameTime);
         }
 
@@ -136,7 +143,7 @@ namespace Quarter3Project
         protected override void Draw(GameTime gameTime)
         {
             GraphicsDevice.Clear(Color.CornflowerBlue);
-            
+
             // TODO: Add your drawing code here
 
             base.Draw(gameTime);
@@ -161,6 +168,8 @@ namespace Quarter3Project
             splashScreenManager.Visible = false;
             gameManager.Enabled = false;
             gameManager.Visible = false;
+            creditsManager.Enabled = false;
+            creditsManager.Visible = false;
 
             switch (gL)
             {
@@ -187,6 +196,12 @@ namespace Quarter3Project
                     splashScreenManager.Visible = true;
                     pL = cL;
                     cL = GameLevels.GameLevels.SPLASH;
+                    break;
+                case GameLevels.GameLevels.CREDITS:
+                    creditsManager.Enabled = true;
+                    creditsManager.Visible = true;
+                    pL = cL;
+                    cL = GameLevels.GameLevels.CREDITS;
                     break;
             }
         }

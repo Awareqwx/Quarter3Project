@@ -46,12 +46,10 @@ namespace Quarter3Project.Managers
         {
             myGame = game;
         }
-        
+
         protected override void LoadContent()
         {
-
             spriteBatch = new SpriteBatch(Game.GraphicsDevice);
-
             background = Game.Content.Load<Texture2D>(@"Images/Splash");
 
             base.LoadContent();

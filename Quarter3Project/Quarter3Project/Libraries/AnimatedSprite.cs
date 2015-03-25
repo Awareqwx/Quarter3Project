@@ -19,8 +19,19 @@ namespace Quarter3Project
             public Point startPos; //The starting point of the animation, the top left frame is (0, 0)
             public int millisPerFrame; //The time each frame should be up, in milliseconds (1000ms = 1s)
             public Boolean doesLoop; //Does the animation loop?
-            public AnimationSet(string n, Point fs, Point ss, Point sp, int mpf, Boolean l)
+            public AnimationSet(string n, Point fs, Point ss, Point sp, int mpf, Boolean l) //Uses frameSize to determine sprite position
             {
+                name = n;
+                frameSize = fs;
+                sheetSize = ss;
+                startPos = new Point(sp.X * fs.X, fs.Y * sp.Y);
+                millisPerFrame = mpf;
+                doesLoop = l;
+            }
+
+            public AnimationSet(string n, Point fs, Point ss, int mpf, Point sp, Boolean l) //Uses absolute position to determine sprite position
+            {
+                // TODO: Complete member initialization
                 name = n;
                 frameSize = fs;
                 sheetSize = ss;
@@ -35,7 +46,11 @@ namespace Quarter3Project
 
         public Texture2D[] textures;
 
-        protected Vector2 position, prevPosition, prevPrevPosition;
+        protected Vector2 direction,
+                          velocity,
+                          acceleration,
+                          position;
+        protected Vector2 prevPosition, prevPrevPosition;
         protected Color[] colors;
 
         protected Point currentFrame;
@@ -83,7 +98,6 @@ namespace Quarter3Project
             timeSinceLast += gameTime.ElapsedGameTime.Milliseconds;
             if (currentSet.sheetSize == new Point(1, 1))
             {
-
             }
             else
             {
@@ -101,7 +115,7 @@ namespace Quarter3Project
                             {
                                 if (currentSet.doesLoop)
                                 {
-                                    currentFrame.Y = 0;
+                                    currentFrame = Point.Zero;
                                 }
                                 else
                                 {
@@ -113,7 +127,6 @@ namespace Quarter3Project
                 }
                 else
                 {
-                    currentFrame = Point.Zero;
                 }
             }
             prevPrevPosition = prevPosition;
@@ -168,7 +181,7 @@ namespace Quarter3Project
         {
             for (int i = 0; i < textures.Length; i++)
             {
-                spriteBatch.Draw(textures[i], position, new Rectangle(currentSet.frameSize.X * currentFrame.X + currentSet.frameSize.X * currentSet.startPos.X, currentSet.frameSize.Y * currentFrame.Y + currentSet.frameSize.Y * currentSet.startPos.Y, currentSet.frameSize.X, currentSet.frameSize.Y), colors[i]);
+                spriteBatch.Draw(textures[i], position, new Rectangle(currentSet.frameSize.X * currentFrame.X + currentSet.startPos.X, currentSet.frameSize.Y * currentFrame.Y + currentSet.startPos.Y, currentSet.frameSize.X, currentSet.frameSize.Y), colors[i]);
             }
         }
     }

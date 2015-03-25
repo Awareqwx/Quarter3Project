@@ -55,6 +55,11 @@ namespace Quarter3Project
         /// <summary>
         /// 
         /// </summary>
+        public void showPop(int id)
+        {
+            myGame.showPop(id); 
+        }
+
         public void exitToMenu()
         {
             saveGame();
@@ -95,8 +100,6 @@ namespace Quarter3Project
                     sw.WriteLine(300);
                     break;
             }
-            sw.WriteLine(myGame.gameManager.tests[0].getPos().X);
-            sw.WriteLine(myGame.gameManager.tests[0].getPos().Y);
              
             sw.Close();
         }
@@ -110,8 +113,8 @@ namespace Quarter3Project
             {
                 StreamReader sr = new StreamReader(@"Save/Save.txt");
                 myGame.gameManager.classType = Int32.Parse(sr.ReadLine());
-                myGame.gameManager.LoadContent2();
                 sr.Close();
+                myGame.gameManager.loadPlayer();
             }
         }
 
@@ -139,6 +142,11 @@ namespace Quarter3Project
             }
         }
 
+        public void Credits()
+        {
+            myGame.SetCurrentLevel(GameLevels.GameLevels.CREDITS);
+        }
+
         /// <summary>
         /// 
         /// </summary>
@@ -161,6 +169,7 @@ namespace Quarter3Project
                     case true:
                         switch (myGame.createManager.chrSelection[i].id)
                         {
+                            default:
                             case 100:
                                 sw.WriteLine(100);
                                 break;
@@ -169,6 +178,9 @@ namespace Quarter3Project
                                 break;
                             case 300:
                                 sw.WriteLine(300);
+                                break;
+                            case 400:
+                                sw.WriteLine(400);
                                 break;
                         }
                         break;
@@ -188,6 +200,5 @@ namespace Quarter3Project
         }
 
         #endregion
-
     }
 }

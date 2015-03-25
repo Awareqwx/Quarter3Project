@@ -13,7 +13,7 @@ namespace Quarter3Project.EntityTypes
         KeyboardState keyboardState, prevKBState;
         Random r;
         int timer;
-        int shotTime = 100;
+        int shotTime = 600;
 
         Texture2D atk;
 
@@ -82,8 +82,8 @@ namespace Quarter3Project.EntityTypes
 
         void fireShot()
         {
-            Vector2 p = myGame.player.getCenter() - position;
-            myGame.enemyShots.Add(new Projectile(atk, position, myGame, p, 5, Color.Red, new Point(40, 12), 5));
+            Vector2 p = myGame.player.getCenter() - getCenter();
+            myGame.enemyShots.Add(new Projectile(atk, getCenter(), myGame, p, 5, Color.Red, new Point(40, 12), 5, 10000, myGame.enemyShots.Count, false));
         }
 
     }

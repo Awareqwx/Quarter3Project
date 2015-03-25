@@ -49,7 +49,8 @@ namespace Quarter3Project.Managers
         public List<ItemData.pop> popList { get; private set; }
         Texture2D popFG,
                   popBG,
-                  bgBorder;
+                  bgBorder,
+                  popbg;
         public int idn { get; private set; }
         public bool lockMove { get; private set; }
 
@@ -57,7 +58,8 @@ namespace Quarter3Project.Managers
         Texture2D red;
 
         public List<ItemData.itemSpace> invList { get; private set; }
-        Texture2D empty;
+        Texture2D empty,
+                  rarityBorder;
         double doubleClickTime = 0;
 
         public List<ItemData.itemSpace> keybindList { get; private set; }
@@ -81,10 +83,10 @@ namespace Quarter3Project.Managers
         /// </summary>
         private void addPopUps()
         {
-            popList.Add(new ItemData.pop(popFG, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 0, new string[] { "Are you sure you want to quit?" }, false, false, false, 2000, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
-            popList.Add(new ItemData.pop(popFG, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 0, new string[] { "Any previous games that have been created will be \ndeleted if you continue." }, false, false, false, 2001, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
-            popList.Add(new ItemData.pop(popFG, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 0, new string[] { "Do you want to return to the menu?" }, false, false, false, 2002, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
-            popList.Add(new ItemData.pop(popFG, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 1, new string[] { "There is no save game detected, create a character \nfirst before starting the game." }, false, false, false, 2003, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
+            popList.Add(new ItemData.pop(popbg, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 0, new string[] { "Are you sure you want to quit?" }, false, false, false, 2000, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
+            popList.Add(new ItemData.pop(popbg, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 0, new string[] { "Any previous games that have been created will be \ndeleted if you continue." }, false, false, false, 2001, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
+            popList.Add(new ItemData.pop(popbg, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 0, new string[] { "Do you want to return to the menu?" }, false, false, false, 2002, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
+            popList.Add(new ItemData.pop(popbg, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), new Point(600, 250), 1, new string[] { "There is no save game detected, create a character \nfirst before starting the game." }, false, false, false, 2003, new Vector2((GraphicsDevice.Viewport.Width / 2) - (600 / 2), (GraphicsDevice.Viewport.Height / 2) - (250 / 2)), 0));
             popList.Add(new ItemData.pop(popFG, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (310 / 2), (GraphicsDevice.Viewport.Height / 2) - (360 / 2)), new Point(310, 360), 4, new string[] { "" }, false, false, false, 2004, new Vector2((GraphicsDevice.Viewport.Width / 2) - (155 / 2), (GraphicsDevice.Viewport.Height / 2) - (180 / 2)), 0));
             popList.Add(new ItemData.pop(popFG, popBG, new Vector2((GraphicsDevice.Viewport.Width / 2) - (860 / 2), (GraphicsDevice.Viewport.Height / 2) - (420 / 2)), new Point(860, 420), 5, new string[] { "" }, false, false, false, 2005, new Vector2((GraphicsDevice.Viewport.Width / 2) - (155 / 2), (GraphicsDevice.Viewport.Height / 2) - (180 / 2)), 0));
         }
@@ -175,17 +177,17 @@ namespace Quarter3Project.Managers
                             case 2000:
                                 btnList.Add(new ItemData.btn(red, new Vector2(715, 400), new Point(50, 25), "Yes", Color.White, false, false, true, 2000, 2000));
                                 btnList.Add(new ItemData.btn(red, new Vector2(650, 400), new Point(50, 25), "No", Color.White, false, false, true, 2000, 2001));
-                                btnList.Add(new ItemData.btn(red, new Vector2(195, 400), new Point(50, 25), "Cancel", Color.White, false, false, true, 2000, 2002));
+                                btnList.Add(new ItemData.btn(red, new Vector2(195, 400), new Point(60, 25), "Cancel", Color.White, false, false, true, 2000, 2002));
                                 break;
                             case 2001:
                                 btnList.Add(new ItemData.btn(red, new Vector2(715, 400), new Point(50, 25), "Yes", Color.White, false, false, true, 2001, 2000));
                                 btnList.Add(new ItemData.btn(red, new Vector2(650, 400), new Point(50, 25), "No", Color.White, false, false, true, 2001, 2001));
-                                btnList.Add(new ItemData.btn(red, new Vector2(195, 400), new Point(50, 25), "Cancel", Color.White, false, false, true, 2001, 2002));
-                                break;
+                                btnList.Add(new ItemData.btn(red, new Vector2(195, 400), new Point(60, 25), "Cancel", Color.White, false, false, true, 2001, 2002));
+                            break;
                             case 2002:
                                 btnList.Add(new ItemData.btn(red, new Vector2(715, 400), new Point(50, 25), "Yes", Color.White, false, false, true, 2002, 2000));
                                 btnList.Add(new ItemData.btn(red, new Vector2(650, 400), new Point(50, 25), "No", Color.White, false, false, true, 2002, 2001));
-                                btnList.Add(new ItemData.btn(red, new Vector2(195, 400), new Point(50, 25), "Cancel", Color.White, false, false, true, 2002, 2002));
+                                btnList.Add(new ItemData.btn(red, new Vector2(195, 400), new Point(60, 25), "Cancel", Color.White, false, false, true, 2002, 2002));
                                 break;
                         }
                         break;
@@ -205,7 +207,7 @@ namespace Quarter3Project.Managers
                         switch (popList[i].getID)
                         {
                             case 2004:
-                                btnList.Add(new ItemData.btn(red, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X, (int)popList[i].getPos.Y), new Point(20, 20), "X", Color.White, false, false, true, 2004, 2004));
+                                btnList.Add(new ItemData.btn(red, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 30, (int)popList[i].getPos.Y + 11), new Point(20, 20), "X", Color.White, false, false, true, 2004, 2004));
                                 break;
                         }
                         break;
@@ -213,7 +215,7 @@ namespace Quarter3Project.Managers
                         switch (popList[i].getID)
                         {
                             case 2005:
-                                btnList.Add(new ItemData.btn(red, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X, (int)popList[i].getPos.Y), new Point(20, 20), "X", Color.White, false, false, true, 2005, 2004));
+                                btnList.Add(new ItemData.btn(red, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 30, (int)popList[i].getPos.Y + 30), new Point(20, 20), "X", Color.White, false, false, true, 2005, 2004));
                                 break;
                         }
                         break;
@@ -261,10 +263,11 @@ namespace Quarter3Project.Managers
             popBG.SetData(new Color[] { new Color(255, 255, 255) });
             popFG = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
             popFG.SetData(new Color[] { new Color(110, 110, 110) });
-            red = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
-            red.SetData(new Color[] { new Color(255, 0, 0) });
+            red = Game.Content.Load<Texture2D>(@"Images/btnTex");
             empty = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
             empty.SetData(new Color[] { new Color(0, 0, 0, 0.3f) });
+            rarityBorder = new Texture2D(GraphicsDevice, 1, 1, false, SurfaceFormat.Color);
+            popbg = Game.Content.Load<Texture2D>(@"Images/long_board_ui");
 
             base.LoadContent();
         }
@@ -336,19 +339,19 @@ namespace Quarter3Project.Managers
                         switch (btnList[c].uniqueid)
                         {
                             case 2000: // Yes
-                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 65, (int)popList[i].getPos.Y + popList[i].getSize.Y - 35), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
+                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 135, (int)popList[i].getPos.Y + popList[i].getSize.Y - 55), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
                                 break;
                             case 2001: // No
-                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 130, (int)popList[i].getPos.Y + popList[i].getSize.Y - 35), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
+                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 210, (int)popList[i].getPos.Y + popList[i].getSize.Y - 55), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
                                 break;
                             case 2002: // Cancel
-                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + 15, (int)popList[i].getPos.Y + popList[i].getSize.Y - 35), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
+                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + 85, (int)popList[i].getPos.Y + popList[i].getSize.Y - 55), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
                                 break;
                             case 2003: // Ok
-                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 65, (int)popList[i].getPos.Y + popList[i].getSize.Y - 35), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
+                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 135, (int)popList[i].getPos.Y + popList[i].getSize.Y - 55), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
                                 break;
                             case 2004: // X
-                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2((int)popList[i].getPos.X + popList[i].getSize.X - 20, (int)popList[i].getPos.Y + 1), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
+                                btnList[c] = new ItemData.btn(btnList[c].btnTexture, new Vector2(((int)popList[i].getPos.X + popList[i].getSize.X - 30), (int)popList[i].getPos.Y + 11), btnList[c].size, btnList[c].text, btnList[c].color, btnList[c].hover, btnList[c].phover, btnList[c].visible, btnList[c].id, btnList[c].uniqueid);
                                 break;
                         }
                     }
@@ -423,19 +426,22 @@ namespace Quarter3Project.Managers
 
             doubleClickTime += gameTime.ElapsedGameTime.TotalMilliseconds;
 
-            if (mouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released)
+            for (int c = 0; c < popList.Count; c++)
             {
-                if (doubleClickTime < doubleClickDelay)
+                if (mouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released && popList[c].getBoxType == 4 && popList[c].getDrawOrder == popList.Count - 1)
                 {
-                    for (int i = 0; i < invList.Count; i++)
+                    if (doubleClickTime < doubleClickDelay)
                     {
-                        if (invList[i].collisionRect().Intersects(new Rectangle((int)mousePos.X, (int)mousePos.Y, 1, 1)))
+                        for (int i = 0; i < invList.Count; i++)
                         {
-                            gE.useItem(invList[i].itemID);
+                            if (invList[i].collisionRect().Intersects(new Rectangle((int)mousePos.X, (int)mousePos.Y, 1, 1)))
+                            {
+                                gE.useItem(invList[i].itemID);
+                            }
                         }
                     }
+                    doubleClickTime = 0;
                 }
-                doubleClickTime = 0;
             }
 
             if (popList.Count(p => p.getBoxType == 4 && p.getVis == true && p.getDrawOrder == popList.Count - 1) == 1)
@@ -450,7 +456,7 @@ namespace Quarter3Project.Managers
                             {
                                 if (g.gameManager.itemList[z].iID == invList[i].itemID)
                                 {
-                                    g.gameManager.itemList[z] = new ItemData.item(g.gameManager.itemList[z].iTex, g.gameManager.itemList[z].iID, g.gameManager.itemList[z].iName, g.gameManager.itemList[z].pBG, g.gameManager.itemList[z].pDesc, true);
+                                    g.gameManager.itemList[z] = new ItemData.item(g.gameManager.itemList[z].iTex, g.gameManager.itemList[z].iID, g.gameManager.itemList[z].iName, g.gameManager.itemList[z].pBG, g.gameManager.itemList[z].pDesc, true, g.gameManager.itemList[z].rar);
                                 }
                             }
                         }
@@ -461,7 +467,7 @@ namespace Quarter3Project.Managers
                             {
                                 if (g.gameManager.itemList[z].iID == invList[i].itemID)
                                 {
-                                    g.gameManager.itemList[z] = new ItemData.item(g.gameManager.itemList[z].iTex, g.gameManager.itemList[z].iID, g.gameManager.itemList[z].iName, g.gameManager.itemList[z].pBG, g.gameManager.itemList[z].pDesc, false);
+                                    g.gameManager.itemList[z] = new ItemData.item(g.gameManager.itemList[z].iTex, g.gameManager.itemList[z].iID, g.gameManager.itemList[z].iName, g.gameManager.itemList[z].pBG, g.gameManager.itemList[z].pDesc, false, g.gameManager.itemList[z].rar);
 
                                 }
                             }
@@ -514,7 +520,7 @@ namespace Quarter3Project.Managers
         /// </summary>
         public void updateGameState()
         {
-            switch (g.CurrentLevel)
+            switch (g.cL)
             {
                 case GameLevels.GameLevels.CREATE:
                     for (int i = 0; i < popList.Count; i++)
@@ -575,76 +581,79 @@ namespace Quarter3Project.Managers
             {
                 for (int b = 0; b < btnList.Count; b++)
                 {
-                    if (popList[i].getHoverState == true && btnList[b].hover == true && mouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released)
+                    if (popList.Count(s => s.getHoverState == true) == 1 || popList.Any(p => p.getDrawOrder == popList.Count - 1 && p.getID == popList[i].getID && popList[i].getDrawOrder == popList.Count - 1 && popList[i].getID == btnList[b].id))
                     {
-                        switch (popList[i].getID)
+                        if (popList[i].getHoverState == true && btnList[b].hover == true && mouseState.LeftButton == ButtonState.Pressed && prevMouseState.LeftButton == ButtonState.Released)
                         {
-                            case 2000: // Are you sure you want to quit the game?
-                                switch (btnList[b].uniqueid)
-                                {
-                                    case 2000: // Yes
-                                        gE.exitGame();
-                                        break;
-                                    case 2001: // No
-                                        gE.closePop(2000);
-                                        break;
-                                    case 2002: // Cancel
-                                        gE.closePop(2000);
-                                        break;
-                                }
-                                break;
-                            case 2001: // Any current save games will be overwritten if you continue.
-                                switch (btnList[b].uniqueid)
-                                {
-                                    case 2000: // Yes
-                                        bE.saveNewChr();
-                                        break;
-                                    case 2001: // No
-                                        gE.closePop(2001);
-                                        break;
-                                    case 2002: // Cancel
-                                        gE.closePop(2001);
-                                        break;
-                                }
-                                break;
-                            case 2002: // Are you sure you want to go back to the main menu?
-                                switch (btnList[b].uniqueid)
-                                {
-                                    case 2000: // Yes
-                                        bE.exitToMenu();
-                                        break;
-                                    case 2001: // No
-                                        gE.closePop(2002);
-                                        break;
-                                    case 2002: // Cancel
-                                        gE.closePop(2002);
-                                        break;
-                                }
-                                break;
-                            case 2003: // You haven't created any characters yet....
-                                switch (btnList[b].uniqueid)
-                                {
-                                    case 2003: // Ok
-                                        gE.closePop(2003);
-                                        break;
-                                }
-                                break;
-                            case 2004: // Inventory
-                                switch (btnList[b].uniqueid)
-                                {
-                                    case 2004: // X
-                                        gE.closePop(2004);
-                                        break;
-                                }
-                                break;
-                            case 2005:
-                                switch (btnList[b].uniqueid)
-                                {
-                                    case 2004: // X
-                                        gE.closePop(2005);
-                                        break;
-                                }
-                                break;
+                            switch (popList[i].getID)
+                            {
+                                case 2000: // Are you sure you want to quit the game?
+                                    switch (btnList[b].uniqueid)
+                                    {
+                                        case 2000: // Yes
+                                            gE.exitGame();
+                                            break;
+                                        case 2001: // No
+                                            gE.closePop(2000);
+                                            break;
+                                        case 2002: // Cancel
+                                            gE.closePop(2000);
+                                            break;
+                                    }
+                                    break;
+                                case 2001: // Any current save games will be overwritten if you continue.
+                                    switch (btnList[b].uniqueid)
+                                    {
+                                        case 2000: // Yes
+                                            bE.saveNewChr();
+                                            break;
+                                        case 2001: // No
+                                            gE.closePop(2001);
+                                            break;
+                                        case 2002: // Cancel
+                                            gE.closePop(2001);
+                                            break;
+                                    }
+                                    break;
+                                case 2002: // Are you sure you want to go back to the main menu?
+                                    switch (btnList[b].uniqueid)
+                                    {
+                                        case 2000: // Yes
+                                            bE.exitToMenu();
+                                            break;
+                                        case 2001: // No
+                                            gE.closePop(2002);
+                                            break;
+                                        case 2002: // Cancel
+                                            gE.closePop(2002);
+                                            break;
+                                    }
+                                    break;
+                                case 2003: // You haven't created any characters yet....
+                                    switch (btnList[b].uniqueid)
+                                    {
+                                        case 2003: // Ok
+                                            gE.closePop(2003);
+                                            break;
+                                    }
+                                    break;
+                                case 2004: // Inventory
+                                    switch (btnList[b].uniqueid)
+                                    {
+                                        case 2004: // X
+                                            gE.closePop(2004);
+                                            break;
+                                    }
+                                    break;
+                                case 2005:
+                                    switch (btnList[b].uniqueid)
+                                    {
+                                        case 2004: // X
+                                            gE.closePop(2005);
+                                            break;
+                                    }
+                                    break;
+                            }
                         }
                     }
                 }
@@ -710,7 +719,7 @@ namespace Quarter3Project.Managers
                 {
                     for (int b = 0; b < btnList.Count; b++)
                     {
-                        if (mouseState.LeftButton == ButtonState.Pressed && btnList[b].hover == true)
+                        if (mouseState.LeftButton == ButtonState.Pressed && btnList[b].hover == true && popList.Any(p => p.getDrawOrder == popList.Count - 1 && p.getID == popList[i].getID && popList[i].getDrawOrder == popList.Count - 1 && popList[i].getID == btnList[b].id))
                         {
                             lockMove = true;
                         }
@@ -760,19 +769,19 @@ namespace Quarter3Project.Managers
                                 switch (btnList[b].uniqueid)
                                 {
                                     case 2000: // Yes
-                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 65, newPos.Y + popList[i].getSize.Y - 35), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
+                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 135, newPos.Y + popList[i].getSize.Y - 55), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
                                         break;
                                     case 2001: // No
-                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 130, newPos.Y + popList[i].getSize.Y - 35), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
+                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 210, newPos.Y + popList[i].getSize.Y - 55), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
                                         break;
                                     case 2002: // Cancel
-                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + 15, newPos.Y + popList[i].getSize.Y - 35), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
+                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + 85, newPos.Y + popList[i].getSize.Y - 55), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
                                         break;
                                     case 2003: // Ok
-                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 65, newPos.Y + popList[i].getSize.Y - 35), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
+                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 135, newPos.Y + popList[i].getSize.Y - 55), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
                                         break;
                                     case 2004: // X
-                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 20, newPos.Y + 1), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
+                                        btnList[b] = new ItemData.btn(btnList[b].btnTexture, new Vector2(newPos.X + popList[i].getSize.X - 30, newPos.Y + 11), btnList[b].size, btnList[b].text, btnList[b].color, btnList[b].hover, btnList[b].phover, btnList[b].visible, btnList[b].id, btnList[b].uniqueid);
                                         break;
                                 }
                             }
@@ -831,9 +840,11 @@ namespace Quarter3Project.Managers
                     spriteBatch.Draw(p.getBDTex, new Rectangle((int)p.getPos.X, (int)p.getPos.Y, p.getSize.X, 1), Color.White);
                     spriteBatch.Draw(p.getBDTex, new Rectangle((int)p.getPos.X + p.getSize.X, (int)p.getPos.Y, 1, p.getSize.Y), Color.White);
                     spriteBatch.Draw(p.getBDTex, new Rectangle((int)p.getPos.X, (int)p.getPos.Y + p.getSize.Y, p.getSize.X, 1), Color.White);
+
                     foreach (String s in p.getText)
                     {
-                        spriteBatch.DrawString(Consolas, s, new Vector2(p.getPos.X + 10, p.getPos.Y + 10), Color.White);
+                        spriteBatch.DrawString(Consolas, s, new Vector2(p.getPos.X + 51, p.getPos.Y + 56), new Color(0, 0, 0, 1.0f));
+                        spriteBatch.DrawString(Consolas, s, new Vector2(p.getPos.X + 50, p.getPos.Y + 55), new Color(255, 255, 173));
                     }
                 }
 
@@ -844,6 +855,7 @@ namespace Quarter3Project.Managers
                     {
                         if (btnList[i].id == p.getID && btnList[i].visible == true)
                         {
+                            spriteBatch.Draw(btnList[i].btnTexture, new Rectangle((int)btnList[i].position.X - 3, (int)btnList[i].position.Y - 3, btnList[i].size.X + 6, btnList[i].size.Y + 6), new Color(0, 0, 0, .7f));
                             spriteBatch.Draw(btnList[i].btnTexture, new Rectangle((int)btnList[i].position.X, (int)btnList[i].position.Y, btnList[i].size.X, btnList[i].size.Y), Color.White);
                             if (btnList[i].text.Length == 1)
                             {
@@ -853,7 +865,6 @@ namespace Quarter3Project.Managers
                             {
                                 spriteBatch.DrawString(Consolas, btnList[i].text, new Vector2(((int)btnList[i].position.X + (btnList[i].size.X / 2)) - (Consolas.MeasureString(btnList[i].text).Length() / 2), ((int)btnList[i].position.Y + (btnList[i].size.Y / 2)) - (Consolas.MeasureString(btnList[i].text).Y / 2)), Color.White);
                             }
-
                         }
                     }
                 }
@@ -893,10 +904,15 @@ namespace Quarter3Project.Managers
                         {
                             if (g.gameManager.itemList[z].pVis == true)
                             {
-                                spriteBatch.Draw(g.gameManager.itemList[z].pBG, new Rectangle((int)mousePos.X, (int)mousePos.Y, (int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() + 12, 125), Color.White * .8f);
+                                spriteBatch.Draw(g.gameManager.itemList[z].pBG, new Rectangle((int)mousePos.X, (int)mousePos.Y, (int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() + 12, ((int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() / 2) + 12), Color.White * .8f);
                                 spriteBatch.Draw(g.gameManager.itemList[z].iTex, new Rectangle((int)mousePos.X + 10, (int)mousePos.Y + 10, 24, 24), Color.White);
+                                spriteBatch.DrawString(Consolas, g.gameManager.itemList[z].iName, new Vector2((int)mousePos.X + 51, (int)mousePos.Y + 6 + ((int)Consolas.MeasureString(g.gameManager.itemList[z].iName).Y / 2)), Color.Black);
                                 spriteBatch.DrawString(Consolas, g.gameManager.itemList[z].iName, new Vector2((int)mousePos.X + 50, (int)mousePos.Y + 5 + ((int)Consolas.MeasureString(g.gameManager.itemList[z].iName).Y / 2)), Color.White);
                                 spriteBatch.DrawString(Consolas, g.gameManager.itemList[z].pDesc, new Vector2((int)mousePos.X + 12, (int)mousePos.Y + 45), Color.White);
+                                spriteBatch.Draw(g.gameManager.itemList[z].rar, new Rectangle((int)mousePos.X, (int)mousePos.Y, (int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() + 12, 1), Color.White);
+                                spriteBatch.Draw(g.gameManager.itemList[z].rar, new Rectangle((int)mousePos.X, (int)mousePos.Y, 1, ((int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() / 2) + 12), Color.White);
+                                spriteBatch.Draw(g.gameManager.itemList[z].rar, new Rectangle((int)mousePos.X, (int)mousePos.Y + ((int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() / 2) + 12, ((int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length()) + 12, 1), Color.White);
+                                spriteBatch.Draw(g.gameManager.itemList[z].rar, new Rectangle((int)mousePos.X + ((int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length()) + 12, (int)mousePos.Y, 1, ((int)Consolas.MeasureString(g.gameManager.itemList[z].pDesc).Length() / 2) + 12), Color.White);
                             }
                         }
                     }

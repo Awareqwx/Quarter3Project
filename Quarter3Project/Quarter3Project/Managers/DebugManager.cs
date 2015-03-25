@@ -3,7 +3,7 @@
 #endregion
 
 #region Using Statements
-using Microsoft.Xna.Framework;
+﻿using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
 using System;
@@ -47,7 +47,6 @@ namespace Quarter3Project.Managers
 
         public override void Initialize()
         {
-
             debugList = new List<ItemData.text>();
 
             base.Initialize();
@@ -95,7 +94,6 @@ namespace Quarter3Project.Managers
             }
 
             prevKeyboardState = keyboardState;
-
             base.Update(gameTime);
         }
 
